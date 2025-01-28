@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_embedded_help_role">
+    <sys_embedded_help_role action="INSERT_OR_UPDATE">
+        <order>1000</order>
+        <role display_value="x_1543564_retailno.equipment_maintenance" name="x_1543564_retailno.equipment_maintenance">6f5e63228357d65012d6fe55eeaad347</role>
+        <sys_class_name>sys_embedded_help_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-28 01:49:09</sys_created_on>
+        <sys_id>e75e63228357d65012d6fe55eeaad349</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>6f5e63228357d65012d6fe55eeaad347</sys_name>
+        <sys_package display_value="RetailNOW Management Application" source="x_1543564_retailno">3b6dab668317d65012d6fe55eeaad385</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="RetailNOW Management Application">3b6dab668317d65012d6fe55eeaad385</sys_scope>
+        <sys_update_name>sys_embedded_help_role_e75e63228357d65012d6fe55eeaad349</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-28 01:49:09</sys_updated_on>
+    </sys_embedded_help_role>
+</record_update>
