@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="DELETE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-28 01:57:36</sys_created_on>
+        <sys_id>1740ff268357d65012d6fe55eeaad301</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_1543564_retailno_maintenance_requests.x_1543564_retailno.territory_manager</sys_name>
+        <sys_package display_value="RetailNOW Management Application" source="x_1543564_retailno">3b6dab668317d65012d6fe55eeaad385</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="RetailNOW Management Application">3b6dab668317d65012d6fe55eeaad385</sys_scope>
+        <sys_security_acl display_value="x_1543564_retailno_maintenance_requests">9340bf268357d65012d6fe55eeaad3fe</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_1740ff268357d65012d6fe55eeaad301</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-28 01:57:36</sys_updated_on>
+        <sys_user_role display_value="x_1543564_retailno.territory_manager" name="x_1543564_retailno.territory_manager">5f5e2ba28357d65012d6fe55eeaad380</sys_user_role>
+    </sys_security_acl_role>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="RetailNOW Management Application">3b6dab668317d65012d6fe55eeaad385</application>
+        <file_path/>
+        <instance_id>13d7a602db79fd5402d917291396195e</instance_id>
+        <instance_name>dev183570</instance_name>
+        <name>sys_security_acl_role_1740ff268357d65012d6fe55eeaad301</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role"><sys_security_acl_role action="INSERT_OR_UPDATE"><sys_class_name>sys_security_acl_role</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-01-28 01:57:36</sys_created_on><sys_id>1740ff268357d65012d6fe55eeaad301</sys_id><sys_mod_count>0</sys_mod_count><sys_name>x_1543564_retailno_maintenance_requests.x_1543564_retailno.territory_manager</sys_name><sys_package display_value="RetailNOW Management Application" source="x_1543564_retailno">3b6dab668317d65012d6fe55eeaad385</sys_package><sys_policy/><sys_scope display_value="RetailNOW Management Application">3b6dab668317d65012d6fe55eeaad385</sys_scope><sys_security_acl display_value="x_1543564_retailno_maintenance_requests">9340bf268357d65012d6fe55eeaad3fe</sys_security_acl><sys_update_name>sys_security_acl_role_1740ff268357d65012d6fe55eeaad301</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-01-28 01:57:36</sys_updated_on><sys_user_role display_value="x_1543564_retailno.territory_manager" name="x_1543564_retailno.territory_manager">5f5e2ba28357d65012d6fe55eeaad380</sys_user_role></sys_security_acl_role></record_update>]]></payload>
+        <payload_hash>811541776</payload_hash>
+        <record_name>x_1543564_retailno_maintenance_requests.x_1543564_retailno.territory_manager</record_name>
+        <reverted_from/>
+        <source>847dab668317d65012d6fe55eeaad38a</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-28 01:57:36</sys_created_on>
+        <sys_id>5740ff268357d65012d6fe55eeaad304</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>194aaa0dda80000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-28 01:57:36</sys_updated_on>
+        <type>Access Roles</type>
+        <update_guid>5b40ff268257d6506315c540a31aab03</update_guid>
+        <update_guid_history>5b40ff268257d6506315c540a31aab03:811541776</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="x_1543564_retailno_maintenance_requests.x_1543564_retailno.territory_manager">77dd0c07835f1a5012d6fe55eeaad3e7</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-28 22:45:16</sys_created_on>
+        <sys_db_object display_value="" name="sys_security_acl_role">sys_security_acl_role</sys_db_object>
+        <sys_id>4945d6a6a1c0442d9f7a635a021244e1</sys_id>
+        <sys_metadata>1740ff268357d65012d6fe55eeaad301</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_1543564_retailno_maintenance_requests.x_1543564_retailno.territory_manager</sys_name>
+        <sys_package display_value="RetailNOW Management Application" source="x_1543564_retailno">3b6dab668317d65012d6fe55eeaad385</sys_package>
+        <sys_parent display_value="">9340bf268357d65012d6fe55eeaad3fe</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="RetailNOW Management Application">3b6dab668317d65012d6fe55eeaad385</sys_scope>
+        <sys_scope_delete display_value="">111bdc697e1b492e92c4039dac372fe4</sys_scope_delete>
+        <sys_update_name>sys_security_acl_role_1740ff268357d65012d6fe55eeaad301</sys_update_name>
+        <sys_update_version display_value="sys_security_acl_role_1740ff268357d65012d6fe55eeaad301">5740ff268357d65012d6fe55eeaad304</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-28 22:45:16</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

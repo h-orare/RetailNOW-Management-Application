@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="426982fe83931a5012d6fe55eeaad343" extends="sys_import_set_row" label="Stations" max_length="40" name="x_1543564_retailno_import_stations" type="collection">
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=region" label="region" max_length="40" name="u_region" type="string"/>
+        <element attributes="import_attribute_name=13 Kg Target" label="13 Kg Target" max_length="40" name="u_13_kg_target" type="integer"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=station name" label="station name" max_length="40" name="u_station_name" type="string"/>
+        <element attributes="import_attribute_name=AGO Target" label="AGO Target" max_length="40" name="u_ago_target" type="integer"/>
+        <element attributes="import_attribute_name=6 Kg Target" label="6 Kg Target" max_length="40" name="u_6_kg_target" type="integer"/>
+        <element attributes="import_attribute_name=PMS Target" label="PMS Target" max_length="40" name="u_pms_target" type="integer"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=type" label="type" max_length="40" name="u_type" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=active" label="active" max_length="40" name="u_active" type="string"/>
+    </element>
+</database>

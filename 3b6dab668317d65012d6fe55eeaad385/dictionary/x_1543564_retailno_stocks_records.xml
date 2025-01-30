@@ -1,3 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element db_object_id="4ae0fb668357d65012d6fe55eeaad375" extends="task" label="Stocks Records" max_length="40" name="x_1543564_retailno_stocks_records" type="collection"/>
+    <element db_object_id="4ae0fb668357d65012d6fe55eeaad375" extends="task" label="Stocks Records" max_length="40" name="x_1543564_retailno_stocks_records" type="collection">
+        <element choice="1" label="Maintenance Category" max_length="40" name="maintenance_category" type="choice">
+            <choice/>
+        </element>
+        <element label="6kg Gas Stocks" max_length="40" name="u_6kg_gas_stocks" type="integer"/>
+        <element label="Station Category" max_length="32" name="station_category" type="string"/>
+        <element label="6kg Days Cover" max_length="40" name="u_6kg_days_cover" type="float"/>
+        <element label="AGO Days Cover" max_length="40" name="ago_days_cover" type="float"/>
+        <element label="PMS Days Cover" max_length="40" name="pms_days_cover" type="float"/>
+        <element label="13kg Gas Stocks" max_length="40" name="u_13kg_gas_stocks" type="integer"/>
+        <element label="PMS Stocks" max_length="40" name="pms_stocks" type="integer"/>
+        <element display="true" label="Station Name" max_length="32" name="station_name" reference="x_1543564_retailno_stations_table" type="reference"/>
+        <element label="Maintenance Request Summary" max_length="100" name="maintenance_request_summary" type="string"/>
+        <element label="13kg Days Cover" max_length="40" name="u_13kg_days_cover" type="float"/>
+        <element label="AGO Daily Target" max_length="32" name="ago_daily_target" type="integer"/>
+        <element label="AGO Stocks" max_length="40" name="ago_stocks" type="integer"/>
+        <element label="13kg Gas Daily Target" max_length="32" name="u_13kg_gas_daily_target" type="integer"/>
+        <element label="6kg Gas Daily Target" max_length="32" name="u_6kg_gas_daily_target" type="integer"/>
+        <element label="Region" max_length="32" name="region" type="string"/>
+        <element label="PMS Daily Target" max_length="32" name="pms_daily_target" type="integer"/>
+    </element>
 </database>

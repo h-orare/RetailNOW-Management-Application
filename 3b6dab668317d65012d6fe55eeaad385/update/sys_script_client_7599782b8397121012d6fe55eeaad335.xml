@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field/>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>RestrictingRecordProducerInputValues</name>
+        <order/>
+        <script><![CDATA[function onSubmit() {
+    //Type appropriate comment here, and begin script below
+
+    var pmsValue = g_form.getValue('pms_stocks')
+    var num = parseFloat(pmsValue)
+
+    if (isNaN(num) || num <= 0) {
+        g_form.showFieldMsg("pms_stocks", "The Value Must be Greater than Zero", "error")
+
+        return false;
+    }
+    return true;
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-30 15:20:14</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>7599782b8397121012d6fe55eeaad335</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>RestrictingRecordProducerInputValues</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="RetailNOW Management Application" source="x_1543564_retailno">3b6dab668317d65012d6fe55eeaad385</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="RetailNOW Management Application">3b6dab668317d65012d6fe55eeaad385</sys_scope>
+        <sys_update_name>sys_script_client_7599782b8397121012d6fe55eeaad335</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-30 16:45:59</sys_updated_on>
+        <table>x_1543564_retailno_stocks_records</table>
+        <type>onSubmit</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

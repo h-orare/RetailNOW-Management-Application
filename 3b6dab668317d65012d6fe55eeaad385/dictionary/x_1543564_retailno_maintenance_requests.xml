@@ -1,3 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><database>
-    <element db_object_id="fa407f268357d65012d6fe55eeaad3f3" extends="task" label="Maintenance Requests" max_length="40" name="x_1543564_retailno_maintenance_requests" type="collection"/>
-</database>

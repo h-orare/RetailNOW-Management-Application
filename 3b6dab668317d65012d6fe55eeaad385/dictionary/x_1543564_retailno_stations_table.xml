@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element db_object_id="44c2332a8357d65012d6fe55eeaad376" label="Stations Table" max_length="40" name="x_1543564_retailno_stations_table" type="collection">
-        <element attributes="edge_encryption_enabled=true" label="Station Name" max_length="100" name="station_name" type="string"/>
+        <element attributes="edge_encryption_enabled=true" display="true" label="Station Name" max_length="40" name="station_name" type="string"/>
         <element label="13Kg Daily Target" max_length="40" name="u_13kg_daily_target" type="integer"/>
         <element attributes="edge_encryption_enabled=true" choice="1" label="Region" max_length="40" name="region" type="choice">
             <choice>
@@ -12,7 +12,7 @@
                 <element inactive_on_update="false" label="Mombasa" value="mombasa"/>
             </choice>
         </element>
-        <element attributes="edge_encryption_enabled=true" choice="1" display="true" label="Type" max_length="40" name="type" type="choice">
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Type" max_length="40" name="type" type="choice">
             <choice>
                 <element inactive_on_update="false" label="CODO" value="codo"/>
                 <element inactive_on_update="false" label="Lease" value="lease"/>
@@ -21,7 +21,7 @@
         </element>
         <element label="6kg Daily Target" max_length="40" name="u_6kg_daily_target" type="integer"/>
         <element label="PMS Daily Target" max_length="40" name="pms_daily_target" type="integer"/>
-        <element attributes="edge_encryption_enabled=true" choice="1" label="Active" max_length="40" name="active" type="choice">
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Active" max_length="40" name="active" type="boolean">
             <choice>
                 <element inactive_on_update="false" label="True" value="true"/>
                 <element inactive_on_update="false" label="False" value="false"/>
