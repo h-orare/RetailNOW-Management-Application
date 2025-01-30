@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module">
+    <sys_app_module action="DELETE">
+        <active>true</active>
+        <application/>
+        <assessment/>
+        <device_type/>
+        <filter/>
+        <hint/>
+        <homepage/>
+        <image/>
+        <link_type>LIST</link_type>
+        <map_page/>
+        <mobile_title>Station Stocks</mobile_title>
+        <mobile_view_name>Mobile</mobile_view_name>
+        <name>x_1543564_retailno_maintenance_requests</name>
+        <order>300</order>
+        <override_menu_roles>false</override_menu_roles>
+        <query/>
+        <report/>
+        <require_confirmation>true</require_confirmation>
+        <roles/>
+        <sys_class_name>sys_app_module</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-28 13:28:20</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>156e023683d31a5012d6fe55eeaad3cf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Maintenance Requests</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="RetailNOW Management Application" source="x_1543564_retailno">3b6dab668317d65012d6fe55eeaad385</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="RetailNOW Management Application">3b6dab668317d65012d6fe55eeaad385</sys_scope>
+        <sys_update_name>sys_app_module_156e023683d31a5012d6fe55eeaad3cf</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-28 13:28:20</sys_updated_on>
+        <timeline_page/>
+        <title>Maintenance Requests</title>
+        <uncancelable>false</uncancelable>
+        <view_name/>
+        <window_name/>
+    </sys_app_module>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="RetailNOW Management Application">3b6dab668317d65012d6fe55eeaad385</application>
+        <file_path/>
+        <instance_id>13d7a602db79fd5402d917291396195e</instance_id>
+        <instance_name>dev183570</instance_name>
+        <name>sys_app_module_156e023683d31a5012d6fe55eeaad3cf</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module"><sys_app_module action="INSERT_OR_UPDATE"><active>true</active><application/><assessment/><device_type/><filter/><hint/><homepage/><image/><link_type>LIST</link_type><map_page/><mobile_title>Station Stocks</mobile_title><mobile_view_name>Mobile</mobile_view_name><name>x_1543564_retailno_maintenance_requests</name><order>300</order><override_menu_roles>false</override_menu_roles><query/><report/><require_confirmation>true</require_confirmation><roles/><sys_class_name>sys_app_module</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-01-28 13:28:20</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>156e023683d31a5012d6fe55eeaad3cf</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Maintenance Requests</sys_name><sys_overrides/><sys_package display_value="RetailNOW Management Application" source="x_1543564_retailno">3b6dab668317d65012d6fe55eeaad385</sys_package><sys_policy/><sys_scope display_value="RetailNOW Management Application">3b6dab668317d65012d6fe55eeaad385</sys_scope><sys_update_name>sys_app_module_156e023683d31a5012d6fe55eeaad3cf</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-01-28 13:28:20</sys_updated_on><timeline_page/><title>Maintenance Requests</title><uncancelable>false</uncancelable><view_name/><window_name/></sys_app_module></record_update>]]></payload>
+        <payload_hash>-163004652</payload_hash>
+        <record_name>Maintenance Requests</record_name>
+        <reverted_from/>
+        <source>d8a0c4b683d7d65012d6fe55eeaad3bd</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-28 13:31:12</sys_created_on>
+        <sys_id>230fc6b683d31a5012d6fe55eeaad324</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>194ad1be0cb0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-28 13:31:12</sys_updated_on>
+        <type>Module</type>
+        <update_guid>dd6e0236ffd31a5041bc1a612715dbd0</update_guid>
+        <update_guid_history>dd6e0236ffd31a5041bc1a612715dbd0:-897083456,dd6e0236ffd31a5041bc1a612715dbd0:-897083456</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Maintenance Requests">0a9fc6b683d31a5012d6fe55eeaad3bb</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-28 13:33:34</sys_created_on>
+        <sys_db_object display_value="" name="sys_app_module">sys_app_module</sys_db_object>
+        <sys_id>8bb352af45a04ba29e47d87d6fb8c301</sys_id>
+        <sys_metadata>156e023683d31a5012d6fe55eeaad3cf</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Maintenance Requests</sys_name>
+        <sys_package display_value="RetailNOW Management Application" source="x_1543564_retailno">3b6dab668317d65012d6fe55eeaad385</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="RetailNOW Management Application">3b6dab668317d65012d6fe55eeaad385</sys_scope>
+        <sys_scope_delete display_value="">111bdc697e1b492e92c4039dac372fe4</sys_scope_delete>
+        <sys_update_name>sys_app_module_156e023683d31a5012d6fe55eeaad3cf</sys_update_name>
+        <sys_update_version display_value="sys_app_module_156e023683d31a5012d6fe55eeaad3cf">230fc6b683d31a5012d6fe55eeaad324</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-28 13:33:34</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
