@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_module">
+    <sys_ui_module action="DELETE">
+        <active>true</active>
+        <application display_value="RetailNOW Management Application">f8d681b883eb961012d6fe55eeaad305</application>
+        <filter/>
+        <name>Maintenance Requests</name>
+        <order/>
+        <path/>
+        <path_relative_to_root>false</path_relative_to_root>
+        <roles>x_1543564_retailno.maintenance_requests_user</roles>
+        <sys_class_name>sys_ui_module</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-03 13:23:28</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>f8d681b883eb961012d6fe55eeaad309</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Maintenance Requests</sys_name>
+        <sys_package display_value="RetailNOW Management Application" source="x_1543564_retailno">3b6dab668317d65012d6fe55eeaad385</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="RetailNOW Management Application">3b6dab668317d65012d6fe55eeaad385</sys_scope>
+        <sys_update_name>sys_ui_module_f8d681b883eb961012d6fe55eeaad309</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-03 13:23:28</sys_updated_on>
+        <table>x_1543564_retailno_maintenance_requests</table>
+        <uncancelable>false</uncancelable>
+        <view_name/>
+    </sys_ui_module>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="RetailNOW Management Application">3b6dab668317d65012d6fe55eeaad385</application>
+        <file_path/>
+        <instance_id>13d7a602db79fd5402d917291396195e</instance_id>
+        <instance_name>dev183570</instance_name>
+        <name>sys_ui_module_f8d681b883eb961012d6fe55eeaad309</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_module"><sys_ui_module action="INSERT_OR_UPDATE"><active>true</active><application display_value="RetailNOW Management Application">f8d681b883eb961012d6fe55eeaad305</application><filter/><name>Maintenance Requests</name><order/><path/><path_relative_to_root>false</path_relative_to_root><roles>x_1543564_retailno.maintenance_requests_user</roles><sys_class_name>sys_ui_module</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-02-03 13:23:28</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>f8d681b883eb961012d6fe55eeaad309</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Maintenance Requests</sys_name><sys_package display_value="RetailNOW Management Application" source="x_1543564_retailno">3b6dab668317d65012d6fe55eeaad385</sys_package><sys_policy/><sys_scope display_value="RetailNOW Management Application">3b6dab668317d65012d6fe55eeaad385</sys_scope><sys_update_name>sys_ui_module_f8d681b883eb961012d6fe55eeaad309</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-02-03 13:23:28</sys_updated_on><table>x_1543564_retailno_maintenance_requests</table><uncancelable>false</uncancelable><view_name/></sys_ui_module></record_update>]]></payload>
+        <payload_hash>1593166337</payload_hash>
+        <record_name>Maintenance Requests</record_name>
+        <reverted_from/>
+        <source>d8a0c4b683d7d65012d6fe55eeaad3bd</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-03 13:23:28</sys_created_on>
+        <sys_id>f0d681b883eb961012d6fe55eeaad30d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>194cbfaf43d0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-03 13:23:28</sys_updated_on>
+        <type>Module</type>
+        <update_guid>b4d681b88ceb9610c6ac9be7e1df3d0c</update_guid>
+        <update_guid_history>b4d681b88ceb9610c6ac9be7e1df3d0c:1593166337</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-03 13:51:55</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_module">sys_ui_module</sys_db_object>
+        <sys_id>beb788755d5546209c55e91057199d90</sys_id>
+        <sys_metadata>f8d681b883eb961012d6fe55eeaad309</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Maintenance Requests</sys_name>
+        <sys_package display_value="RetailNOW Management Application" source="x_1543564_retailno">3b6dab668317d65012d6fe55eeaad385</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="RetailNOW Management Application">3b6dab668317d65012d6fe55eeaad385</sys_scope>
+        <sys_scope_delete display_value="">111bdc697e1b492e92c4039dac372fe4</sys_scope_delete>
+        <sys_update_name>sys_ui_module_f8d681b883eb961012d6fe55eeaad309</sys_update_name>
+        <sys_update_version display_value="sys_ui_module_f8d681b883eb961012d6fe55eeaad309">f0d681b883eb961012d6fe55eeaad30d</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-03 13:51:55</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

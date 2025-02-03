@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_module">
+    <sys_ui_module action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <application display_value="RetailNOW Management Application">f8d681b883eb961012d6fe55eeaad305</application>
+        <filter/>
+        <name>Maintenance Requets</name>
+        <order/>
+        <path/>
+        <path_relative_to_root>false</path_relative_to_root>
+        <roles>x_1543564_retailno.maintenance_requets_user</roles>
+        <sys_class_name>sys_ui_module</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-03 13:52:55</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>489dcdb0832f961012d6fe55eeaad337</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Maintenance Requets</sys_name>
+        <sys_package display_value="RetailNOW Management Application" source="x_1543564_retailno">3b6dab668317d65012d6fe55eeaad385</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="RetailNOW Management Application">3b6dab668317d65012d6fe55eeaad385</sys_scope>
+        <sys_update_name>sys_ui_module_489dcdb0832f961012d6fe55eeaad337</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-03 13:52:55</sys_updated_on>
+        <table>x_1543564_retailno_maintenance_requets</table>
+        <uncancelable>false</uncancelable>
+        <view_name/>
+    </sys_ui_module>
+</record_update>

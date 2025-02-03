@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="ac6d85b0832f961012d6fe55eeaad394" extends="task" label="Maintenance Requets" max_length="40" name="x_1543564_retailno_maintenance_requets" type="collection">
+        <element label="Maintenance Request Details" max_length="400" name="maintenance_request_details" type="string"/>
+        <element label="Station Name" max_length="40" name="station_name" type="string"/>
+        <element label="Date Posted" max_length="40" name="date_posted" type="string"/>
+        <element label="Region" max_length="40" name="region" type="string"/>
+        <element label="Enhancement" max_length="32" name="enhancement" reference="rm_enhancement" type="reference"/>
+        <element label="Station Category" max_length="40" name="station_category" type="string"/>
+        <element label="Maintenance Request Summary" max_length="100" name="maintenance_request_summary" type="string"/>
+        <element label="Maintenance Category" max_length="40" name="maintenance_category" type="string"/>
+    </element>
+</database>

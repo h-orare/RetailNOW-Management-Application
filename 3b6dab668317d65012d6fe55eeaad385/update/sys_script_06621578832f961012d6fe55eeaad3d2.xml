@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>false</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_1543564_retailno_stocks_records</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>UpdateMaintenanceRecordsTable</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/ ) {
+
+    //checking if current record exists in MR table
+    // var glideB=new GlideRecord('x_1543564_retailno_maintenance_requets')
+    // glideB.addQuery('sys_id',current.sys_id)
+    // glideB.query()
+
+
+    //  if (glideB.next()) {
+    //     // Update existing record in MR table
+    //     glideB.short_description = current.maintenance_request_summary;
+    // 	glideB.description = current.description;
+
+    //     glideB.update();
+
+    // Create new record in MR table
+    var newRecord = new GlideRecord('x_1543564_retailno_maintenance_requets');
+    newRecord.initialize();
+    newRecord.sys_id = current.sys_id; // Maintain same sys_id for traceability
+    newRecord.date_posted = current.date_posted.getDisplayValue();
+    newRecord.station_name = current.station_name.getDisplayValue();
+    newRecord.station_category = current.station_category;
+    newRecord.region = current.region;
+    newRecord.short_description = current.maintenance_request_summary;
+    newRecord.description = current.description;
+    newRecord.maintenance_category = current.maintenance_category;
+    newRecord.insert();
+
+
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-03 14:32:14</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>06621578832f961012d6fe55eeaad3d2</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>UpdateMaintenanceRecordsTable</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="RetailNOW Management Application" source="x_1543564_retailno">3b6dab668317d65012d6fe55eeaad385</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="RetailNOW Management Application">3b6dab668317d65012d6fe55eeaad385</sys_scope>
+        <sys_update_name>sys_script_06621578832f961012d6fe55eeaad3d2</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-03 14:59:58</sys_updated_on>
+        <template/>
+        <when>before</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=06621578832f961012d6fe55eeaad3d2"/>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>06621578832f961012d6fe55eeaad3d2</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-03 14:32:14</sys_created_on>
+        <sys_id>8c9611b8832f961012d6fe55eeaad320</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-03 14:32:14</sys_updated_on>
+        <table>sys_script</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>

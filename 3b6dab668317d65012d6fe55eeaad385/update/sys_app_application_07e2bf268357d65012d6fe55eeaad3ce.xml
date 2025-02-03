@@ -7,14 +7,14 @@
         <hint>A custom application for retail station management</hint>
         <name/>
         <order/>
-        <roles>x_1543564_retailno.territory_manager,x_1543564_retailno.civil_maintenance,x_1543564_retailno.equipment_maintenance,x_1543564_retailno.business_analyst</roles>
+        <roles>x_1543564_retailno.territory_manager,x_1543564_retailno.civil_maintenance,x_1543564_retailno.equipment_maintenance,x_1543564_retailno.business_analyst,x_1543564_retailno.maintenance_requets_user,x_1543564_retailno.maintenance_requests_user</roles>
         <sys_class_name>sys_app_application</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-01-28 02:09:04</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>07e2bf268357d65012d6fe55eeaad3ce</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name>RetailNOW Management Application</sys_name>
         <sys_overrides/>
         <sys_package display_value="RetailNOW Management Application" source="x_1543564_retailno">3b6dab668317d65012d6fe55eeaad385</sys_package>
@@ -22,7 +22,7 @@
         <sys_scope display_value="RetailNOW Management Application">3b6dab668317d65012d6fe55eeaad385</sys_scope>
         <sys_update_name>sys_app_application_07e2bf268357d65012d6fe55eeaad3ce</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-01-28 02:09:04</sys_updated_on>
+        <sys_updated_on>2025-02-03 15:59:27</sys_updated_on>
         <title>RetailNOW Management Application</title>
         <view_name/>
     </sys_app_application>

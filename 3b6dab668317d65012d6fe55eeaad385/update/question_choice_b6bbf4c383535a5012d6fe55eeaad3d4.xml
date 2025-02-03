@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="question_choice">
+    <question_choice action="INSERT_OR_UPDATE">
+        <inactive>false</inactive>
+        <order>500</order>
+        <published_ref/>
+        <question display_value="Select Region">d8b5fccb83135a5012d6fe55eeaad329</question>
+        <sys_class_name>question_choice</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-29 02:06:05</sys_created_on>
+        <sys_id>b6bbf4c383535a5012d6fe55eeaad3d4</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Kisumu</sys_name>
+        <sys_package display_value="RetailNOW Management Application" source="x_1543564_retailno">3b6dab668317d65012d6fe55eeaad385</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="RetailNOW Management Application">3b6dab668317d65012d6fe55eeaad385</sys_scope>
+        <sys_update_name>question_choice_b6bbf4c383535a5012d6fe55eeaad3d4</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-03 02:24:41</sys_updated_on>
+        <text>Kisumu</text>
+        <value>Kisumu</value>
+    </question_choice>
+    <fx_price action="delete_multiple" query="id=b6bbf4c383535a5012d6fe55eeaad3d4"/>
+</record_update>

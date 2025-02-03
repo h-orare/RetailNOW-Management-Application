@@ -21,12 +21,12 @@
         <dynamic_value_field/>
         <enable_also_request_for>false</enable_also_request_for>
         <example_text/>
-        <field>maintenance_category</field>
+        <field/>
         <global>false</global>
         <help_tag>More information</help_tag>
         <help_text/>
         <hidden>false</hidden>
-        <include_none>true</include_none>
+        <include_none>false</include_none>
         <instructions/>
         <layout>normal</layout>
         <list_table/>
@@ -38,16 +38,16 @@
         <macro/>
         <macroponent/>
         <mandatory>false</mandatory>
-        <map_to_field>true</map_to_field>
+        <map_to_field>false</map_to_field>
         <mask_use_confirmation>false</mask_use_confirmation>
         <mask_use_encryption>false</mask_use_encryption>
-        <name>maintenance_category</name>
-        <order>1500</order>
+        <name>formatter5</name>
+        <order>1800</order>
         <post_insert_script/>
         <price_if_checked>0</price_if_checked>
         <pricing_implications>false</pricing_implications>
         <published_ref/>
-        <question_text>Maintenance Category</question_text>
+        <question_text/>
         <read_only>false</read_only>
         <read_roles/>
         <read_script/>
@@ -75,19 +75,19 @@
         <summary_macro/>
         <sys_class_name>item_option_new</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2025-01-29 02:00:05</sys_created_on>
-        <sys_id>f1597c0383535a5012d6fe55eeaad3c4</sys_id>
+        <sys_created_on>2025-01-29 02:18:00</sys_created_on>
+        <sys_id>849ef00b83535a5012d6fe55eeaad369</sys_id>
         <sys_mod_count>4</sys_mod_count>
-        <sys_name>Maintenance Category</sys_name>
-        <sys_package display_value="RetailNOW Management Application" source="x_1543564_retailno">3b6dab668317d65012d6fe55eeaad385</sys_package>
+        <sys_name>formatter5</sys_name>
+        <sys_package/>
         <sys_policy/>
         <sys_scope display_value="RetailNOW Management Application">3b6dab668317d65012d6fe55eeaad385</sys_scope>
-        <sys_update_name>item_option_new_f1597c0383535a5012d6fe55eeaad3c4</sys_update_name>
+        <sys_update_name>item_option_new_849ef00b83535a5012d6fe55eeaad369</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-02-03 02:31:45</sys_updated_on>
+        <sys_updated_on>2025-01-29 02:20:14</sys_updated_on>
         <table/>
         <tooltip/>
-        <type>5</type>
+        <type>20</type>
         <ui_page/>
         <unique>false</unique>
         <use_dynamic_default>false</use_dynamic_default>
@@ -95,7 +95,7 @@
         <validate_regex/>
         <variable_name/>
         <variable_set/>
-        <variable_width>25</variable_width>
+        <variable_width/>
         <visibility>1</visibility>
         <visible_bundle>true</visible_bundle>
         <visible_guide>true</visible_guide>
@@ -103,22 +103,22 @@
         <visible_summary>true</visible_summary>
         <write_roles/>
     </item_option_new>
-    <sys_translated_text action="delete_multiple" query="documentkey=f1597c0383535a5012d6fe55eeaad3c4"/>
-    <fx_price action="delete_multiple" query="id=f1597c0383535a5012d6fe55eeaad3c4"/>
+    <sys_translated_text action="delete_multiple" query="documentkey=849ef00b83535a5012d6fe55eeaad369"/>
+    <fx_price action="delete_multiple" query="id=849ef00b83535a5012d6fe55eeaad369"/>
     <fx_price action="INSERT_OR_UPDATE">
         <amount>0</amount>
         <currency display_value="USD">USD</currency>
         <field>price_if_checked</field>
-        <id>f1597c0383535a5012d6fe55eeaad3c4</id>
+        <id>849ef00b83535a5012d6fe55eeaad369</id>
         <parent/>
         <reference_amount>0</reference_amount>
         <reference_currency display_value="USD">USD</reference_currency>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2025-01-29 02:00:06</sys_created_on>
-        <sys_id>ed7a348383535a5012d6fe55eeaad369</sys_id>
+        <sys_created_on>2025-01-29 02:18:00</sys_created_on>
+        <sys_id>489ef00b83535a5012d6fe55eeaad36b</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-01-29 02:00:06</sys_updated_on>
+        <sys_updated_on>2025-01-29 02:18:00</sys_updated_on>
         <table>item_option_new</table>
         <type>calculated</type>
     </fx_price>
@@ -126,16 +126,16 @@
         <amount>0</amount>
         <currency display_value="USD">USD</currency>
         <field>rec_price_if_checked</field>
-        <id>f1597c0383535a5012d6fe55eeaad3c4</id>
+        <id>849ef00b83535a5012d6fe55eeaad369</id>
         <parent/>
         <reference_amount>0</reference_amount>
         <reference_currency display_value="USD">USD</reference_currency>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2025-01-29 02:00:06</sys_created_on>
-        <sys_id>a57a348383535a5012d6fe55eeaad369</sys_id>
+        <sys_created_on>2025-01-29 02:18:00</sys_created_on>
+        <sys_id>009ef00b83535a5012d6fe55eeaad36b</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-01-29 02:00:06</sys_updated_on>
+        <sys_updated_on>2025-01-29 02:18:00</sys_updated_on>
         <table>item_option_new</table>
         <type>calculated</type>
     </fx_price>

@@ -13,7 +13,7 @@
         <delivery_plan display_value="DEFAULT">523da512c611228900811a37c97c2014</delivery_plan>
         <delivery_plan_script/>
         <delivery_time>1970-01-03 00:00:00</delivery_time>
-        <description><![CDATA[<p style="text-align: center;"><span style="font-size: 24pt; font-family: georgia, palatino;"><strong>Submit Your Daily Station Stocks and Any Maintenance Requests Here</strong></span></p>]]></description>
+        <description><![CDATA[<p style="text-align: center;"><span style="font-size: 24pt; font-family: &#39;trebuchet ms&#39;, geneva; color: rgb(0, 0, 0);"><strong>Submit Your Daily Station Stocks and Any Maintenance Requests Here</strong></span></p>]]></description>
         <display_price_property>non_zero</display_price_property>
         <entitlement_script/>
         <flow_designer_flow/>
@@ -89,14 +89,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-01-29 01:17:43</sys_created_on>
         <sys_id>90cfacc383135a5012d6fe55eeaad389</sys_id>
-        <sys_mod_count>58</sys_mod_count>
+        <sys_mod_count>68</sys_mod_count>
         <sys_name>RetailNOW  Application Interface</sys_name>
         <sys_package display_value="RetailNOW Management Application" source="x_1543564_retailno">3b6dab668317d65012d6fe55eeaad385</sys_package>
         <sys_policy/>
         <sys_scope display_value="RetailNOW Management Application">3b6dab668317d65012d6fe55eeaad385</sys_scope>
         <sys_update_name>sc_cat_item_producer_90cfacc383135a5012d6fe55eeaad389</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-01-30 17:07:04</sys_updated_on>
+        <sys_updated_on>2025-02-03 15:36:07</sys_updated_on>
         <table_name>x_1543564_retailno_stocks_records</table_name>
         <taxonomy_topic/>
         <template/>
@@ -104,7 +104,7 @@
         <type>item</type>
         <use_sc_layout>true</use_sc_layout>
         <vendor/>
-        <version>58</version>
+        <version>68</version>
         <view/>
         <visible_bundle>true</visible_bundle>
         <visible_guide>true</visible_guide>
