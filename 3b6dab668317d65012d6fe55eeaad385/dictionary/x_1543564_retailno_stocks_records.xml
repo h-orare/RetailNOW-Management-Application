@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element db_object_id="4ae0fb668357d65012d6fe55eeaad375" extends="task" label="Stocks Records" max_length="40" name="x_1543564_retailno_stocks_records" type="collection">
-        <element choice="1" label="Maintenance Category" max_length="40" name="maintenance_category" type="choice">
+        <element choice="1" label="Maintenance Category" max_length="40" name="maintenance_category" type="string">
             <choice/>
         </element>
         <element label="6kg Gas Stocks" max_length="40" name="u_6kg_gas_stocks" type="integer"/>
@@ -12,6 +12,7 @@
         <element label="PMS Stocks" max_length="40" name="pms_stocks" type="integer"/>
         <element display="true" label="Station Name" max_length="32" name="station_name" reference="x_1543564_retailno_stations_table" type="reference"/>
         <element label="Maintenance Request Summary" max_length="100" name="maintenance_request_summary" type="string"/>
+        <element label="Date Posted" max_length="40" name="date_posted" type="glide_date"/>
         <element label="13kg Days Cover" max_length="40" name="u_13kg_days_cover" type="float"/>
         <element label="AGO Daily Target" max_length="32" name="ago_daily_target" type="integer"/>
         <element label="AGO Stocks" max_length="40" name="ago_stocks" type="integer"/>

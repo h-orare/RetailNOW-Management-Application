@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update>
-    <sys_dictionary action="INSERT_OR_UPDATE" element="maintenance_category" table="x_1543564_retailno_stocks_records">
+    <sys_dictionary action="INSERT_OR_UPDATE" element="maintenance_category" table="x_1543564_retailno_maintenance_requets">
         <active>true</active>
         <array>false</array>
         <attributes/>
@@ -10,7 +10,7 @@
 	return '';  // return the calculated value
 
 })(current);]]></calculation>
-        <choice>1</choice>
+        <choice/>
         <choice_field/>
         <choice_table/>
         <column_label>Maintenance Category</column_label>
@@ -35,7 +35,7 @@
         <internal_type display_value="String">string</internal_type>
         <mandatory>false</mandatory>
         <max_length>40</max_length>
-        <name>x_1543564_retailno_stocks_records</name>
+        <name>x_1543564_retailno_maintenance_requets</name>
         <next_element/>
         <primary>false</primary>
         <read_only>false</read_only>
@@ -51,14 +51,14 @@
         <staged>false</staged>
         <sys_class_name>sys_dictionary</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2025-01-29 00:45:37</sys_created_on>
+        <sys_created_on>2025-02-03 13:58:17</sys_created_on>
         <sys_name>Maintenance Category</sys_name>
         <sys_package display_value="RetailNOW Management Application" source="x_1543564_retailno">3b6dab668317d65012d6fe55eeaad385</sys_package>
         <sys_policy/>
         <sys_scope display_value="RetailNOW Management Application">3b6dab668317d65012d6fe55eeaad385</sys_scope>
-        <sys_update_name>sys_dictionary_x_1543564_retailno_stocks_records_maintenance_category</sys_update_name>
+        <sys_update_name>sys_dictionary_x_1543564_retailno_maintenance_requets_maintenance_category</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-02-03 02:27:17</sys_updated_on>
+        <sys_updated_on>2025-02-03 13:58:17</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

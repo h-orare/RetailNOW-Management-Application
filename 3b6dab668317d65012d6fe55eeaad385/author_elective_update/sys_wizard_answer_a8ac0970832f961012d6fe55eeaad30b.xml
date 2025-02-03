@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_wizard_answer">
+    <sys_wizard_answer action="DELETE">
+        <active>true</active>
+        <answer>Task</answer>
+        <button_label/>
+        <dependent_value/>
+        <element/>
+        <name>Task</name>
+        <next_question/>
+        <order>100</order>
+        <payload_name/>
+        <question display_value="Task" name="Task">a3c5924b651012104f340572a94740ab</question>
+        <roles/>
+        <script/>
+        <sys_class_name>sys_wizard_answer</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-03 13:48:51</sys_created_on>
+        <sys_id>a8ac0970832f961012d6fe55eeaad30b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Task</sys_name>
+        <sys_package display_value="RetailNOW Management Application" source="x_1543564_retailno">3b6dab668317d65012d6fe55eeaad385</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="RetailNOW Management Application">3b6dab668317d65012d6fe55eeaad385</sys_scope>
+        <sys_update_name>sys_wizard_answer_a8ac0970832f961012d6fe55eeaad30b</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-03 13:48:51</sys_updated_on>
+        <table/>
+        <target_url>x_1543564_retailno_maintenance_requests.do</target_url>
+        <type>1</type>
+    </sys_wizard_answer>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="RetailNOW Management Application">3b6dab668317d65012d6fe55eeaad385</application>
+        <file_path/>
+        <instance_id>13d7a602db79fd5402d917291396195e</instance_id>
+        <instance_name>dev183570</instance_name>
+        <name>sys_wizard_answer_a8ac0970832f961012d6fe55eeaad30b</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_wizard_answer"><sys_wizard_answer action="INSERT_OR_UPDATE"><active>true</active><answer>Task</answer><button_label/><dependent_value/><element/><name>Task</name><next_question/><order>100</order><payload_name/><question display_value="Task" name="Task">a3c5924b651012104f340572a94740ab</question><roles/><script/><sys_class_name>sys_wizard_answer</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-02-03 13:48:51</sys_created_on><sys_id>a8ac0970832f961012d6fe55eeaad30b</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Task</sys_name><sys_package display_value="RetailNOW Management Application" source="x_1543564_retailno">3b6dab668317d65012d6fe55eeaad385</sys_package><sys_policy/><sys_scope display_value="RetailNOW Management Application">3b6dab668317d65012d6fe55eeaad385</sys_scope><sys_update_name>sys_wizard_answer_a8ac0970832f961012d6fe55eeaad30b</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-02-03 13:48:51</sys_updated_on><table/><target_url>x_1543564_retailno_maintenance_requests.do</target_url><type>1</type></sys_wizard_answer></record_update>]]></payload>
+        <payload_hash>1391012502</payload_hash>
+        <record_name>Task</record_name>
+        <reverted_from/>
+        <source/>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-03 13:51:57</sys_created_on>
+        <sys_id>8e5d49b0832f961012d6fe55eeaad3f1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>194cc15074a0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-03 13:51:57</sys_updated_on>
+        <type>Answer</type>
+        <update_guid>4e5d49b0122f96109ce70b0be15bbcf1</update_guid>
+        <update_guid_history>4e5d49b0122f96109ce70b0be15bbcf1:1391012502</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-03 13:51:57</sys_created_on>
+        <sys_db_object display_value="" name="sys_wizard_answer">sys_wizard_answer</sys_db_object>
+        <sys_id>eac185d3f85b4218a2c1691c5f6791a4</sys_id>
+        <sys_metadata>a8ac0970832f961012d6fe55eeaad30b</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Task</sys_name>
+        <sys_package display_value="RetailNOW Management Application" source="x_1543564_retailno">3b6dab668317d65012d6fe55eeaad385</sys_package>
+        <sys_parent display_value="Task">a3c5924b651012104f340572a94740ab</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="RetailNOW Management Application">3b6dab668317d65012d6fe55eeaad385</sys_scope>
+        <sys_scope_delete display_value="">111bdc697e1b492e92c4039dac372fe4</sys_scope_delete>
+        <sys_update_name>sys_wizard_answer_a8ac0970832f961012d6fe55eeaad30b</sys_update_name>
+        <sys_update_version display_value="sys_wizard_answer_a8ac0970832f961012d6fe55eeaad30b">8e5d49b0832f961012d6fe55eeaad3f1</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-03 13:51:57</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
