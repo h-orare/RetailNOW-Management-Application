@@ -1,0 +1,1121 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="DELETE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,timeFromCreateToActivate=8593000,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>26000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>To drive the maintenance requests approval process</description>
+        <display_name_after_preview/>
+        <flow_priority>MEDIUM</flow_priority>
+        <generation_source/>
+        <internal_name>maintenance_requests_flow</internal_name>
+        <label_cache>[{"name":"{{static.46d96f57a9fe198101947a9620895886}}","label":"Luke Wilson","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","usedInstances":{"c0988f54-3ee2-489e-b6fc-09271cea7be6":["approval_conditions"]}},{"name":"Created_1.current","label":"Trigger - Record Created➛Maintenance Requets Record","reference":"x_1543564_retailno_maintenance_requets","reference_display":"Maintenance Requets","type":"reference","base_type":"reference","usedInstances":{"ebaa1850-4aac-46a6-9cab-eb0f66c0315f":["record"],"c0988f54-3ee2-489e-b6fc-09271cea7be6":["record"],"7b979f81-01af-443f-97ec-400fea8e534e":["record"],"8336f203-0a15-4066-9a89-8e4f1d52a9c2":["record"],"e950cfd1-db43-4934-a1f3-0df172e48404":["record","enhancement"],"8d153387-fd8a-4637-9faa-50bcd6b9e9ff":["short_description"],"3aa50ed3-c445-462c-a513-145329bc37b8":["record"],"eb70d407-88f2-4114-a3a8-c7c4e5b209e1":["short_description"],"69e5d4d3-f5ec-47b5-ade0-ef6b32accef8":["record"]},"attributes":{}},{"name":"ebaa1850-4aac-46a6-9cab-eb0f66c0315f.state","label":"1 - Wait For Condition➛State","reference_display":"State","type":"choice","base_type":"choice","choices":[{"label":"Complete","value":"0","order":0.0},{"label":"Timeout","value":"1","order":1.0}],"usedInstances":{},"attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"2e334039-7a20-4ead-9148-909988f1a7e4"}},{"name":"Created_1.current.state","label":"Trigger - Record Created➛Maintenance Requets Record➛Status","reference":"","reference_display":"Status","type":"choice","base_type":"choice","parent_table_name":"x_1543564_retailno_maintenance_requets","column_name":"state","choices":[{"label":"Review","used":false,"image":"","reference":false,"selected":false,"missing":false,"rawLabel":"Review","value":"1","parameters":{"name":"x_1543564_retailno_maintenance_requets","dependent_values":[""]}},{"label":"Awaiting Approval","used":false,"image":"","reference":false,"selected":false,"missing":false,"rawLabel":"Awaiting Approval","value":"2","parameters":{"name":"x_1543564_retailno_maintenance_requets","dependent_values":[""]}},{"label":"Accepted","used":false,"image":"","reference":false,"selected":false,"missing":false,"rawLabel":"Accepted","value":"3","parameters":{"name":"x_1543564_retailno_maintenance_requets","dependent_values":[""]}},{"label":"Rejected","used":false,"image":"","reference":false,"selected":false,"missing":false,"rawLabel":"Rejected","value":"4","parameters":{"name":"x_1543564_retailno_maintenance_requets","dependent_values":[""]}}],"usedInstances":{"39aa4cf8-45fb-41d9-a65a-d6da642c91cf":["condition"]}},{"name":"{{static.bef8fe3e83971a5012d6fe55eeaad36b}}","label":"Beryl Tinder","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","usedInstances":{"c0988f54-3ee2-489e-b6fc-09271cea7be6":["approval_conditions"]}},{"name":"c0988f54-3ee2-489e-b6fc-09271cea7be6.approval_state","label":"3 - Ask For Approval➛Approval State","reference_display":"Approval State","type":"choice","base_type":"choice","choices":[{"label":"-- None --","value":"","order":0.0},{"label":"Not Yet Requested","value":"not requested","order":1.0},{"label":"Requested","value":"requested","order":2.0},{"label":"Approved","value":"approved","order":3.0},{"label":"Rejected","value":"rejected","order":4.0},{"label":"Cancelled","value":"cancelled","order":5.0},{"label":"No Longer Required","value":"not_required","order":6.0},{"label":"Skipped","value":"skipped","order":7.0}],"usedInstances":{"5c726662-bcf7-48af-a749-efec3c4e48f4":["condition"],"3ed7ac5f-a8b7-47ba-bc36-004c6434a64c":["condition"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Created_1.current.maintenance_request_summary","label":"Trigger - Record Created➛Maintenance Requets Record➛Maintenance Request Summary","reference":"","reference_display":"Maintenance Request Summary","type":"string","base_type":"string","parent_table_name":"x_1543564_retailno_maintenance_requets","column_name":"maintenance_request_summary","usedInstances":{"0ca6cfcb-df6a-41b6-8eb8-d1255dd58a7d":["short_description"]}},{"name":"0ca6cfcb-df6a-41b6-8eb8-d1255dd58a7d.record","label":"5 - Create Record➛rm_enhancement Record","reference":"rm_enhancement","reference_display":"Enhancement","type":"reference","base_type":"reference","usedInstances":{"7b979f81-01af-443f-97ec-400fea8e534e":["enhancement"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}}]</label_cache>
+        <master_snapshot>2867e778832bd61012d6fe55eeaad3c2</master_snapshot>
+        <master_snapshot_digest/>
+        <name>Maintenance Requests Flow</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id>38672b78832bd61012d6fe55eeaad33c</remote_trigger_id>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <substatus/>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-03 23:55:09</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>c2675ffc83a7d61012d6fe55eeaad31f</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name>Maintenance Requests Flow</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="RetailNOW Management Application" source="x_1543564_retailno">3b6dab668317d65012d6fe55eeaad385</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="RetailNOW Management Application">3b6dab668317d65012d6fe55eeaad385</sys_scope>
+        <sys_update_name>sys_hub_flow_c2675ffc83a7d61012d6fe55eeaad31f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-04 02:18:25</sys_updated_on>
+        <type>flow</type>
+        <version>2</version>
+    </sys_hub_flow>
+    <sys_translated_text action="DELETE" query="documentkey=c2675ffc83a7d61012d6fe55eeaad31f"/>
+    <sys_variable_value action="DELETE" query="document_key=c2675ffc83a7d61012d6fe55eeaad31f"/>
+    <sys_flow_record_trigger action="DELETE">
+        <active>true</active>
+        <condition table="x_1543564_retailno_maintenance_requets">^EQ<item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </condition>
+        <name/>
+        <on_delete>false</on_delete>
+        <on_insert>true</on_insert>
+        <on_update>false</on_update>
+        <run_flow_in>background</run_flow_in>
+        <run_on_extended>false</run_on_extended>
+        <run_when_setting>both</run_when_setting>
+        <run_when_user_list/>
+        <run_when_user_setting>any</run_when_user_setting>
+        <sys_class_name>sys_flow_record_trigger</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-04 01:04:59</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>38672b78832bd61012d6fe55eeaad33c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope display_value="RetailNOW Management Application">3b6dab668317d65012d6fe55eeaad385</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-04 01:04:59</sys_updated_on>
+        <table>x_1543564_retailno_maintenance_requets</table>
+    </sys_flow_record_trigger>
+    <sys_trigger_runner_mapping action="DELETE">
+        <active>true</active>
+        <data>{"run_flow_in":"background","run_when_user_list":[],"run_when_setting":"both","run_when_user_setting":"any","run_on_extended":"false"}</data>
+        <identifier>c2675ffc83a7d61012d6fe55eeaad31f</identifier>
+        <runner>FDTriggerRunner</runner>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-04 02:18:25</sys_created_on>
+        <sys_id>68383b3083abd61012d6fe55eeaad318</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-04 02:18:25</sys_updated_on>
+        <trigger display_value="">38672b78832bd61012d6fe55eeaad33c</trigger>
+    </sys_trigger_runner_mapping>
+    <sys_trigger_runner_mapping action="DELETE" query="identifier=c2675ffc83a7d61012d6fe55eeaad31f^sys_idNOT IN68383b3083abd61012d6fe55eeaad318"/>
+    <sys_hub_flow_stage action="DELETE" query="flow=c2675ffc83a7d61012d6fe55eeaad31f"/>
+    <sys_flow_cat_variable_model action="DELETE" query="id=c2675ffc83a7d61012d6fe55eeaad31f^sys_idNOT IN0e675ffc83a7d61012d6fe55eeaad321"/>
+    <sys_flow_cat_variable_model action="DELETE">
+        <id>c2675ffc83a7d61012d6fe55eeaad31f</id>
+        <name>Maintenance Requests Flow</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-03 23:55:09</sys_created_on>
+        <sys_id>0e675ffc83a7d61012d6fe55eeaad321</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-03 23:55:09</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="DELETE" query="flow_catalog_model=0e675ffc83a7d61012d6fe55eeaad321"/>
+    <sys_hub_flow_input action="DELETE" query="model=c2675ffc83a7d61012d6fe55eeaad31f^sys_idNOT IN19c0e3fc83e7d61012d6fe55eeaad37d,21c0ef30832bd61012d6fe55eeaad343"/>
+    <sys_hub_flow_input action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id,uiTypeLabel=Document ID</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Maintenance Requests Flow">c2675ffc83a7d61012d6fe55eeaad31f</model>
+        <model_id>c2675ffc83a7d61012d6fe55eeaad31f</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_c2675ffc83a7d61012d6fe55eeaad31f</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-04 00:36:04</sys_created_on>
+        <sys_id>19c0e3fc83e7d61012d6fe55eeaad37d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="RetailNOW Management Application">3b6dab668317d65012d6fe55eeaad385</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-04 00:36:04</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="DELETE" query="action_input=19c0e3fc83e7d61012d6fe55eeaad37d"/>
+    <sys_hub_flow_input action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name,uiTypeLabel=Table Name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Maintenance Requests Flow">c2675ffc83a7d61012d6fe55eeaad31f</model>
+        <model_id>c2675ffc83a7d61012d6fe55eeaad31f</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_c2675ffc83a7d61012d6fe55eeaad31f</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-04 00:36:05</sys_created_on>
+        <sys_id>21c0ef30832bd61012d6fe55eeaad343</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="RetailNOW Management Application">3b6dab668317d65012d6fe55eeaad385</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-04 00:36:05</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="DELETE" query="action_input=21c0ef30832bd61012d6fe55eeaad343"/>
+    <sys_hub_flow_output action="DELETE" query="model=c2675ffc83a7d61012d6fe55eeaad31f"/>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=c2675ffc83a7d61012d6fe55eeaad31f"/>
+    <sys_hub_trigger_instance_v2 action="DELETE" query="flow=c2675ffc83a7d61012d6fe55eeaad31f^sys_idNOT INe1c0ef30832bd61012d6fe55eeaad348"/>
+    <sys_hub_trigger_instance_v2 action="DELETE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Maintenance Requests Flow">c2675ffc83a7d61012d6fe55eeaad31f</flow>
+        <name>Created</name>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-04 00:36:05</sys_created_on>
+        <sys_id>e1c0ef30832bd61012d6fe55eeaad348</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-04 01:04:51</sys_updated_on>
+        <trigger_definition display_value="Created">798916a0c31322002841b63b12d3ae7c</trigger_definition>
+        <trigger_inputs>H4sIAAAAAAAA/9VY227jNhD9FUFPLeACuvgS522bZNEAuxvUSduHIBUoaWgTpUmvRCnxLvLvHepiy7o4vmWTfQlgkuKcOTxzhsz9d5MTH7h5bt4Rn4PZM5lQEAnC75YLwGGlhz1B5npuTkRIlIyW5rmKEuiZMgohMs/tnpkSnsDtMr4O8SNcmn1RfG4W0/j7ybMHfXcw7HsRKMK4kN6c6JCCiABw8GsCKsYPQhYvOFn+XXz3eb3ImKwWBTPGwwiEeX7/0DMXJMKgSgP6XptiGlVAAzJ2wApc23Ucy3LO+rY/dH3bCV0CloUb1smoZaFaOFlTAE+IMAQMRQmPoYWuCEh4I/hytWKGWeV8zclTzL7h7meWXkcBsQeQzwUzyQK4WSgmRT6SA8onJU/m4ksOVBMHlCRclcThSBKDF8JCY9PRitD0diYfJ2Wgj0xkaRSTXAaEr34RpSLmJwpizSxlHDn2chJimUQZzMnVxc3k0vvnw93FH1cTb3J1eze5vri7ujSfs3y8r4neMUdYYPHydJ5Xp/2RAdcnJZK5j2h6ZhxEbKE+BIqlUMB57q01eyFFyDJWGroNyql4U7dFSuWpWVandIPK5qV8/736s6nNfHA/LQ6HhIRAOrTo04oWq0m2QFMt+Vaz26bKYmQXWfYt67WFmdfIwbqcyxD45Xo7EyenU1QqE4sks4tHIlTsKemRMPQqhOmliOkloea5Pb+oyigR+IG3Ir6pzYy2FX+fWIxw77GySm6yLXGefiq2nCTCkHhC+McIkgipUUZpSvR6TqYFo/QWOASqctr0r7j66zOLYyamFdSroBkHjZircKgao0wpjx0fGfzhwMJs8pvWeKsV6N7VaduU+kAda6Rr07Zcn9rWyBoQGrqWFTiV6myC6USpaqf/KlXaUaNxJjC+g5zqXBYorarCd5JGuqmrMlt97IUVXJwGmn0iaI6GVrM0dy9PW+kvH77clOG21E7co0mY6qtSuKu17ehqlMtHtNMDHM0nwX/TSCYirFuM3tNgwlivMH4p+Pv1hO5GZQTbAWyueCNfWzNcapSI5QkczaW2P4Y+WGhkLnqYPxiP/YA4lI6GI3DsmqOtYbRie19O9oKC0jYJdrlaqxjSNg3t4WdHAGx4294Aj3e1QoGtnpbP/Rzu9TgD4SHUyOPanxomNuUshHLu4ApuREnXNXtsFdOzcTCwR6NghC8GrGLaB5/YfWdAxqOhezaoVXEDyjaYqoWEH/KOiJdxBuTdPXRfU4YxKKVbxv6dVOClMvuG5EEq3Uxzb2QmISPjixS/Xa/XGbeATSp7MZ6qpe6CAjeLjNeF4Us1a/R0DP07jm+E1nfBDlbe8ilT00O6mdbRTxnonw3G1G23DDpus4w1mG6Y7+cKsKPq0876absL7CritLUWOpv3AbKs6aHa1bdcO05Fin1yUpzXI8U9+qpTFl3n++0QsD9RW8ouBMf0Jh0TPEmrhnwpDZwwMIjBqFH8Vw6f4/7SUDNASjneaTGgoaMf68TVztCEslLwjwWS35IbHQqHjeLm86bNp3bqp315Qjgig4HbcWcd11+ebYBewPt+WtHeSk/bCmdrP9pv3/qerR2pIsPNo9+x15w06/aGc1zWrS3npayPbybb3s0tKN5pm3j4H/dGypMkHgAA</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>record_create</trigger_type>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="DELETE" query="flow=c2675ffc83a7d61012d6fe55eeaad31f^sys_idNOT IN3257a778832bd61012d6fe55eeaad3fe,69c0ef30832bd61012d6fe55eeaad349,a1c0ef30832bd61012d6fe55eeaad373,a9c0ef30832bd61012d6fe55eeaad373,adc0ef30832bd61012d6fe55eeaad371"/>
+    <sys_hub_action_instance_v2 action="DELETE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Maintenance Requests Flow">c2675ffc83a7d61012d6fe55eeaad31f</flow>
+        <generation_source/>
+        <order>8</order>
+        <parent_ui_id>e8324273-172a-40ac-b25c-87016c775380</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-04 01:04:51</sys_created_on>
+        <sys_id>3257a778832bd61012d6fe55eeaad3fe</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="RetailNOW Management Application">3b6dab668317d65012d6fe55eeaad385</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-04 02:18:17</sys_updated_on>
+        <ui_id>69e5d4d3-f5ec-47b5-ade0-ef6b32accef8</ui_id>
+        <values>H4sIAAAAAAAA/+1UTWsbMRD9K0bnZdn1rk3iW4kx9NAE0pJLGoRWGtsCrbTRSo5d4//e0X44jtOmxqSHQHTTfLx5b/TQ/ZZIQSYkB5Gkl+mYZ2mWDZNkeJGnxTgr0qHIGEBKIqJZCVhpgRsr8L5iyofAdntlgTkQNI25txa02+0wL2RdKba568owwpdSCcyTyf1DRCpmEdGBJZPtUcptKqCKFaCwcWq4LxF08HWKGKey7btve7rH9MMMvIsOncoQxFTgkyYRgbUDLQDHzZmqISIl04I5Yzdk4qzHAKoWN1pt9hVLqV2rtGTrWv5C/DwJdXNAaXy/BSM53FROGt1GHCtUnzTKl/q65RqWCHPmlTtYoq+BCqgCtzCtpTL/vjRPt/2cmdSNjI6WMpyp/Y05Z2XhHdRh76CgUV+yqpJ6QStrVrJpRiplvFB4iefKPOHMWi50zHjgHeMmWDzD+LQJ3zErg4hvCIPNu0Y0ffRhbiujI0wbzY1g2rwIltbcysp9QeAVdDR3UefLYvTWS/PL54c9wHz25pqmozwbjXNqwTGptEGl+EqgGe4Jg48eXP3arCf3nWfpH4Hr4LrleqrOF81/0d2Z+kWs8/To3Tx98b893Y3+YKb+l5WT4Zuf1sGTNu6tD2xcO/xff/okyUT+2qxH2TMtCSViOhi0qNHJnHuAmQQl6j+I6D3ZDaCrbsD+r303Y6bjpDmfX+45X+7Db3aA3OAMCAAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="DELETE">
+        <action_type display_value="Wait For Condition">89ce8a4187120010663ca1bb36cb0be3</action_type>
+        <action_type_parent display_value="Wait For Condition">8bb9a8160b10030085c083eb37673aec</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>89ce8a4187120010663ca1bb36cb0be3</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Maintenance Requests Flow">c2675ffc83a7d61012d6fe55eeaad31f</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-04 00:36:05</sys_created_on>
+        <sys_id>69c0ef30832bd61012d6fe55eeaad349</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="RetailNOW Management Application">3b6dab668317d65012d6fe55eeaad385</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-04 02:18:17</sys_updated_on>
+        <ui_id>ebaa1850-4aac-46a6-9cab-eb0f66c0315f</ui_id>
+        <values>H4sIAAAAAAAA/+VXTW/jNhD9KwudTVeUKJnKbWE7aIB2Azje7WG7FShyGBOgJa9EZeMG+e+lPhxLtuM1Eido0SOHnOGbmfc04tcHRwnnwiERB8oIpiPsuS52w9DnDCeJH/LETYA4AydlS7Anc+BZLuz6jumyMjw8jHNgBkSMh7zMc0jN46PdF6pYabb+0h6zFr5QWth95+Lrt4GzYrmNaCB3Lh52tsx6BbFmCWjrOMl4ubRBP1xNbIxT0W68Zxu4u/CrO+xatNFjVRntVoUHDxy4N5AKsLdJpgsYOEuWCmayfO1cmLy0Bpu0uE71+unEQqWmSXTJ7gv1tw3ve9U5CTYz/lSETHG4XhmVpY3FsERvNjNdLtNPDdSqhiBZqU2nhmUBsYBVha26rYEibxbZj9nmnkuV1lm0sHTGmX5aMWNylZQGiqrspZofKkNj/u1gA6TStmdxDTousjKvE5tNx9ezSfzHx/n41+ksnk1v5rOr8XxaeYCGOvSSrVYqvY1XeXanaoQ23+XwVtvFUOrsh02sULfpkPGqOENbbja8tPZJbf7CclVd+rsNY50rlJ9T9b2Eq5oSUmIfhyHC2PURwUmIIgoBciFgJPBIGISe81h3I/5eVgVp6ttWMq6b0SRVM8UeLXiuVuajBXMHbf0eBxu9BEcZyLaE68TcauY+xgHxg5DEORimdJrZ6lj6QMpsA63RpmWKfRGd7Pcyqc0rrB8+NVhPzbPn/Ezerdh6tlZr3nGttZZTxEbdNxZbe/Xr1darQ19s/RYUcUPCFnQd9b0U5WEaUZL4yE9IgEgkJaIuJYgAc3ngiRHB/KeK+qmOjn/J5ZZPPEuFqrIoOjoqjB08f5au6wvvr+tZZ0n2xXP88MsUM+6iOjWjg86H0mxl07O1svHPNaKI6761bs41pHp16MumV8p3kQcIGiaBSxFIShHxRxRF2PNQGDKBMeFCuuccOK44RivZ+UEzaglZaWKp2W1HKu6+IDafkxcOC9vVXy7bEKdi3DhP0/o712J9FnwrgCTLNLB0y35ytqFB/jNDY1uEnYnR7cO7UJ9zRu0IYCjyOSASJhxRySXyIQmkHyQ0Gbmvngz8OJmifc6IMmd1z7akP+czZBv9VHwHXJ+H3FK97lDX3jI++B8yfq8WO++S7cZb0X5h/SZsXVQtszLbFwJgNgqS6qnBEPEijFhEPBSFMAIiaeiz6NVCoPgo0eQ+qwq+AFFqeBshPLV0o4QTAG58b7bInsfcKiHv3NOKIDzjW2H3r4cv0y6If6kkukXpq6HblveZAp6HfQEcYWH/gogXeoj6ZIRGEU1cYhuf+PBi8n/7B+IGhaCZEgAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="DELETE">
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>2de05916c31332002841b63b12d3aee1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Maintenance Requests Flow">c2675ffc83a7d61012d6fe55eeaad31f</flow>
+        <generation_source/>
+        <order>5</order>
+        <parent_ui_id>5c726662-bcf7-48af-a749-efec3c4e48f4</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-04 00:36:05</sys_created_on>
+        <sys_id>a1c0ef30832bd61012d6fe55eeaad373</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="RetailNOW Management Application">3b6dab668317d65012d6fe55eeaad385</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-04 02:18:17</sys_updated_on>
+        <ui_id>0ca6cfcb-df6a-41b6-8eb8-d1255dd58a7d</ui_id>
+        <values>H4sIAAAAAAAA/91UzW7bMAx+lUJnw5DiNEtyGzrk1hbYhl6aTmAkOhEgy64kp/WCvPsk2e66bgGCYTtsvomkvh+K5v2BKEmWZMaQXi7YTBSsKCaUTuZTtpkVGzaRBSBOSUYMVBgqPWw08nTIyB50G4O24mh2YARWaHxISOUaDd3dqbzYKS0tGrK8f8hIAzbgebRkeXiT8l2DXMMGdYD5HLkvbnruc3X/cPmEj8jyNlZbGQXRjOCzRyMx8JWgHWakAiPB17YjS2/bELAI8tbo7qVip4LNJSGx9tmprwF9TmNdicGawD4ndrUSeNt4VZs+khQMyVq3lbnp1caWYgmt9mNLQ6R1yCU2UVtkG6jLT7v66eNItFIm2RiSuhagX07gvVWb1qOLjUedXodX0DTKbHlj671Kl4OWKt/qcMhLXT8FUqe2JgcRheehFZCvQvxDCt+BVdHFdYAJl4/JNX9sI2/vY1DMe9OhwAmrGv8+wO1xEHfMxsmUSBcnX5htvr9oGkb3airdrrY+ik3wQeq6pbSQh8NVeC+PkrNctDa0yecVhAdDEyeUW3wMOJ67tqrAdsfjF3DRWGrO1tZtM+CsxzFfk+WaXEEDQvnu4npb+TXJ1r2OlAMQQizeMUFhTim7pLREVpbTgk4kMspSuescV/LM+uPPP9n/bvc3dwZWQbPHi75N2dlTNQKsFGrpfjFm49IYCPh+IBgWB/tTi4PNaPr+8vroBf1j2+PVxj6xRx6+AVSvwYbjBgAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="DELETE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Maintenance Requests Flow">c2675ffc83a7d61012d6fe55eeaad31f</flow>
+        <generation_source/>
+        <order>6</order>
+        <parent_ui_id>5c726662-bcf7-48af-a749-efec3c4e48f4</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-04 00:36:05</sys_created_on>
+        <sys_id>a9c0ef30832bd61012d6fe55eeaad373</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="RetailNOW Management Application">3b6dab668317d65012d6fe55eeaad385</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-04 02:18:17</sys_updated_on>
+        <ui_id>7b979f81-01af-443f-97ec-400fea8e534e</ui_id>
+        <values>H4sIAAAAAAAA/+1UTW/bMAz9K4XPjmHHsZfmNiwIsMNaoBt66VqDluhEgCy7spwmM/LfR/kjTbuuC4LsMGC+iRQf36Oeedc4gjszZ4LcDy6DmIVBGI59fzydBGkcpsGYh4AYOK6jIEe6qZEVmtN5DbK2gab5pBEM8iTwWK01KrPbUZ6LqpSwve2vUYSthOSUd2Z3965TgiZEg9qZNa9SZltiIiFFSYXzgtU5gV58nhPGsWyH6puB7mv6tgedeY+eCBuklOUT+K6DG4OKI7XLQFboOjkoDqbQW2dmdE0BUs2vldzub6yEMp3SHDaV+EH4E9/ey5Cksf0UCsHwujSiUF3EQCqHZCHrXF11XO0QMYNamoMh1hUmHEvLzXbrqGRfV8XTzdBnIVQro6clCwZyfwJjtEhrg5WdO0ps1edQlkItk1IXa9EWE5XcW0o6eJksnqhnJZbKA2Z5ezQJ8BYUn7fhW9DCivhCMFS8a0Unj7Xt28noCSet5lZw0r4IXa2YFqX5SMBr7Gnu3N6XafTeS7PL54c9wHz25iYJokkYxZNEowEhVUFK6ZVQAc2Jgo81mupXsx5dd5qlv1muF1cd12N1vij+je7e1C9ivaejs3l6+rc93bf+x0z9Jyv743eX1sGTtu6tDmxcGdqv32vfD3n4gGplTWgVdqGm8RnELGPpiGcxjCzsaIrpdMSDcRRxHk3hA/e6zffWaj43/Ik/BeZEyuBFR8s9emoDwEKg5NUbYxz+ir5Bsu4b7Lf92X6NIPbb7//SP2Xp3/8EuA68wY4IAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="DELETE">
+        <action_type display_value="Ask For Approval">f8f2e9920b10030085c083eb37673abd</action_type>
+        <action_type_parent display_value="Ask For Approval">bae0a1120b10030085c083eb37673a92</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f8f2e9920b10030085c083eb37673abd</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Maintenance Requests Flow">c2675ffc83a7d61012d6fe55eeaad31f</flow>
+        <generation_source/>
+        <order>3</order>
+        <parent_ui_id>39aa4cf8-45fb-41d9-a65a-d6da642c91cf</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-04 00:36:05</sys_created_on>
+        <sys_id>adc0ef30832bd61012d6fe55eeaad371</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="RetailNOW Management Application">3b6dab668317d65012d6fe55eeaad385</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-04 02:18:17</sys_updated_on>
+        <ui_id>c0988f54-3ee2-489e-b6fc-09271cea7be6</ui_id>
+        <values>H4sIAAAAAAAA/+1X32+bMBD+VyqeowxCSCBv1apKm7RV6rq+NBVy7KPx5BhqTNcs4n/fGQyh6UajKq22bo++n9/dfWfM1cbhzJk50zAZQRSN3IXnur7rhgF1Qx8W/nQy9Ql1nYEjyQrQUgFNFcPzHRGFEWw27xUQDSz2hrRQCqQuS9QznmeCrC+tGUrokguGemd2dT1wMqIwogblzDY7Kr3OIBZkAQIdT1JarDDo0YcTjLEv2sb7vIG7C9/kwDOz0WNuhKgyeNyBA/caJAPMlhCRw8BZEcmITtXamWlVoACLZmdSrFuLJZe6LnRF7nP+A8P7I2OXAFZG2yaknMJZpnkqa4kmC9EoU1Gs5OcaqukhJKQQutPDIoeYQWawmWw1lOTLMv1+3uQ55bKqwsISKSWiPRGtFV8UGnLTdhBQFb8iWcblTZyp9I5XzghlNbwReBgmIv2OOXN+I4eEGtxD7AQZnqL8pBJfEsVNEZ8wDDqXVdHxbWHy1mVYwHFVc10wWuVU8UwfY8w7sAjLgWXkgvbOmG5HWofbEvI+9oKxH0zGsQJNuJAp1oezAUmwOyi8LUDnjxm6t9/zeHxhYB5Vsx3sXeID58clWxJXx1jWoS2HvX4OW8k+JA7dFyaxTf2XsfgpArte33RZuJ0m5kPERMQJB9G9WhvFY652NM9j46lJ9YCNe+BtnI9t9qNTC/h3hVh+Vscdfo4OyE/3pRn6dq9Z2jt18LfD/ZYWSvaQNF7yvJrdb8nasTgUafeA3zh/rPHvcna3rB7K+v8p+ydQdhz0zhx+cR/RVDJu8OUd4ta3GOTHcv31arPJNdGcDheQhAn4EPrR1COB643YJIEgACCE+ZNFiTga2/GERZMkmJIoAS8KPdeLxniYjNwwCsJwUpbXj7fhtdI+b8Xaq/28EJA3a7ZHy9sHt/XrHYFdslaprJNdtPGh3t+vsGdv8/FCeweeRNsBswLbgb9/3T/CuVODnDuzuSNTCXNnMHeMVWwmX4nRAsG1ikq22ZRlLSkUsQG8znHrzcg6ryxzugSG7KmkDyQ1pa38kD+kX2yCoxPE/e6Cd75GT3et/astav9fNtKuR1tJ3Tne/RYFB/sWjf/NDUGYPG6f0fjpwUvl2Wtz/ROwJNmZSBEAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_sub_flow_instance_v2 action="DELETE" query="flow=c2675ffc83a7d61012d6fe55eeaad31f"/>
+    <sys_hub_flow_logic_instance_v2 action="DELETE" query="flow=c2675ffc83a7d61012d6fe55eeaad31f^sys_idNOT IN2dc0ef30832bd61012d6fe55eeaad372,a9c0ef30832bd61012d6fe55eeaad34b,ba57a778832bd61012d6fe55eeaad3fd"/>
+    <sys_hub_flow_logic_instance_v2 action="DELETE">
+        <attributes/>
+        <block display_value="">65c0ef30832bd61012d6fe55eeaad372</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Maintenance Requests Flow">c2675ffc83a7d61012d6fe55eeaad31f</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>4</order>
+        <outputs_assigned/>
+        <parent_ui_id>39aa4cf8-45fb-41d9-a65a-d6da642c91cf</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-04 00:36:05</sys_created_on>
+        <sys_id>2dc0ef30832bd61012d6fe55eeaad372</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_scope display_value="RetailNOW Management Application">3b6dab668317d65012d6fe55eeaad385</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-04 02:18:22</sys_updated_on>
+        <ui_id>5c726662-bcf7-48af-a749-efec3c4e48f4</ui_id>
+        <values>H4sIAAAAAAAA/+VUy27bMBD8lUJnWaAky7F9C1oEKNA2QBPk0gbCilzZRClRJSk7ruF/71IP20gctChy600ccndmlkPtA926pnX2Xl9bK1d1sPz2GAay9hh974MaKgyWAde1kE7qOu+AMNiAav0GfQppGwW7hxPC11IJg0O3BgzVODTBcv9sy+0azBUUqKjwzhlZr6hcClqVDMp4wWOeJrM0YSyZT+NilhZxIlJASOncWPh+FPfuU4eEr6r2fITbkUkb4WXFLAzwyWEtkKhLUBbDoIJagNNmd0QMgrit1QlYy9r1jit4svIX9U6yzB8skTzy4zi05HjbeCU94qBQ46ZWbVV/6QX7aWIJrXJn02wt5gIbr87TDdzl3Vpvv45EN7LunAybSnNQxxU48lu0Dq2/AVRYUaO8gqahKeSN0RvZFZOWKlopWkSl0lsi9ZGIgHvhEQ0DohvCP3TwAxjpXXymNlTcyyzASp538aF2zpCFQzeO/GfrBfUGByt5Pw06YLmRjbsmng0Oqg/hy+ydxW6/52wxn5fZdJIiJpPpfIGTYlbyCVskVzFHuCpwFpE2cgcqtw4cHg7fW8ZS0aN01S+y+1Zt3+IBLCArs5hllx/AdHbpAVyI/uupT/6Qen99fxl6xth/mnpp8z69g7eO/J9D/+gT3jPYPiACubQk5N5jH8f/st/Y0U1Lfg5ttfnhLZyww29L5Djj4QUAAA==</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="DELETE">
+        <attributes/>
+        <block display_value="">6dc0ef30832bd61012d6fe55eeaad34a</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Maintenance Requests Flow">c2675ffc83a7d61012d6fe55eeaad31f</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-04 00:36:05</sys_created_on>
+        <sys_id>a9c0ef30832bd61012d6fe55eeaad34b</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_scope display_value="RetailNOW Management Application">3b6dab668317d65012d6fe55eeaad385</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-04 02:18:22</sys_updated_on>
+        <ui_id>39aa4cf8-45fb-41d9-a65a-d6da642c91cf</ui_id>
+        <values>H4sIAAAAAAAA/+VUTWvcMBD9K8VnY/wRL83eQkqg0DbQhFzaIMbSeFdUllxJ3s3W7H/vyB+7S7KhofTWm/VGM++90cN9ZDrfdt7dmyvn5EpHy2+PcSR1wOi7jzQ0GC0jbrSQXhrNBiCONqC6UKBPIV2rYPdwRPhaKmFxmtaCpR6PNlr2z0p+1yJTUKGixjtvpV5RuxR0qlOos0ue8SJfFHma5u8vsmpRVFkuCkAo6N7ceD2Le/dpQOJXVQc+wt3MZKwIsrI0jvDJoxZI1DUoh3HUgBbgjd0dEIsgbrU6Amup/ei4gScnf9HsvCzDxRrJIz+sw0iOt21QMiIeKjUXjeoa/WUUHLaJNXTKn2yzc8gEtkFdoJu467u12X6diW6kHpxMRWU4qMMJPPmtOo8uvAAqbGgQa6BtaQustWYjh2bS0iQrRYekVmZLpCESCfAgPKFlQHJD+IcBfgArg4vPNIaaR5kVOMnZEB8a5y1Z2A/rYD+7IGg0OFlh4zboguNWtv6KeDY4qd7HL7N3Eru+v6bX8ChYlvDO0g584jwB+/33Lk0Lkb8M5pt6/kV0L6Gsyywtz0f3YnEuumdC+3pe8z/kNSz+jXFN0/Q/zat0bMzd5G0g/+u4PoZsjgxuDIhALh0JuQ/Yx/mPGgo7emnJT6GtsT+ChSO2/w1QeehomwUAAA==</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="DELETE">
+        <attributes/>
+        <block display_value="">7e57a778832bd61012d6fe55eeaad3fc</block>
+        <comment/>
+        <connected_to>5c726662-bcf7-48af-a749-efec3c4e48f4</connected_to>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Maintenance Requests Flow">c2675ffc83a7d61012d6fe55eeaad31f</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Else">1f781bf3c32232002841b63b12d3aee6</logic_definition>
+        <order>7</order>
+        <outputs_assigned/>
+        <parent_ui_id>39aa4cf8-45fb-41d9-a65a-d6da642c91cf</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-04 01:04:51</sys_created_on>
+        <sys_id>ba57a778832bd61012d6fe55eeaad3fd</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="RetailNOW Management Application">3b6dab668317d65012d6fe55eeaad385</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-04 02:18:22</sys_updated_on>
+        <ui_id>e8324273-172a-40ac-b25c-87016c775380</ui_id>
+        <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="DELETE" query="attached_to=c2675ffc83a7d61012d6fe55eeaad31f"/>
+    <sys_hub_flow_variable action="DELETE" query="model=c2675ffc83a7d61012d6fe55eeaad31f"/>
+    <sys_documentation action="DELETE" query="name=var__m_sys_hub_flow_input_c2675ffc83a7d61012d6fe55eeaad31f^sys_idNOT IN2dc0ef30832bd61012d6fe55eeaad341,e1c0ef30832bd61012d6fe55eeaad345"/>
+    <sys_documentation action="DELETE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_c2675ffc83a7d61012d6fe55eeaad31f</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-04 00:36:05</sys_created_on>
+        <sys_id>2dc0ef30832bd61012d6fe55eeaad341</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="RetailNOW Management Application" source="x_1543564_retailno">3b6dab668317d65012d6fe55eeaad385</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="RetailNOW Management Application">3b6dab668317d65012d6fe55eeaad385</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-04 00:36:05</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="DELETE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_c2675ffc83a7d61012d6fe55eeaad31f</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-04 00:36:05</sys_created_on>
+        <sys_id>e1c0ef30832bd61012d6fe55eeaad345</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="RetailNOW Management Application" source="x_1543564_retailno">3b6dab668317d65012d6fe55eeaad385</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="RetailNOW Management Application">3b6dab668317d65012d6fe55eeaad385</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-04 00:36:05</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="DELETE" query="name=var__m_sys_hub_flow_input_c2675ffc83a7d61012d6fe55eeaad31f"/>
+    <sys_documentation action="DELETE" query="name=var__m_sys_hub_flow_output_c2675ffc83a7d61012d6fe55eeaad31f"/>
+    <sys_choice action="DELETE" query="name=var__m_sys_hub_flow_output_c2675ffc83a7d61012d6fe55eeaad31f"/>
+    <sys_hub_flow_snapshot action="DELETE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>26000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>To drive the maintenance requests approval process</description>
+        <flow_priority>MEDIUM</flow_priority>
+        <internal_name>maintenance_requests_flow</internal_name>
+        <label_cache>[{"name":"{{static.46d96f57a9fe198101947a9620895886}}","label":"Luke Wilson","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","usedInstances":{"c0988f54-3ee2-489e-b6fc-09271cea7be6":["approval_conditions"]}},{"name":"Created_1.current","label":"Trigger - Record Created➛Maintenance Requets Record","reference":"x_1543564_retailno_maintenance_requets","reference_display":"Maintenance Requets","type":"reference","base_type":"reference","usedInstances":{"ebaa1850-4aac-46a6-9cab-eb0f66c0315f":["record"],"c0988f54-3ee2-489e-b6fc-09271cea7be6":["record"],"7b979f81-01af-443f-97ec-400fea8e534e":["record"],"8336f203-0a15-4066-9a89-8e4f1d52a9c2":["record"],"e950cfd1-db43-4934-a1f3-0df172e48404":["record","enhancement"],"8d153387-fd8a-4637-9faa-50bcd6b9e9ff":["short_description"],"3aa50ed3-c445-462c-a513-145329bc37b8":["record"],"eb70d407-88f2-4114-a3a8-c7c4e5b209e1":["short_description"],"69e5d4d3-f5ec-47b5-ade0-ef6b32accef8":["record"]},"attributes":{}},{"name":"ebaa1850-4aac-46a6-9cab-eb0f66c0315f.state","label":"1 - Wait For Condition➛State","reference_display":"State","type":"choice","base_type":"choice","choices":[{"label":"Complete","value":"0","order":0.0},{"label":"Timeout","value":"1","order":1.0}],"usedInstances":{},"attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"2e334039-7a20-4ead-9148-909988f1a7e4"}},{"name":"Created_1.current.state","label":"Trigger - Record Created➛Maintenance Requets Record➛Status","reference":"","reference_display":"Status","type":"choice","base_type":"choice","parent_table_name":"x_1543564_retailno_maintenance_requets","column_name":"state","choices":[{"label":"Review","used":false,"image":"","reference":false,"selected":false,"missing":false,"rawLabel":"Review","value":"1","parameters":{"name":"x_1543564_retailno_maintenance_requets","dependent_values":[""]}},{"label":"Awaiting Approval","used":false,"image":"","reference":false,"selected":false,"missing":false,"rawLabel":"Awaiting Approval","value":"2","parameters":{"name":"x_1543564_retailno_maintenance_requets","dependent_values":[""]}},{"label":"Accepted","used":false,"image":"","reference":false,"selected":false,"missing":false,"rawLabel":"Accepted","value":"3","parameters":{"name":"x_1543564_retailno_maintenance_requets","dependent_values":[""]}},{"label":"Rejected","used":false,"image":"","reference":false,"selected":false,"missing":false,"rawLabel":"Rejected","value":"4","parameters":{"name":"x_1543564_retailno_maintenance_requets","dependent_values":[""]}}],"usedInstances":{"39aa4cf8-45fb-41d9-a65a-d6da642c91cf":["condition"]}},{"name":"{{static.bef8fe3e83971a5012d6fe55eeaad36b}}","label":"Beryl Tinder","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","usedInstances":{"c0988f54-3ee2-489e-b6fc-09271cea7be6":["approval_conditions"]}},{"name":"c0988f54-3ee2-489e-b6fc-09271cea7be6.approval_state","label":"3 - Ask For Approval➛Approval State","reference_display":"Approval State","type":"choice","base_type":"choice","choices":[{"label":"-- None --","value":"","order":0.0},{"label":"Not Yet Requested","value":"not requested","order":1.0},{"label":"Requested","value":"requested","order":2.0},{"label":"Approved","value":"approved","order":3.0},{"label":"Rejected","value":"rejected","order":4.0},{"label":"Cancelled","value":"cancelled","order":5.0},{"label":"No Longer Required","value":"not_required","order":6.0},{"label":"Skipped","value":"skipped","order":7.0}],"usedInstances":{"5c726662-bcf7-48af-a749-efec3c4e48f4":["condition"],"3ed7ac5f-a8b7-47ba-bc36-004c6434a64c":["condition"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Created_1.current.maintenance_request_summary","label":"Trigger - Record Created➛Maintenance Requets Record➛Maintenance Request Summary","reference":"","reference_display":"Maintenance Request Summary","type":"string","base_type":"string","parent_table_name":"x_1543564_retailno_maintenance_requets","column_name":"maintenance_request_summary","usedInstances":{"0ca6cfcb-df6a-41b6-8eb8-d1255dd58a7d":["short_description"]}},{"name":"0ca6cfcb-df6a-41b6-8eb8-d1255dd58a7d.record","label":"5 - Create Record➛rm_enhancement Record","reference":"rm_enhancement","reference_display":"Enhancement","type":"reference","base_type":"reference","usedInstances":{"7b979f81-01af-443f-97ec-400fea8e534e":["enhancement"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}}]</label_cache>
+        <master>true</master>
+        <name>Maintenance Requests Flow</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="Maintenance Requests Flow">c2675ffc83a7d61012d6fe55eeaad31f</parent_flow>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-04 01:04:57</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>2867e778832bd61012d6fe55eeaad3c2</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="RetailNOW Management Application">3b6dab668317d65012d6fe55eeaad385</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-04 02:18:24</sys_updated_on>
+        <type>flow</type>
+        <version>2</version>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="DELETE" query="documentkey=2867e778832bd61012d6fe55eeaad3c2"/>
+    <sys_variable_value action="DELETE" query="document_key=2867e778832bd61012d6fe55eeaad3c2"/>
+    <sys_hub_flow_stage action="DELETE" query="flow=2867e778832bd61012d6fe55eeaad3c2"/>
+    <sys_flow_cat_variable_model action="DELETE" query="id=2867e778832bd61012d6fe55eeaad3c2^sys_idNOT INa067e778832bd61012d6fe55eeaad3c4"/>
+    <sys_flow_cat_variable_model action="DELETE">
+        <id>2867e778832bd61012d6fe55eeaad3c2</id>
+        <name>Maintenance Requests Flow</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-04 01:04:57</sys_created_on>
+        <sys_id>a067e778832bd61012d6fe55eeaad3c4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-04 01:04:57</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="DELETE" query="flow_catalog_model=a067e778832bd61012d6fe55eeaad3c4"/>
+    <sys_hub_flow_input action="DELETE" query="model=2867e778832bd61012d6fe55eeaad3c2^sys_idNOT IN28672b78832bd61012d6fe55eeaad306,a467e778832bd61012d6fe55eeaad3de"/>
+    <sys_hub_flow_input action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Maintenance Requests Flow">2867e778832bd61012d6fe55eeaad3c2</model>
+        <model_id>2867e778832bd61012d6fe55eeaad3c2</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_2867e778832bd61012d6fe55eeaad3c2</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-04 01:04:58</sys_created_on>
+        <sys_id>28672b78832bd61012d6fe55eeaad306</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="RetailNOW Management Application">3b6dab668317d65012d6fe55eeaad385</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-04 02:18:24</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="DELETE" query="action_input=28672b78832bd61012d6fe55eeaad306"/>
+    <sys_hub_flow_input action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Maintenance Requests Flow">2867e778832bd61012d6fe55eeaad3c2</model>
+        <model_id>2867e778832bd61012d6fe55eeaad3c2</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_2867e778832bd61012d6fe55eeaad3c2</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-04 01:04:57</sys_created_on>
+        <sys_id>a467e778832bd61012d6fe55eeaad3de</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="RetailNOW Management Application">3b6dab668317d65012d6fe55eeaad385</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-04 02:18:24</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="DELETE" query="action_input=a467e778832bd61012d6fe55eeaad3de"/>
+    <sys_hub_flow_output action="DELETE" query="model=2867e778832bd61012d6fe55eeaad3c2"/>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=2867e778832bd61012d6fe55eeaad3c2"/>
+    <sys_hub_trigger_instance_v2 action="DELETE" query="flow=2867e778832bd61012d6fe55eeaad3c2^sys_idNOT IN28672b78832bd61012d6fe55eeaad323"/>
+    <sys_hub_trigger_instance_v2 action="DELETE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Maintenance Requests Flow">2867e778832bd61012d6fe55eeaad3c2</flow>
+        <name>Created</name>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-04 01:04:58</sys_created_on>
+        <sys_id>28672b78832bd61012d6fe55eeaad323</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-04 01:04:58</sys_updated_on>
+        <trigger_definition display_value="Created">798916a0c31322002841b63b12d3ae7c</trigger_definition>
+        <trigger_inputs>H4sIAAAAAAAA/9VY227jNhD9FUFPLeACuvgS522bZNEAuxvUSduHIBUoaWgTpUmvRCnxLvLvHepiy7o4vmWTfQlgkuKcOTxzhsz9d5MTH7h5bt4Rn4PZM5lQEAnC75YLwGGlhz1B5npuTkRIlIyW5rmKEuiZMgohMs/tnpkSnsDtMr4O8SNcmn1RfG4W0/j7ybMHfXcw7HsRKMK4kN6c6JCCiABw8GsCKsYPQhYvOFn+XXz3eb3ImKwWBTPGwwiEeX7/0DMXJMKgSgP6XptiGlVAAzJ2wApc23Ucy3LO+rY/dH3bCV0CloUb1smoZaFaOFlTAE+IMAQMRQmPoYWuCEh4I/hytWKGWeV8zclTzL7h7meWXkcBsQeQzwUzyQK4WSgmRT6SA8onJU/m4ksOVBMHlCRclcThSBKDF8JCY9PRitD0diYfJ2Wgj0xkaRSTXAaEr34RpSLmJwpizSxlHDn2chJimUQZzMnVxc3k0vvnw93FH1cTb3J1eze5vri7ujSfs3y8r4neMUdYYPHydJ5Xp/2RAdcnJZK5j2h6ZhxEbKE+BIqlUMB57q01eyFFyDJWGroNyql4U7dFSuWpWVandIPK5qV8/736s6nNfHA/LQ6HhIRAOrTo04oWq0m2QFMt+Vaz26bKYmQXWfYt67WFmdfIwbqcyxD45Xo7EyenU1QqE4sks4tHIlTsKemRMPQqhOmliOkloea5Pb+oyigR+IG3Ir6pzYy2FX+fWIxw77GySm6yLXGefiq2nCTCkHhC+McIkgipUUZpSvR6TqYFo/QWOASqctr0r7j66zOLYyamFdSroBkHjZircKgao0wpjx0fGfzhwMJs8pvWeKsV6N7VaduU+kAda6Rr07Zcn9rWyBoQGrqWFTiV6myC6USpaqf/KlXaUaNxJjC+g5zqXBYorarCd5JGuqmrMlt97IUVXJwGmn0iaI6GVrM0dy9PW+kvH77clOG21E7co0mY6qtSuKu17ehqlMtHtNMDHM0nwX/TSCYirFuM3tNgwlivMH4p+Pv1hO5GZQTbAWyueCNfWzNcapSI5QkczaW2P4Y+WGhkLnqYPxiP/YA4lI6GI3DsmqOtYbRie19O9oKC0jYJdrlaqxjSNg3t4WdHAGx4294Aj3e1QoGtnpbP/Rzu9TgD4SHUyOPanxomNuUshHLu4ApuREnXNXtsFdOzcTCwR6NghC8GrGLaB5/YfWdAxqOhezaoVXEDyjaYqoWEH/KOiJdxBuTdPXRfU4YxKKVbxv6dVOClMvuG5EEq3Uxzb2QmISPjixS/Xa/XGbeATSp7MZ6qpe6CAjeLjNeF4Us1a/R0DP07jm+E1nfBDlbe8ilT00O6mdbRTxnonw3G1G23DDpus4w1mG6Y7+cKsKPq0876absL7CritLUWOpv3AbKs6aHa1bdcO05Fin1yUpzXI8U9+qpTFl3n++0QsD9RW8ouBMf0Jh0TPEmrhnwpDZwwMIjBqFH8Vw6f4/7SUDNASjneaTGgoaMf68TVztCEslLwjwWS35IbHQqHjeLm86bNp3bqp315Qjgig4HbcWcd11+ebYBewPt+WtHeSk/bCmdrP9pv3/qerR2pIsPNo9+x15w06/aGc1zWrS3npayPbybb3s0tKN5pm3j4H/dGypMkHgAA</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>record_create</trigger_type>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="DELETE" query="flow=2867e778832bd61012d6fe55eeaad3c2^sys_idNOT IN2c672b78832bd61012d6fe55eeaad31f,60672b78832bd61012d6fe55eeaad323,68672b78832bd61012d6fe55eeaad322,6c672b78832bd61012d6fe55eeaad320,a8672b78832bd61012d6fe55eeaad321"/>
+    <sys_hub_action_instance_v2 action="DELETE">
+        <action_type display_value="Wait For Condition">89ce8a4187120010663ca1bb36cb0be3</action_type>
+        <action_type_parent display_value="Wait For Condition">8bb9a8160b10030085c083eb37673aec</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>89ce8a4187120010663ca1bb36cb0be3</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Maintenance Requests Flow">2867e778832bd61012d6fe55eeaad3c2</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-04 01:04:58</sys_created_on>
+        <sys_id>2c672b78832bd61012d6fe55eeaad31f</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="RetailNOW Management Application">3b6dab668317d65012d6fe55eeaad385</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-04 01:04:58</sys_updated_on>
+        <ui_id>ebaa1850-4aac-46a6-9cab-eb0f66c0315f</ui_id>
+        <values>H4sIAAAAAAAA/+2XXW+jOBSG/8qI6ziLwRDo3ShptZW6UyntzF7MziJjHzeWHMiA6TRb9b+vAaeQ0GTanbRSpb308QfveX0eDny9dyR3ThwSM4gowdEEe66L3TD0GcVp6ocsdVMgzsjJ6BLMygJYXnAzvqWqqgP399MCqAae4DGrigIy/fBg5rksV4quv9hlJsIWUnEz75x8/TZyVrQwJ2oonJP7nannSlI0BWWWzjeadjXq9aoe85xVS6MrkZvghd05szMfzmdmxmyq5eCRA3caMg5Gh6CqhJGzpBmnOi/WzokuKhMwOfPLTK0fVyxkpts8l/SulP+YB/tevU6ASYxZDx6H1zRVMGs9aqfEjGp6ZU5nuioeLcslg7K1hYOgldLTfqxdcLnSMs/aLbo+2O7OVbXMPrWmOI8H9K6kKiHhsKpzrdW3qYmrRf5jvhF6JrPGFZumyhlVjyOqdSHTStdy7p1KXj9leBt+2nIhlSmBpBGdlHlVNEbNT6eX81ny58fr6e+n82R+enU9P59en9Y7QEFz9JKuVjK7SVZFfisbhSbf5fhGmcFYqPyHSayUN9mYstqcsbk+Oj4z8VkT/kILWT/0D3OM2Vyr/JzJ7xWcN8UnBPZxGCKMXR8RnIYojiBALgSUBB4Jg9BzHkZOuS6nipZl57G54OR7VVvUOm69TZrradNsqrTezAq50h+NvFuwjj6MNkAGB6ufdsXeO7OD8i7BAfGDkCQFaCpVlhu/TIFCRs2VmqBJVJdDSp+974Us/zybDcsNF3uyszgPYhf9vR8+tRMWZu8wzDbS0dwi8ATMkfvOYLap/TrNW35vw7zluCyTtqSt6ObUtyLWw1EckdRHfkoCRGIhUORGBBGgLgs8PiGY/Qdif8rp4S4lukpmecZlnVfZ47TUpnP+Vbmuz72/L+e9IRnCeXjxUbur6BE57Qt/KhmL5SB28dQBFkv/WD2WuO57A/NYXXbL8G0utyx/E/6AR2EauBECEUWI+JMIxdjzUBhSjjFhXLiv2zFdfqiiRe8TVssl5JVOhKI3PRbdIXGbN9jL2HqGkg1bp1nzArWK9kq0hKV5roBmu13PlNNvZ1apxYu8sOsd4uud0XW0tte5vdPz+n6/CVuM0cg0MYpinwEiYcpQJJhAPqSB8IM0SifuK/Q2driO42G58qqgzS12VB3hT/AZOjY8zToB+6VZmpq72Y1fDA+ySAX/I/XLSA0s3/k17CZei6uF2Tej67KuDMPxkDTAdBKk9d8eRcSLMaIx8VAcwgSIiEKfxq9AWoQPVrgYlnPJFsArBccl7Rk6NqRddQL2S7OkdcW+Ddm8F7eUhUejLBp8GLJl1he3j7leZu+SPXEFtGCLMwmqvlP737aHyP7VbMPYv5y36XKeh30ODGFuPiOJF3oo8skETeIodYkpv9SHI7L37V814knT/BQAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="DELETE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Maintenance Requests Flow">2867e778832bd61012d6fe55eeaad3c2</flow>
+        <generation_source/>
+        <order>8</order>
+        <parent_ui_id>e8324273-172a-40ac-b25c-87016c775380</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-04 01:04:58</sys_created_on>
+        <sys_id>60672b78832bd61012d6fe55eeaad323</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="RetailNOW Management Application">3b6dab668317d65012d6fe55eeaad385</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-04 01:04:58</sys_updated_on>
+        <ui_id>69e5d4d3-f5ec-47b5-ade0-ef6b32accef8</ui_id>
+        <values>H4sIAAAAAAAA/+VVXW/aMBT9K8jPUZQQQC1vEwhpUtdK7cRLV0VOfAOWHCe1HQpD/PddJ06IoOuo1Bc03ny/fM7NOfh5TzgjUzICFoS34SSNwigaBsHwZhQmkygJhyyiACHxiKQ5YKWCtFAMzxsqKhvY72cKqAEWh35aKQXSHA6YZ1yXgu6Wrgwj6ZoLhnkyfX7xSEkVTjSgyHR/kroUkqAJCCx9bDGdYjS70p5ZkVY54op5G7xznXOXGXyfYwabLJww8AhsDUgGCCSjQoNHcioZNYXakalRFQaQNHuQYtdVrLk0DdGcbjX/jTePAluXATJL3RK640+aCJg3S2pS2Zwa+oTTU1OpbmcFT0E3e2GQ0UqYWT/WFDyUhheyaTF2sOsuRJXL+2YrpBvQ+yaVhphBabla9A217GldvD22QBdc1mtxNEWRUtGdqDGKJ5WxcPYEBNR7zmlZcrmKS1VseN2MUHJ/JfDgZ6J4wzs1X0mfpha3j5ul/gLj8zq8pIpbEj9wDDYfPKJ3eiao1kcquMf4tbJIGmKOQlxvoV5BXKvBNqeKl+YbXrUBB/zgOeEn449Ult4eRdWbeRT/Ng7Ho2g8GcUKDOVCFsgddQCS4uYw+FqB0eduuLjvc565gE3rmVp+f2HnbHMWu+v3Du6bhDPN+MtMc3NtpnFUrt41//JKMPzwH7mnptoeuucTbfCF+FUFQcRG5244yX5O8xegajW/4CCYfgdmK3jIEZaBuIF9InqXHCxdsnstvkz54SSof1em///m0Xj5AwzPAhIvCQAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="DELETE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Maintenance Requests Flow">2867e778832bd61012d6fe55eeaad3c2</flow>
+        <generation_source/>
+        <order>6</order>
+        <parent_ui_id>5c726662-bcf7-48af-a749-efec3c4e48f4</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-04 01:04:58</sys_created_on>
+        <sys_id>68672b78832bd61012d6fe55eeaad322</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="RetailNOW Management Application">3b6dab668317d65012d6fe55eeaad385</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-04 01:04:58</sys_updated_on>
+        <ui_id>7b979f81-01af-443f-97ec-400fea8e534e</ui_id>
+        <values>H4sIAAAAAAAA/+VVXU/bMBT9K8jPbZQ0bVf6NlEhTWIgwcQLY9GNfUMtOU6wHaCL+t93nbgfAsaKxAta33y/fM7pPfFNy6RgczZGESfHyZSnSZqO4ng0Gyf5NM2TkUgBMWEDpqFEqjTIKyPo/ACq8YG2PTEIDkWWRLwxBrVbrykvpK0VrK5DGUX4UipBeTa/uR2wGgxNdGjYvH2WOhSSghwVlV5uMD3H6Fa1P4uKNyXhyuQmeBY6FyFz9G1BGWrycJJ4wPDJoRZIQApQFgesBC3AVWbF5s40FCDS4kKr1bZiKbXriZbwZOVvunkc+7oCiRkPImyPPyBXuOhF6lPFAhxc0XTuGrPVrJIcba+LwAIa5U72Y33BRe1kpfsW5weH7ko1pT7vVWHbAXv/SWMxE1h7rh59T624WlaPlxugp1J3sgSaquKgtidwzsi8cR5Oy1Bhp3MJdS31XVab6kF2zQSljO4UHaJCVY90p5V3OgLucUekLESnFF904Wsw0pP4TmOoeT1gdmVPFFi7o0I6ZveNR9ITCxSyToVOgqzbBt/MjazdV7rqAQPw9SAsfj55a8v48W6p9mbulv8pSybjdDIdZwYdSKUr4k57gBpIOQreN+jsSzcc3Pc+zxzAZuOZbv3+wi7Y5kXsbL/36LxPBNNMPsw0s89mmkDl07vmX16JR29+kfe2qbOH3fOJdfRC/GziOBXpL9RLv+Wecx9q25jDlBc8H4piCkM/djjDfDYUyWgyEWIygy8i6j/rrz0uHz3+fa47QJeN604lKmFfEWpjOSyJl8OsF+6Z7ULy6Dokt+/Vh3kvmcbd75M58L95tm7/ANZ/S0SxCQAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="DELETE">
+        <action_type display_value="Ask For Approval">f8f2e9920b10030085c083eb37673abd</action_type>
+        <action_type_parent display_value="Ask For Approval">bae0a1120b10030085c083eb37673a92</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f8f2e9920b10030085c083eb37673abd</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Maintenance Requests Flow">2867e778832bd61012d6fe55eeaad3c2</flow>
+        <generation_source/>
+        <order>3</order>
+        <parent_ui_id>39aa4cf8-45fb-41d9-a65a-d6da642c91cf</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-04 01:04:58</sys_created_on>
+        <sys_id>6c672b78832bd61012d6fe55eeaad320</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="RetailNOW Management Application">3b6dab668317d65012d6fe55eeaad385</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-04 02:18:24</sys_updated_on>
+        <ui_id>c0988f54-3ee2-489e-b6fc-09271cea7be6</ui_id>
+        <values>H4sIAAAAAAAA/+1YXW/iOBT9K5WfEZsQAoG3qqjSrnZnpGl3XkoVGfumeGWSjO10ykb573sTOyEDUwZGaKWq8+j7YZ97OAdjHkoiOJmTaZSMYDYbeSvf8wLPi0LmRQGsgulkGlDmkQFJ6QawUgHLFMf1M5VFHSjLGwXUAI/9ISuUgtRUFea50Lmk28+uDCNsLSTHPJk/PA5IThXuaECRebmXOhWSpCuQWPqpxbSP0Wzzes0zVmwQVyza4J+uc+EyV78vMINNNRxvQODFQMoBcSRUahiQDU05NZnakrlRBQZwZv4xlduuYi1SY+fc0Bct/sWDg1FdlwAOxhwH3fKeriQsLEc2lSyooXe4OzOF6ijLBANtaeGQ0EKam37MFnzMjchS22LqjV13JotN+sGSQroNeh9JoSHmkNez1ujtaMndOvv6qQV6K9KGFTemzBiV3Yoao8SqMDWckoCEhuYNzXORPsW5yp5F04xQNsMniYthIrOveKYWT+mQshr3EJmlw1uML5rwZ6pEPcRfuA02VwOit/pGUq13oyCP8ZeiRmIHcyPEDQuWgrqPKZGbazzlGRzmauAkv2JH9cV2crLb7RT/EvvhOAgn41iBoUKmGU6Mnz6kFPnC4JcCjD60wMl95xnlhEFao9y7SfYGczZplnGT+9YlTdvVB5twJvGPm8RFdi6x0vqOSSLvjZnEjfbmXfIjg3j+MV3xaKcjRIAzUBknAmT/bmgTh17oZc5T+wmoWrVfuzOubh2s1+A6/TfL7+m/6d/T/+hM/b9+S0Se99Ys8J7uCXZUcBDsdPVPVqj0iAvitdCNOl51Q6/iPFecALJ1xR8W5b4p9sH/jCeCX554H54Yh0fl1vuJ0SmbZSkXNWLdc4b9hgZ9nW7/fihLbagRbLiCJEoggCiYTX0aev6ITxIIQwBKeTBZVYijrR1P+GyShFM6S8CfRb7nz8a4mIy8aBZG0aSqHg/t9n8de56HTyC1e/AUEvSPSHYO7pLKNfVd3F2R7Y7OyeNLPYHeoJHfy+87dlRvyWynL14gQfjE77/6l8TCXpL5kqRZCksyWJK6Kq4F1oSxAsF1iSZWllVlI4WibgO/t9x1c7rVTaVma+Cozyb6TSRuDOHil/jT4QROWg8uCrhaWFIOaXLe63BaXsTBLXrnCpqdfrsX/ds0vNhtOv5lwUtYEGGKuHu44FWJ34IX9OXjf/uCFfyNEwAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="DELETE">
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>2de05916c31332002841b63b12d3aee1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Maintenance Requests Flow">2867e778832bd61012d6fe55eeaad3c2</flow>
+        <generation_source/>
+        <order>5</order>
+        <parent_ui_id>5c726662-bcf7-48af-a749-efec3c4e48f4</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-04 01:04:58</sys_created_on>
+        <sys_id>a8672b78832bd61012d6fe55eeaad321</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="RetailNOW Management Application">3b6dab668317d65012d6fe55eeaad385</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-04 01:04:58</sys_updated_on>
+        <ui_id>0ca6cfcb-df6a-41b6-8eb8-d1255dd58a7d</ui_id>
+        <values>H4sIAAAAAAAA/91VwU7jMBD9FeRzFNkNdKE3VNTTAtKy4kLZaGpPWkuOE2ynkK367ztO0lKxVMtKe2F787yZ8Xsv4+nDhmnFJmwskJ9diLHMRJaNOB+dn4rFOFuIkcoA8ZQlzEKJlBlgYTDvDglbg2li0JU52hVYiSXaQIDSvjbQ3h/D5Uob5dCyycNjwmpw1C+gY5PNG+ij7Aws0FDq90jvCNvQ1u/Gvh7Wntz0QOVU5MMThi8BrUIiUoDxmLASrIJQuZZNgmso4BDUrTXtPmOlSeWEsZj74vVPuvacx7wCSZnEHtsfu4uvest6qLiCAHfUXYbGDelyVWmJvvdFYQGNCdPDWJ9wWwdd2b6kkzpUV6Yp7U1vC9s32H0hijQec4V11BrZD1KKu1X1/G3HdKZtZ8sAmkqC2Z8gBKcXTYh8NgxN97HzEupa22Veu2qtu2LiUqZLQ4e0MNUzXer10qYgI/GUrIV0RvGrLnwPTkcV19SGircJ862fGvD+VQsZmT81kUmvbNCQ9zbEEul0HS7pgjUOdLfJbvQV8oujwyUWr8PUTbs/GHu/qlyI9Lv2RH7ecJ6pzWZKExFQ5SKVjSPjQloCjQTa+ARyh0/UJ+S+KUtw7Xb7g9SQ1M6upauaeugz372jOZvM2RRqkDq0J9fLMsxZMu95dBiAlPLii5AczjkXZ5wXKIriNOMjhYKLLp2My7X6YP7291f8v8v9y6X057nZLaWZRqP8O4O020hYkuyAeT9Yb7bSAJ7cD+CwmcS/2kxizLvfJ9tPvcBPv54O/o2OLKrHX2oXHHqlBwAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_sub_flow_instance_v2 action="DELETE" query="flow=2867e778832bd61012d6fe55eeaad3c2"/>
+    <sys_hub_flow_logic_instance_v2 action="DELETE" query="flow=2867e778832bd61012d6fe55eeaad3c2^sys_idNOT IN6c672b78832bd61012d6fe55eeaad31e,a8672b78832bd61012d6fe55eeaad31c,ec672b78832bd61012d6fe55eeaad31d"/>
+    <sys_hub_flow_logic_instance_v2 action="DELETE">
+        <attributes/>
+        <block display_value="">7e57a778832bd61012d6fe55eeaad3fc</block>
+        <comment/>
+        <connected_to>5c726662-bcf7-48af-a749-efec3c4e48f4</connected_to>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Maintenance Requests Flow">2867e778832bd61012d6fe55eeaad3c2</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Else">1f781bf3c32232002841b63b12d3aee6</logic_definition>
+        <order>7</order>
+        <outputs_assigned/>
+        <parent_ui_id>39aa4cf8-45fb-41d9-a65a-d6da642c91cf</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-04 01:04:58</sys_created_on>
+        <sys_id>6c672b78832bd61012d6fe55eeaad31e</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="RetailNOW Management Application">3b6dab668317d65012d6fe55eeaad385</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-04 02:18:24</sys_updated_on>
+        <ui_id>e8324273-172a-40ac-b25c-87016c775380</ui_id>
+        <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="DELETE">
+        <attributes/>
+        <block display_value="">6dc0ef30832bd61012d6fe55eeaad34a</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Maintenance Requests Flow">2867e778832bd61012d6fe55eeaad3c2</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-04 01:04:58</sys_created_on>
+        <sys_id>a8672b78832bd61012d6fe55eeaad31c</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="RetailNOW Management Application">3b6dab668317d65012d6fe55eeaad385</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-04 02:18:24</sys_updated_on>
+        <ui_id>39aa4cf8-45fb-41d9-a65a-d6da642c91cf</ui_id>
+        <values>H4sIAAAAAAAA/+1VXWvbMBT9K0PPxvijCWvfSkJh0K2wlr5sxVxLciImS54+kmYm/31XluOENWMt9HFv1rm6955zdC/uifau884+6GtrxUqRq29PCREqYPjdEwUtJ1eEasWEE1pVA5CQDUgfAvjJhO0k7B6PCF0LyQwfq3VgMMdxQ676P0KCYUKTQZNf0pyWxbwssqz4eJHX87LOC1YChxILSqi5xKuLA40PtwOS/JWf23UBt84ItRrPt2OV+wOoDQus8iwh/NlxxTjyaUBanpAWFAOnzW5CDAd2p+QRWAvlouAWnq34hQ2L2SxcbDhKpKMb0/EBasmX0a0YapbgAOl46ryZzNOCchsNYrwBL93iFIsX7rogN6a4UHjM1tK36kt0hUwFTh7HW14x3gW1gf6opblf6+3XA9MboQZnxqDUFOR0Aof+1d4FPj3hkrdYqGqh69DVqjN6I4Zk5NKmK4mHtJF6i03DhKVAA/EUzYX0BvHlAD+CEUHFZyyDyZFmDVbQaphGLIc2cbJPiN3ZhQRrjyLR4eqnDxSj5FFcFf0JKdSIzl1j5w0fdeyTl8N9Mtd9v8D3dpxVeUq9QVdcah0C+/13n2UlK15O/qty3rYblzBrZnk2O78bF/Nzu3FmK964EMU/FiK8xCv3Icuy/wvxLgshbBXHeNQ2NH/HfXgKwx97Tl5TYZHa8EyfDv+EENjhgAl6Cm21+RFEHbH9b/Rjj1tdBgAA</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="DELETE">
+        <attributes/>
+        <block display_value="">65c0ef30832bd61012d6fe55eeaad372</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Maintenance Requests Flow">2867e778832bd61012d6fe55eeaad3c2</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>4</order>
+        <outputs_assigned/>
+        <parent_ui_id>39aa4cf8-45fb-41d9-a65a-d6da642c91cf</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-04 01:04:58</sys_created_on>
+        <sys_id>ec672b78832bd61012d6fe55eeaad31d</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="RetailNOW Management Application">3b6dab668317d65012d6fe55eeaad385</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-04 02:18:24</sys_updated_on>
+        <ui_id>5c726662-bcf7-48af-a749-efec3c4e48f4</ui_id>
+        <values>H4sIAAAAAAAA/+1VXWvbMBT9K0PPjvFHnCZ5KwmFQbfCWvqyFXMtXydisuVZctIs5L/vynKcsGZshTzuzTrSvTrn6B68Z6o1dWv0k7rVWqwqNv/64jFRWYy+96yCEtmccVXlwghVpR3gsQ3I1m7QZy50LWH3fEL4Wsi8wb5bDQ3VGGzYfP/blsipoAigCGc85HE0iaMgiKbjMJvEWRjlMSDE1FBChpKOLo40Ptx3iPdHfmZXW1ybRlSrfn3fd3k8gqrJLasw8Bi+GqxyJD4FSI0eK6HKwahmNyANQv5QyROwFpVxgkt41eInXRgliT1YIEnkvRvD8gkyiUvnltsqlmCA6LTctM1gnhIctTMoxwJaaRbnmDvwUFu5rsTYxn21km1ZfXausKHB2eO0GtMca6vW0u+1FI9rtf1yZHonqs6ZflMqDnJYgSH/stZYPnuGEktqlJZQ1+RqWjdqI7pi4lL6K0kLv5BqS5faCfOBW+I+mQv+HeHLDn6GRlgVn6gNFTuaGWjB024aqR3ZhOzgMb3TCwlan0SSw+mP1lJ0kntxqfPHlvBG1OaWbt5gr+PgvR3us7ne73kwm06LZDyKEaPReDrDUTYp+CiYRTchR7jJcOITW9ILMtUGDB4O39ogiHOH0jC9Cce12r4vYTNIiiQMkssJG08uJexCtt4Zq+gvsbLv+Y+pCoLgf6yuEiuhUxeGXlt3+RVT9WIj5O4cvOZCE7XumT4e/yx2Y0cDJvg5tFXNdyvqhB1+ASqHPjyjBgAA</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="DELETE" query="attached_to=2867e778832bd61012d6fe55eeaad3c2"/>
+    <sys_hub_flow_variable action="DELETE" query="model=2867e778832bd61012d6fe55eeaad3c2"/>
+    <sys_documentation action="DELETE" query="name=var__m_sys_hub_flow_input_2867e778832bd61012d6fe55eeaad3c2^sys_idNOT IN6c672b78832bd61012d6fe55eeaad30a,ac672b78832bd61012d6fe55eeaad303"/>
+    <sys_documentation action="DELETE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_2867e778832bd61012d6fe55eeaad3c2</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-04 01:04:58</sys_created_on>
+        <sys_id>6c672b78832bd61012d6fe55eeaad30a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="RetailNOW Management Application" source="x_1543564_retailno">3b6dab668317d65012d6fe55eeaad385</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="RetailNOW Management Application">3b6dab668317d65012d6fe55eeaad385</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-04 01:04:58</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="DELETE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_2867e778832bd61012d6fe55eeaad3c2</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-04 01:04:58</sys_created_on>
+        <sys_id>ac672b78832bd61012d6fe55eeaad303</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="RetailNOW Management Application" source="x_1543564_retailno">3b6dab668317d65012d6fe55eeaad385</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="RetailNOW Management Application">3b6dab668317d65012d6fe55eeaad385</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-04 01:04:58</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="DELETE" query="name=var__m_sys_hub_flow_input_2867e778832bd61012d6fe55eeaad3c2"/>
+    <sys_documentation action="DELETE" query="name=var__m_sys_hub_flow_output_2867e778832bd61012d6fe55eeaad3c2"/>
+    <sys_choice action="DELETE" query="name=var__m_sys_hub_flow_output_2867e778832bd61012d6fe55eeaad3c2"/>
+    <sys_hub_flow action="DELETE">
+        <sys_id>c2675ffc83a7d61012d6fe55eeaad31f</sys_id>
+        <latest_snapshot>2867e778832bd61012d6fe55eeaad3c2</latest_snapshot>
+        <compiler_build>glide-xanadu-07-02-2024__patch1-08-24-2024_09-01-2024_1853.zip</compiler_build>
+    </sys_hub_flow>
+    <sys_flow_trigger_plan action="DELETE" query="plan_id=c2675ffc83a7d61012d6fe55eeaad31f^sys_idNOT IN78672b78832bd61012d6fe55eeaad33e"/>
+    <sys_flow_trigger_plan action="DELETE">
+        <binding_strategy>com.snc.process_flow.engine.binding.OncePerRecord</binding_strategy>
+        <plan>{"type":"PlanProxy","persistor":{"@class":".ChunkingPlanPersistor","table":"sys_flow_trigger_plan","id":"78672b78832bd61012d6fe55eeaad33e","name":"plan","plan_signature":null}}</plan>
+        <plan_id>c2675ffc83a7d61012d6fe55eeaad31f</plan_id>
+        <snapshot>2867e778832bd61012d6fe55eeaad3c2</snapshot>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-04 01:04:59</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>78672b78832bd61012d6fe55eeaad33e</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-04 02:18:25</sys_updated_on>
+        <trigger display_value="">38672b78832bd61012d6fe55eeaad33c</trigger>
+    </sys_flow_trigger_plan>
+    <sys_flow_subflow_plan action="DELETE" query="plan_id=c2675ffc83a7d61012d6fe55eeaad31f"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="RetailNOW Management Application">3b6dab668317d65012d6fe55eeaad385</application>
+        <file_path/>
+        <instance_id>13d7a602db79fd5402d917291396195e</instance_id>
+        <instance_name>dev183570</instance_name>
+        <name>sys_hub_flow_c2675ffc83a7d61012d6fe55eeaad31f</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_hub_flow"&gt;&lt;sys_hub_flow action="INSERT_OR_UPDATE"&gt;&lt;access&gt;public&lt;/access&gt;&lt;acls/&gt;&lt;active&gt;true&lt;/active&gt;&lt;annotation/&gt;&lt;attributes&gt;browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,timeFromCreateToActivate=8593000,viewActivatedIn=naturalLanguage&lt;/attributes&gt;&lt;authored_on_release_version&gt;26000&lt;/authored_on_release_version&gt;&lt;callable_by_client_api&gt;false&lt;/callable_by_client_api&gt;&lt;category/&gt;&lt;copied_from/&gt;&lt;copied_from_name/&gt;&lt;description&gt;To drive the maintenance requests approval process&lt;/description&gt;&lt;display_name_after_preview/&gt;&lt;flow_priority&gt;MEDIUM&lt;/flow_priority&gt;&lt;generation_source/&gt;&lt;internal_name&gt;maintenance_requests_flow&lt;/internal_name&gt;&lt;label_cache&gt;[{"name":"{{static.46d96f57a9fe198101947a9620895886}}","label":"Luke Wilson","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","usedInstances":{"c0988f54-3ee2-489e-b6fc-09271cea7be6":["approval_conditions"]}},{"name":"Created_1.current","label":"Trigger - Record Created➛Maintenance Requets Record","reference":"x_1543564_retailno_maintenance_requets","reference_display":"Maintenance Requets","type":"reference","base_type":"reference","usedInstances":{"ebaa1850-4aac-46a6-9cab-eb0f66c0315f":["record"],"c0988f54-3ee2-489e-b6fc-09271cea7be6":["record"],"7b979f81-01af-443f-97ec-400fea8e534e":["record"],"8336f203-0a15-4066-9a89-8e4f1d52a9c2":["record"],"e950cfd1-db43-4934-a1f3-0df172e48404":["record","enhancement"],"8d153387-fd8a-4637-9faa-50bcd6b9e9ff":["short_description"],"3aa50ed3-c445-462c-a513-145329bc37b8":["record"],"eb70d407-88f2-4114-a3a8-c7c4e5b209e1":["short_description"],"69e5d4d3-f5ec-47b5-ade0-ef6b32accef8":["record"]},"attributes":{}},{"name":"ebaa1850-4aac-46a6-9cab-eb0f66c0315f.state","label":"1 - Wait For Condition➛State","reference_display":"State","type":"choice","base_type":"choice","choices":[{"label":"Complete","value":"0","order":0.0},{"label":"Timeout","value":"1","order":1.0}],"usedInstances":{},"attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"2e334039-7a20-4ead-9148-909988f1a7e4"}},{"name":"Created_1.current.state","label":"Trigger - Record Created➛Maintenance Requets Record➛Status","reference":"","reference_display":"Status","type":"choice","base_type":"choice","parent_table_name":"x_1543564_retailno_maintenance_requets","column_name":"state","choices":[{"label":"Review","used":false,"image":"","reference":false,"selected":false,"missing":false,"rawLabel":"Review","value":"1","parameters":{"name":"x_1543564_retailno_maintenance_requets","dependent_values":[""]}},{"label":"Awaiting Approval","used":false,"image":"","reference":false,"selected":false,"missing":false,"rawLabel":"Awaiting Approval","value":"2","parameters":{"name":"x_1543564_retailno_maintenance_requets","dependent_values":[""]}},{"label":"Accepted","used":false,"image":"","reference":false,"selected":false,"missing":false,"rawLabel":"Accepted","value":"3","parameters":{"name":"x_1543564_retailno_maintenance_requets","dependent_values":[""]}},{"label":"Rejected","used":false,"image":"","reference":false,"selected":false,"missing":false,"rawLabel":"Rejected","value":"4","parameters":{"name":"x_1543564_retailno_maintenance_requets","dependent_values":[""]}}],"usedInstances":{"39aa4cf8-45fb-41d9-a65a-d6da642c91cf":["condition"]}},{"name":"{{static.bef8fe3e83971a5012d6fe55eeaad36b}}","label":"Beryl Tinder","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","usedInstances":{"c0988f54-3ee2-489e-b6fc-09271cea7be6":["approval_conditions"]}},{"name":"c0988f54-3ee2-489e-b6fc-09271cea7be6.approval_state","label":"3 - Ask For Approval➛Approval State","reference_display":"Approval State","type":"choice","base_type":"choice","choices":[{"label":"-- None --","value":"","order":0.0},{"label":"Not Yet Requested","value":"not requested","order":1.0},{"label":"Requested","value":"requested","order":2.0},{"label":"Approved","value":"approved","order":3.0},{"label":"Rejected","value":"rejected","order":4.0},{"label":"Cancelled","value":"cancelled","order":5.0},{"label":"No Longer Required","value":"not_required","order":6.0},{"label":"Skipped","value":"skipped","order":7.0}],"usedInstances":{"5c726662-bcf7-48af-a749-efec3c4e48f4":["condition"],"3ed7ac5f-a8b7-47ba-bc36-004c6434a64c":["condition"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Created_1.current.maintenance_request_summary","label":"Trigger - Record Created➛Maintenance Requets Record➛Maintenance Request Summary","reference":"","reference_display":"Maintenance Request Summary","type":"string","base_type":"string","parent_table_name":"x_1543564_retailno_maintenance_requets","column_name":"maintenance_request_summary","usedInstances":{"0ca6cfcb-df6a-41b6-8eb8-d1255dd58a7d":["short_description"]}},{"name":"0ca6cfcb-df6a-41b6-8eb8-d1255dd58a7d.record","label":"5 - Create Record➛rm_enhancement Record","reference":"rm_enhancement","reference_display":"Enhancement","type":"reference","base_type":"reference","usedInstances":{"7b979f81-01af-443f-97ec-400fea8e534e":["enhancement"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}}]&lt;/label_cache&gt;&lt;master_snapshot&gt;2867e778832bd61012d6fe55eeaad3c2&lt;/master_snapshot&gt;&lt;master_snapshot_digest/&gt;&lt;name&gt;Maintenance Requests Flow&lt;/name&gt;&lt;natlang/&gt;&lt;outputs/&gt;&lt;pre_compiled&gt;false&lt;/pre_compiled&gt;&lt;remote_trigger_id&gt;38672b78832bd61012d6fe55eeaad33c&lt;/remote_trigger_id&gt;&lt;run_as&gt;user&lt;/run_as&gt;&lt;run_with_roles/&gt;&lt;sc_callable&gt;false&lt;/sc_callable&gt;&lt;show_draft_actions&gt;false&lt;/show_draft_actions&gt;&lt;show_triggered_flows&gt;false&lt;/show_triggered_flows&gt;&lt;status&gt;published&lt;/status&gt;&lt;substatus/&gt;&lt;sys_class_name&gt;sys_hub_flow&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-02-03 23:55:09&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;c2675ffc83a7d61012d6fe55eeaad31f&lt;/sys_id&gt;&lt;sys_mod_count&gt;8&lt;/sys_mod_count&gt;&lt;sys_name&gt;Maintenance Requests Flow&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="RetailNOW Management Application" source="x_1543564_retailno"&gt;3b6dab668317d65012d6fe55eeaad385&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="RetailNOW Management Application"&gt;3b6dab668317d65012d6fe55eeaad385&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_hub_flow_c2675ffc83a7d61012d6fe55eeaad31f&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-02-04 02:18:25&lt;/sys_updated_on&gt;&lt;type&gt;flow&lt;/type&gt;&lt;version&gt;2&lt;/version&gt;&lt;/sys_hub_flow&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=c2675ffc83a7d61012d6fe55eeaad31f"/&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=c2675ffc83a7d61012d6fe55eeaad31f"/&gt;&lt;sys_flow_record_trigger action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;condition table="x_1543564_retailno_maintenance_requets"&gt;^EQ&lt;item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/&gt;&lt;/condition&gt;&lt;name/&gt;&lt;on_delete&gt;false&lt;/on_delete&gt;&lt;on_insert&gt;true&lt;/on_insert&gt;&lt;on_update&gt;false&lt;/on_update&gt;&lt;run_flow_in&gt;background&lt;/run_flow_in&gt;&lt;run_on_extended&gt;false&lt;/run_on_extended&gt;&lt;run_when_setting&gt;both&lt;/run_when_setting&gt;&lt;run_when_user_list/&gt;&lt;run_when_user_setting&gt;any&lt;/run_when_user_setting&gt;&lt;sys_class_name&gt;sys_flow_record_trigger&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-02-04 01:04:59&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;38672b78832bd61012d6fe55eeaad33c&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_overrides/&gt;&lt;sys_scope display_value="RetailNOW Management Application"&gt;3b6dab668317d65012d6fe55eeaad385&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-02-04 01:04:59&lt;/sys_updated_on&gt;&lt;table&gt;x_1543564_retailno_maintenance_requets&lt;/table&gt;&lt;/sys_flow_record_trigger&gt;&lt;sys_trigger_runner_mapping action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;data&gt;{"run_flow_in":"background","run_when_user_list":[],"run_when_setting":"both","run_when_user_setting":"any","run_on_extended":"false"}&lt;/data&gt;&lt;identifier&gt;c2675ffc83a7d61012d6fe55eeaad31f&lt;/identifier&gt;&lt;runner&gt;FDTriggerRunner&lt;/runner&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-02-04 02:18:25&lt;/sys_created_on&gt;&lt;sys_id&gt;68383b3083abd61012d6fe55eeaad318&lt;/sys_id&gt;&lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-02-04 02:18:25&lt;/sys_updated_on&gt;&lt;trigger display_value=""&gt;38672b78832bd61012d6fe55eeaad33c&lt;/trigger&gt;&lt;/sys_trigger_runner_mapping&gt;&lt;sys_trigger_runner_mapping action="delete_multiple" query="identifier=c2675ffc83a7d61012d6fe55eeaad31f^sys_idNOT IN68383b3083abd61012d6fe55eeaad318"/&gt;&lt;sys_hub_flow_stage action="delete_multiple" query="flow=c2675ffc83a7d61012d6fe55eeaad31f"/&gt;&lt;sys_flow_cat_variable_model action="delete_multiple" query="id=c2675ffc83a7d61012d6fe55eeaad31f^sys_idNOT IN0e675ffc83a7d61012d6fe55eeaad321"/&gt;&lt;sys_flow_cat_variable_model action="INSERT_OR_UPDATE"&gt;&lt;id&gt;c2675ffc83a7d61012d6fe55eeaad31f&lt;/id&gt;&lt;name&gt;Maintenance Requests Flow&lt;/name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-02-03 23:55:09&lt;/sys_created_on&gt;&lt;sys_id&gt;0e675ffc83a7d61012d6fe55eeaad321&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_scope/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-02-03 23:55:09&lt;/sys_updated_on&gt;&lt;/sys_flow_cat_variable_model&gt;&lt;sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=0e675ffc83a7d61012d6fe55eeaad321"/&gt;&lt;sys_hub_flow_input action="delete_multiple" query="model=c2675ffc83a7d61012d6fe55eeaad31f^sys_idNOT IN19c0e3fc83e7d61012d6fe55eeaad37d,21c0ef30832bd61012d6fe55eeaad343"/&gt;&lt;sys_hub_flow_input action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id,uiTypeLabel=Document ID&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label/&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent&gt;table_name&lt;/dependent&gt;&lt;dependent_on_field&gt;table_name&lt;/dependent_on_field&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;current&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;formula/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_type display_value=""&gt;document_id&lt;/internal_type&gt;&lt;label&gt;Record&lt;/label&gt;&lt;mandatory&gt;true&lt;/mandatory&gt;&lt;max_length&gt;200&lt;/max_length&gt;&lt;model display_value="Maintenance Requests Flow"&gt;c2675ffc83a7d61012d6fe55eeaad31f&lt;/model&gt;&lt;model_id&gt;c2675ffc83a7d61012d6fe55eeaad31f&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_input_c2675ffc83a7d61012d6fe55eeaad31f&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;100&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_roles/&gt;&lt;reference/&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_input&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-02-04 00:36:04&lt;/sys_created_on&gt;&lt;sys_id&gt;19c0e3fc83e7d61012d6fe55eeaad37d&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="RetailNOW Management Application"&gt;3b6dab668317d65012d6fe55eeaad385&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-02-04 00:36:04&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;true&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;virtual_type&gt;script&lt;/virtual_type&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_input&gt;&lt;sys_hub_action_input_action_instance action="delete_multiple" query="action_input=19c0e3fc83e7d61012d6fe55eeaad37d"/&gt;&lt;sys_hub_flow_input action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name,uiTypeLabel=Table Name&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label/&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;table_name&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;formula/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_type display_value=""&gt;table_name&lt;/internal_type&gt;&lt;label&gt;Table Name&lt;/label&gt;&lt;mandatory&gt;false&lt;/mandatory&gt;&lt;max_length&gt;200&lt;/max_length&gt;&lt;model display_value="Maintenance Requests Flow"&gt;c2675ffc83a7d61012d6fe55eeaad31f&lt;/model&gt;&lt;model_id&gt;c2675ffc83a7d61012d6fe55eeaad31f&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_input_c2675ffc83a7d61012d6fe55eeaad31f&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;101&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_roles/&gt;&lt;reference/&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_input&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-02-04 00:36:05&lt;/sys_created_on&gt;&lt;sys_id&gt;21c0ef30832bd61012d6fe55eeaad343&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="RetailNOW Management Application"&gt;3b6dab668317d65012d6fe55eeaad385&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-02-04 00:36:05&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;virtual_type&gt;script&lt;/virtual_type&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_input&gt;&lt;sys_hub_action_input_action_instance action="delete_multiple" query="action_input=21c0ef30832bd61012d6fe55eeaad343"/&gt;&lt;sys_hub_flow_output action="delete_multiple" query="model=c2675ffc83a7d61012d6fe55eeaad31f"/&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=c2675ffc83a7d61012d6fe55eeaad31f"/&gt;&lt;sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=c2675ffc83a7d61012d6fe55eeaad31f^sys_idNOT INe1c0ef30832bd61012d6fe55eeaad348"/&gt;&lt;sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;comment/&gt;&lt;display_text/&gt;&lt;flow display_value="Maintenance Requests Flow"&gt;c2675ffc83a7d61012d6fe55eeaad31f&lt;/flow&gt;&lt;name&gt;Created&lt;/name&gt;&lt;remote_sys_id/&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-02-04 00:36:05&lt;/sys_created_on&gt;&lt;sys_id&gt;e1c0ef30832bd61012d6fe55eeaad348&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_scope/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-02-04 01:04:51&lt;/sys_updated_on&gt;&lt;trigger_definition display_value="Created"&gt;798916a0c31322002841b63b12d3ae7c&lt;/trigger_definition&gt;&lt;trigger_inputs&gt;H4sIAAAAAAAA/9VY227jNhD9FUFPLeACuvgS522bZNEAuxvUSduHIBUoaWgTpUmvRCnxLvLvHepiy7o4vmWTfQlgkuKcOTxzhsz9d5MTH7h5bt4Rn4PZM5lQEAnC75YLwGGlhz1B5npuTkRIlIyW5rmKEuiZMgohMs/tnpkSnsDtMr4O8SNcmn1RfG4W0/j7ybMHfXcw7HsRKMK4kN6c6JCCiABw8GsCKsYPQhYvOFn+XXz3eb3ImKwWBTPGwwiEeX7/0DMXJMKgSgP6XptiGlVAAzJ2wApc23Ucy3LO+rY/dH3bCV0CloUb1smoZaFaOFlTAE+IMAQMRQmPoYWuCEh4I/hytWKGWeV8zclTzL7h7meWXkcBsQeQzwUzyQK4WSgmRT6SA8onJU/m4ksOVBMHlCRclcThSBKDF8JCY9PRitD0diYfJ2Wgj0xkaRSTXAaEr34RpSLmJwpizSxlHDn2chJimUQZzMnVxc3k0vvnw93FH1cTb3J1eze5vri7ujSfs3y8r4neMUdYYPHydJ5Xp/2RAdcnJZK5j2h6ZhxEbKE+BIqlUMB57q01eyFFyDJWGroNyql4U7dFSuWpWVandIPK5qV8/736s6nNfHA/LQ6HhIRAOrTo04oWq0m2QFMt+Vaz26bKYmQXWfYt67WFmdfIwbqcyxD45Xo7EyenU1QqE4sks4tHIlTsKemRMPQqhOmliOkloea5Pb+oyigR+IG3Ir6pzYy2FX+fWIxw77GySm6yLXGefiq2nCTCkHhC+McIkgipUUZpSvR6TqYFo/QWOASqctr0r7j66zOLYyamFdSroBkHjZircKgao0wpjx0fGfzhwMJs8pvWeKsV6N7VaduU+kAda6Rr07Zcn9rWyBoQGrqWFTiV6myC6USpaqf/KlXaUaNxJjC+g5zqXBYorarCd5JGuqmrMlt97IUVXJwGmn0iaI6GVrM0dy9PW+kvH77clOG21E7co0mY6qtSuKu17ehqlMtHtNMDHM0nwX/TSCYirFuM3tNgwlivMH4p+Pv1hO5GZQTbAWyueCNfWzNcapSI5QkczaW2P4Y+WGhkLnqYPxiP/YA4lI6GI3DsmqOtYbRie19O9oKC0jYJdrlaqxjSNg3t4WdHAGx4294Aj3e1QoGtnpbP/Rzu9TgD4SHUyOPanxomNuUshHLu4ApuREnXNXtsFdOzcTCwR6NghC8GrGLaB5/YfWdAxqOhezaoVXEDyjaYqoWEH/KOiJdxBuTdPXRfU4YxKKVbxv6dVOClMvuG5EEq3Uxzb2QmISPjixS/Xa/XGbeATSp7MZ6qpe6CAjeLjNeF4Us1a/R0DP07jm+E1nfBDlbe8ilT00O6mdbRTxnonw3G1G23DDpus4w1mG6Y7+cKsKPq0876absL7CritLUWOpv3AbKs6aHa1bdcO05Fin1yUpzXI8U9+qpTFl3n++0QsD9RW8ouBMf0Jh0TPEmrhnwpDZwwMIjBqFH8Vw6f4/7SUDNASjneaTGgoaMf68TVztCEslLwjwWS35IbHQqHjeLm86bNp3bqp315Qjgig4HbcWcd11+ebYBewPt+WtHeSk/bCmdrP9pv3/qerR2pIsPNo9+x15w06/aGc1zWrS3npayPbybb3s0tKN5pm3j4H/dGypMkHgAA&lt;/trigger_inputs&gt;&lt;trigger_outputs/&gt;&lt;trigger_type&gt;record_create&lt;/trigger_type&gt;&lt;/sys_hub_trigger_instance_v2&gt;&lt;sys_hub_action_instance_v2 action="delete_multiple" query="flow=c2675ffc83a7d61012d6fe55eeaad31f^sys_idNOT IN3257a778832bd61012d6fe55eeaad3fe,69c0ef30832bd61012d6fe55eeaad349,a1c0ef30832bd61012d6fe55eeaad373,a9c0ef30832bd61012d6fe55eeaad373,adc0ef30832bd61012d6fe55eeaad371"/&gt;&lt;sys_hub_action_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;action_type display_value="Update Record"&gt;f9d01dd2c31332002841b63b12d3aea1&lt;/action_type&gt;&lt;action_type_parent display_value="Update Record"&gt;baf174c8c3c232002841b63b12d3aee4&lt;/action_type_parent&gt;&lt;attributes/&gt;&lt;comment/&gt;&lt;compiled_snapshot&gt;f9d01dd2c31332002841b63b12d3aea1&lt;/compiled_snapshot&gt;&lt;display_text/&gt;&lt;flow display_value="Maintenance Requests Flow"&gt;c2675ffc83a7d61012d6fe55eeaad31f&lt;/flow&gt;&lt;generation_source/&gt;&lt;order&gt;8&lt;/order&gt;&lt;parent_ui_id&gt;e8324273-172a-40ac-b25c-87016c775380&lt;/parent_ui_id&gt;&lt;sys_class_name&gt;sys_hub_action_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-02-04 01:04:51&lt;/sys_created_on&gt;&lt;sys_id&gt;3257a778832bd61012d6fe55eeaad3fe&lt;/sys_id&gt;&lt;sys_mod_count&gt;3&lt;/sys_mod_count&gt;&lt;sys_scope display_value="RetailNOW Management Application"&gt;3b6dab668317d65012d6fe55eeaad385&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-02-04 02:18:17&lt;/sys_updated_on&gt;&lt;ui_id&gt;69e5d4d3-f5ec-47b5-ade0-ef6b32accef8&lt;/ui_id&gt;&lt;values&gt;H4sIAAAAAAAA/+1UTWsbMRD9K0bnZdn1rk3iW4kx9NAE0pJLGoRWGtsCrbTRSo5d4//e0X44jtOmxqSHQHTTfLx5b/TQ/ZZIQSYkB5Gkl+mYZ2mWDZNkeJGnxTgr0qHIGEBKIqJZCVhpgRsr8L5iyofAdntlgTkQNI25txa02+0wL2RdKba568owwpdSCcyTyf1DRCpmEdGBJZPtUcptKqCKFaCwcWq4LxF08HWKGKey7btve7rH9MMMvIsOncoQxFTgkyYRgbUDLQDHzZmqISIl04I5Yzdk4qzHAKoWN1pt9hVLqV2rtGTrWv5C/DwJdXNAaXy/BSM53FROGt1GHCtUnzTKl/q65RqWCHPmlTtYoq+BCqgCtzCtpTL/vjRPt/2cmdSNjI6WMpyp/Y05Z2XhHdRh76CgUV+yqpJ6QStrVrJpRiplvFB4iefKPOHMWi50zHjgHeMmWDzD+LQJ3zErg4hvCIPNu0Y0ffRhbiujI0wbzY1g2rwIltbcysp9QeAVdDR3UefLYvTWS/PL54c9wHz25pqmozwbjXNqwTGptEGl+EqgGe4Jg48eXP3arCf3nWfpH4Hr4LrleqrOF81/0d2Z+kWs8/To3Tx98b893Y3+YKb+l5WT4Zuf1sGTNu6tD2xcO/xff/okyUT+2qxH2TMtCSViOhi0qNHJnHuAmQQl6j+I6D3ZDaCrbsD+r303Y6bjpDmfX+45X+7Db3aA3OAMCAAA&lt;/values&gt;&lt;/sys_hub_action_instance_v2&gt;&lt;sys_hub_action_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;action_type display_value="Wait For Condition"&gt;89ce8a4187120010663ca1bb36cb0be3&lt;/action_type&gt;&lt;action_type_parent display_value="Wait For Condition"&gt;8bb9a8160b10030085c083eb37673aec&lt;/action_type_parent&gt;&lt;attributes/&gt;&lt;comment/&gt;&lt;compiled_snapshot&gt;89ce8a4187120010663ca1bb36cb0be3&lt;/compiled_snapshot&gt;&lt;display_text/&gt;&lt;flow display_value="Maintenance Requests Flow"&gt;c2675ffc83a7d61012d6fe55eeaad31f&lt;/flow&gt;&lt;generation_source/&gt;&lt;order&gt;1&lt;/order&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_action_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-02-04 00:36:05&lt;/sys_created_on&gt;&lt;sys_id&gt;69c0ef30832bd61012d6fe55eeaad349&lt;/sys_id&gt;&lt;sys_mod_count&gt;4&lt;/sys_mod_count&gt;&lt;sys_scope display_value="RetailNOW Management Application"&gt;3b6dab668317d65012d6fe55eeaad385&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-02-04 02:18:17&lt;/sys_updated_on&gt;&lt;ui_id&gt;ebaa1850-4aac-46a6-9cab-eb0f66c0315f&lt;/ui_id&gt;&lt;values&gt;H4sIAAAAAAAA/+VXTW/jNhD9KwudTVeUKJnKbWE7aIB2Azje7WG7FShyGBOgJa9EZeMG+e+lPhxLtuM1Eido0SOHnOGbmfc04tcHRwnnwiERB8oIpiPsuS52w9DnDCeJH/LETYA4AydlS7Anc+BZLuz6jumyMjw8jHNgBkSMh7zMc0jN46PdF6pYabb+0h6zFr5QWth95+Lrt4GzYrmNaCB3Lh52tsx6BbFmCWjrOMl4ubRBP1xNbIxT0W68Zxu4u/CrO+xatNFjVRntVoUHDxy4N5AKsLdJpgsYOEuWCmayfO1cmLy0Bpu0uE71+unEQqWmSXTJ7gv1tw3ve9U5CTYz/lSETHG4XhmVpY3FsERvNjNdLtNPDdSqhiBZqU2nhmUBsYBVha26rYEibxbZj9nmnkuV1lm0sHTGmX5aMWNylZQGiqrspZofKkNj/u1gA6TStmdxDTousjKvE5tNx9ezSfzHx/n41+ksnk1v5rOr8XxaeYCGOvSSrVYqvY1XeXanaoQ23+XwVtvFUOrsh02sULfpkPGqOENbbja8tPZJbf7CclVd+rsNY50rlJ9T9b2Eq5oSUmIfhyHC2PURwUmIIgoBciFgJPBIGISe81h3I/5eVgVp6ttWMq6b0SRVM8UeLXiuVuajBXMHbf0eBxu9BEcZyLaE68TcauY+xgHxg5DEORimdJrZ6lj6QMpsA63RpmWKfRGd7Pcyqc0rrB8+NVhPzbPn/Ezerdh6tlZr3nGttZZTxEbdNxZbe/Xr1darQ19s/RYUcUPCFnQd9b0U5WEaUZL4yE9IgEgkJaIuJYgAc3ngiRHB/KeK+qmOjn/J5ZZPPEuFqrIoOjoqjB08f5au6wvvr+tZZ0n2xXP88MsUM+6iOjWjg86H0mxl07O1svHPNaKI6761bs41pHp16MumV8p3kQcIGiaBSxFIShHxRxRF2PNQGDKBMeFCuuccOK44RivZ+UEzaglZaWKp2W1HKu6+IDafkxcOC9vVXy7bEKdi3DhP0/o712J9FnwrgCTLNLB0y35ytqFB/jNDY1uEnYnR7cO7UJ9zRu0IYCjyOSASJhxRySXyIQmkHyQ0Gbmvngz8OJmifc6IMmd1z7akP+czZBv9VHwHXJ+H3FK97lDX3jI++B8yfq8WO++S7cZb0X5h/SZsXVQtszLbFwJgNgqS6qnBEPEijFhEPBSFMAIiaeiz6NVCoPgo0eQ+qwq+AFFqeBshPLV0o4QTAG58b7bInsfcKiHv3NOKIDzjW2H3r4cv0y6If6kkukXpq6HblveZAp6HfQEcYWH/gogXeoj6ZIRGEU1cYhuf+PBi8n/7B+IGhaCZEgAA&lt;/values&gt;&lt;/sys_hub_action_instance_v2&gt;&lt;sys_hub_action_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;action_type display_value="Create Record"&gt;2de05916c31332002841b63b12d3aee1&lt;/action_type&gt;&lt;action_type_parent display_value="Create Record"&gt;02f0b88cc3c632002841b63b12d3aeff&lt;/action_type_parent&gt;&lt;attributes/&gt;&lt;comment/&gt;&lt;compiled_snapshot&gt;2de05916c31332002841b63b12d3aee1&lt;/compiled_snapshot&gt;&lt;display_text/&gt;&lt;flow display_value="Maintenance Requests Flow"&gt;c2675ffc83a7d61012d6fe55eeaad31f&lt;/flow&gt;&lt;generation_source/&gt;&lt;order&gt;5&lt;/order&gt;&lt;parent_ui_id&gt;5c726662-bcf7-48af-a749-efec3c4e48f4&lt;/parent_ui_id&gt;&lt;sys_class_name&gt;sys_hub_action_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-02-04 00:36:05&lt;/sys_created_on&gt;&lt;sys_id&gt;a1c0ef30832bd61012d6fe55eeaad373&lt;/sys_id&gt;&lt;sys_mod_count&gt;3&lt;/sys_mod_count&gt;&lt;sys_scope display_value="RetailNOW Management Application"&gt;3b6dab668317d65012d6fe55eeaad385&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-02-04 02:18:17&lt;/sys_updated_on&gt;&lt;ui_id&gt;0ca6cfcb-df6a-41b6-8eb8-d1255dd58a7d&lt;/ui_id&gt;&lt;values&gt;H4sIAAAAAAAA/91UzW7bMAx+lUJnw5DiNEtyGzrk1hbYhl6aTmAkOhEgy64kp/WCvPsk2e66bgGCYTtsvomkvh+K5v2BKEmWZMaQXi7YTBSsKCaUTuZTtpkVGzaRBSBOSUYMVBgqPWw08nTIyB50G4O24mh2YARWaHxISOUaDd3dqbzYKS0tGrK8f8hIAzbgebRkeXiT8l2DXMMGdYD5HLkvbnruc3X/cPmEj8jyNlZbGQXRjOCzRyMx8JWgHWakAiPB17YjS2/bELAI8tbo7qVip4LNJSGx9tmprwF9TmNdicGawD4ndrUSeNt4VZs+khQMyVq3lbnp1caWYgmt9mNLQ6R1yCU2UVtkG6jLT7v66eNItFIm2RiSuhagX07gvVWb1qOLjUedXodX0DTKbHlj671Kl4OWKt/qcMhLXT8FUqe2JgcRheehFZCvQvxDCt+BVdHFdYAJl4/JNX9sI2/vY1DMe9OhwAmrGv8+wO1xEHfMxsmUSBcnX5htvr9oGkb3airdrrY+ik3wQeq6pbSQh8NVeC+PkrNctDa0yecVhAdDEyeUW3wMOJ67tqrAdsfjF3DRWGrO1tZtM+CsxzFfk+WaXEEDQvnu4npb+TXJ1r2OlAMQQizeMUFhTim7pLREVpbTgk4kMspSuescV/LM+uPPP9n/bvc3dwZWQbPHi75N2dlTNQKsFGrpfjFm49IYCPh+IBgWB/tTi4PNaPr+8vroBf1j2+PVxj6xRx6+AVSvwYbjBgAA&lt;/values&gt;&lt;/sys_hub_action_instance_v2&gt;&lt;sys_hub_action_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;action_type display_value="Update Record"&gt;f9d01dd2c31332002841b63b12d3aea1&lt;/action_type&gt;&lt;action_type_parent display_value="Update Record"&gt;baf174c8c3c232002841b63b12d3aee4&lt;/action_type_parent&gt;&lt;attributes/&gt;&lt;comment/&gt;&lt;compiled_snapshot&gt;f9d01dd2c31332002841b63b12d3aea1&lt;/compiled_snapshot&gt;&lt;display_text/&gt;&lt;flow display_value="Maintenance Requests Flow"&gt;c2675ffc83a7d61012d6fe55eeaad31f&lt;/flow&gt;&lt;generation_source/&gt;&lt;order&gt;6&lt;/order&gt;&lt;parent_ui_id&gt;5c726662-bcf7-48af-a749-efec3c4e48f4&lt;/parent_ui_id&gt;&lt;sys_class_name&gt;sys_hub_action_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-02-04 00:36:05&lt;/sys_created_on&gt;&lt;sys_id&gt;a9c0ef30832bd61012d6fe55eeaad373&lt;/sys_id&gt;&lt;sys_mod_count&gt;3&lt;/sys_mod_count&gt;&lt;sys_scope display_value="RetailNOW Management Application"&gt;3b6dab668317d65012d6fe55eeaad385&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-02-04 02:18:17&lt;/sys_updated_on&gt;&lt;ui_id&gt;7b979f81-01af-443f-97ec-400fea8e534e&lt;/ui_id&gt;&lt;values&gt;H4sIAAAAAAAA/+1UTW/bMAz9K4XPjmHHsZfmNiwIsMNaoBt66VqDluhEgCy7spwmM/LfR/kjTbuuC4LsMGC+iRQf36Oeedc4gjszZ4LcDy6DmIVBGI59fzydBGkcpsGYh4AYOK6jIEe6qZEVmtN5DbK2gab5pBEM8iTwWK01KrPbUZ6LqpSwve2vUYSthOSUd2Z3965TgiZEg9qZNa9SZltiIiFFSYXzgtU5gV58nhPGsWyH6puB7mv6tgedeY+eCBuklOUT+K6DG4OKI7XLQFboOjkoDqbQW2dmdE0BUs2vldzub6yEMp3SHDaV+EH4E9/ey5Cksf0UCsHwujSiUF3EQCqHZCHrXF11XO0QMYNamoMh1hUmHEvLzXbrqGRfV8XTzdBnIVQro6clCwZyfwJjtEhrg5WdO0ps1edQlkItk1IXa9EWE5XcW0o6eJksnqhnJZbKA2Z5ezQJ8BYUn7fhW9DCivhCMFS8a0Unj7Xt28noCSet5lZw0r4IXa2YFqX5SMBr7Gnu3N6XafTeS7PL54c9wHz25iYJokkYxZNEowEhVUFK6ZVQAc2Jgo81mupXsx5dd5qlv1muF1cd12N1vij+je7e1C9ivaejs3l6+rc93bf+x0z9Jyv743eX1sGTtu6tDmxcGdqv32vfD3n4gGplTWgVdqGm8RnELGPpiGcxjCzsaIrpdMSDcRRxHk3hA/e6zffWaj43/Ik/BeZEyuBFR8s9emoDwEKg5NUbYxz+ir5Bsu4b7Lf92X6NIPbb7//SP2Xp3/8EuA68wY4IAAA=&lt;/values&gt;&lt;/sys_hub_action_instance_v2&gt;&lt;sys_hub_action_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;action_type display_value="Ask For Approval"&gt;f8f2e9920b10030085c083eb37673abd&lt;/action_type&gt;&lt;action_type_parent display_value="Ask For Approval"&gt;bae0a1120b10030085c083eb37673a92&lt;/action_type_parent&gt;&lt;attributes/&gt;&lt;comment/&gt;&lt;compiled_snapshot&gt;f8f2e9920b10030085c083eb37673abd&lt;/compiled_snapshot&gt;&lt;display_text/&gt;&lt;flow display_value="Maintenance Requests Flow"&gt;c2675ffc83a7d61012d6fe55eeaad31f&lt;/flow&gt;&lt;generation_source/&gt;&lt;order&gt;3&lt;/order&gt;&lt;parent_ui_id&gt;39aa4cf8-45fb-41d9-a65a-d6da642c91cf&lt;/parent_ui_id&gt;&lt;sys_class_name&gt;sys_hub_action_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-02-04 00:36:05&lt;/sys_created_on&gt;&lt;sys_id&gt;adc0ef30832bd61012d6fe55eeaad371&lt;/sys_id&gt;&lt;sys_mod_count&gt;4&lt;/sys_mod_count&gt;&lt;sys_scope display_value="RetailNOW Management Application"&gt;3b6dab668317d65012d6fe55eeaad385&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-02-04 02:18:17&lt;/sys_updated_on&gt;&lt;ui_id&gt;c0988f54-3ee2-489e-b6fc-09271cea7be6&lt;/ui_id&gt;&lt;values&gt;H4sIAAAAAAAA/+1X32+bMBD+VyqeowxCSCBv1apKm7RV6rq+NBVy7KPx5BhqTNcs4n/fGQyh6UajKq22bo++n9/dfWfM1cbhzJk50zAZQRSN3IXnur7rhgF1Qx8W/nQy9Ql1nYEjyQrQUgFNFcPzHRGFEWw27xUQDSz2hrRQCqQuS9QznmeCrC+tGUrokguGemd2dT1wMqIwogblzDY7Kr3OIBZkAQIdT1JarDDo0YcTjLEv2sb7vIG7C9/kwDOz0WNuhKgyeNyBA/caJAPMlhCRw8BZEcmITtXamWlVoACLZmdSrFuLJZe6LnRF7nP+A8P7I2OXAFZG2yaknMJZpnkqa4kmC9EoU1Gs5OcaqukhJKQQutPDIoeYQWawmWw1lOTLMv1+3uQ55bKqwsISKSWiPRGtFV8UGnLTdhBQFb8iWcblTZyp9I5XzghlNbwReBgmIv2OOXN+I4eEGtxD7AQZnqL8pBJfEsVNEZ8wDDqXVdHxbWHy1mVYwHFVc10wWuVU8UwfY8w7sAjLgWXkgvbOmG5HWofbEvI+9oKxH0zGsQJNuJAp1oezAUmwOyi8LUDnjxm6t9/zeHxhYB5Vsx3sXeID58clWxJXx1jWoS2HvX4OW8k+JA7dFyaxTf2XsfgpArte33RZuJ0m5kPERMQJB9G9WhvFY652NM9j46lJ9YCNe+BtnI9t9qNTC/h3hVh+Vscdfo4OyE/3pRn6dq9Z2jt18LfD/ZYWSvaQNF7yvJrdb8nasTgUafeA3zh/rPHvcna3rB7K+v8p+ydQdhz0zhx+cR/RVDJu8OUd4ta3GOTHcv31arPJNdGcDheQhAn4EPrR1COB643YJIEgACCE+ZNFiTga2/GERZMkmJIoAS8KPdeLxniYjNwwCsJwUpbXj7fhtdI+b8Xaq/28EJA3a7ZHy9sHt/XrHYFdslaprJNdtPGh3t+vsGdv8/FCeweeRNsBswLbgb9/3T/CuVODnDuzuSNTCXNnMHeMVWwmX4nRAsG1ikq22ZRlLSkUsQG8znHrzcg6ryxzugSG7KmkDyQ1pa38kD+kX2yCoxPE/e6Cd75GT3et/astav9fNtKuR1tJ3Tne/RYFB/sWjf/NDUGYPG6f0fjpwUvl2Wtz/ROwJNmZSBEAAA==&lt;/values&gt;&lt;/sys_hub_action_instance_v2&gt;&lt;sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=c2675ffc83a7d61012d6fe55eeaad31f"/&gt;&lt;sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=c2675ffc83a7d61012d6fe55eeaad31f^sys_idNOT IN2dc0ef30832bd61012d6fe55eeaad372,a9c0ef30832bd61012d6fe55eeaad34b,ba57a778832bd61012d6fe55eeaad3fd"/&gt;&lt;sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;attributes/&gt;&lt;block display_value=""&gt;65c0ef30832bd61012d6fe55eeaad372&lt;/block&gt;&lt;comment/&gt;&lt;connected_to/&gt;&lt;decision_table/&gt;&lt;display_text/&gt;&lt;flow display_value="Maintenance Requests Flow"&gt;c2675ffc83a7d61012d6fe55eeaad31f&lt;/flow&gt;&lt;flow_variables_assigned/&gt;&lt;generation_source/&gt;&lt;logic_definition display_value="If"&gt;af4e1945c3e232002841b63b12d3ae3e&lt;/logic_definition&gt;&lt;order&gt;4&lt;/order&gt;&lt;outputs_assigned/&gt;&lt;parent_ui_id&gt;39aa4cf8-45fb-41d9-a65a-d6da642c91cf&lt;/parent_ui_id&gt;&lt;sys_class_name&gt;sys_hub_flow_logic_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-02-04 00:36:05&lt;/sys_created_on&gt;&lt;sys_id&gt;2dc0ef30832bd61012d6fe55eeaad372&lt;/sys_id&gt;&lt;sys_mod_count&gt;5&lt;/sys_mod_count&gt;&lt;sys_scope display_value="RetailNOW Management Application"&gt;3b6dab668317d65012d6fe55eeaad385&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-02-04 02:18:22&lt;/sys_updated_on&gt;&lt;ui_id&gt;5c726662-bcf7-48af-a749-efec3c4e48f4&lt;/ui_id&gt;&lt;values&gt;H4sIAAAAAAAA/+VUy27bMBD8lUJnWaAky7F9C1oEKNA2QBPk0gbCilzZRClRJSk7ruF/71IP20gctChy600ccndmlkPtA926pnX2Xl9bK1d1sPz2GAay9hh974MaKgyWAde1kE7qOu+AMNiAav0GfQppGwW7hxPC11IJg0O3BgzVODTBcv9sy+0azBUUqKjwzhlZr6hcClqVDMp4wWOeJrM0YSyZT+NilhZxIlJASOncWPh+FPfuU4eEr6r2fITbkUkb4WXFLAzwyWEtkKhLUBbDoIJagNNmd0QMgrit1QlYy9r1jit4svIX9U6yzB8skTzy4zi05HjbeCU94qBQ46ZWbVV/6QX7aWIJrXJn02wt5gIbr87TDdzl3Vpvv45EN7LunAybSnNQxxU48lu0Dq2/AVRYUaO8gqahKeSN0RvZFZOWKlopWkSl0lsi9ZGIgHvhEQ0DohvCP3TwAxjpXXymNlTcyyzASp538aF2zpCFQzeO/GfrBfUGByt5Pw06YLmRjbsmng0Oqg/hy+ydxW6/52wxn5fZdJIiJpPpfIGTYlbyCVskVzFHuCpwFpE2cgcqtw4cHg7fW8ZS0aN01S+y+1Zt3+IBLCArs5hllx/AdHbpAVyI/uupT/6Qen99fxl6xth/mnpp8z69g7eO/J9D/+gT3jPYPiACubQk5N5jH8f/st/Y0U1Lfg5ttfnhLZyww29L5Djj4QUAAA==&lt;/values&gt;&lt;workflow_reference/&gt;&lt;/sys_hub_flow_logic_instance_v2&gt;&lt;sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;attributes/&gt;&lt;block display_value=""&gt;6dc0ef30832bd61012d6fe55eeaad34a&lt;/block&gt;&lt;comment/&gt;&lt;connected_to/&gt;&lt;decision_table/&gt;&lt;display_text/&gt;&lt;flow display_value="Maintenance Requests Flow"&gt;c2675ffc83a7d61012d6fe55eeaad31f&lt;/flow&gt;&lt;flow_variables_assigned/&gt;&lt;generation_source/&gt;&lt;logic_definition display_value="If"&gt;af4e1945c3e232002841b63b12d3ae3e&lt;/logic_definition&gt;&lt;order&gt;2&lt;/order&gt;&lt;outputs_assigned/&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_flow_logic_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-02-04 00:36:05&lt;/sys_created_on&gt;&lt;sys_id&gt;a9c0ef30832bd61012d6fe55eeaad34b&lt;/sys_id&gt;&lt;sys_mod_count&gt;5&lt;/sys_mod_count&gt;&lt;sys_scope display_value="RetailNOW Management Application"&gt;3b6dab668317d65012d6fe55eeaad385&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-02-04 02:18:22&lt;/sys_updated_on&gt;&lt;ui_id&gt;39aa4cf8-45fb-41d9-a65a-d6da642c91cf&lt;/ui_id&gt;&lt;values&gt;H4sIAAAAAAAA/+VUTWvcMBD9K8VnY/wRL83eQkqg0DbQhFzaIMbSeFdUllxJ3s3W7H/vyB+7S7KhofTWm/VGM++90cN9ZDrfdt7dmyvn5EpHy2+PcSR1wOi7jzQ0GC0jbrSQXhrNBiCONqC6UKBPIV2rYPdwRPhaKmFxmtaCpR6PNlr2z0p+1yJTUKGixjtvpV5RuxR0qlOos0ue8SJfFHma5u8vsmpRVFkuCkAo6N7ceD2Le/dpQOJXVQc+wt3MZKwIsrI0jvDJoxZI1DUoh3HUgBbgjd0dEIsgbrU6Amup/ei4gScnf9HsvCzDxRrJIz+sw0iOt21QMiIeKjUXjeoa/WUUHLaJNXTKn2yzc8gEtkFdoJu467u12X6diW6kHpxMRWU4qMMJPPmtOo8uvAAqbGgQa6BtaQustWYjh2bS0iQrRYekVmZLpCESCfAgPKFlQHJD+IcBfgArg4vPNIaaR5kVOMnZEB8a5y1Z2A/rYD+7IGg0OFlh4zboguNWtv6KeDY4qd7HL7N3Eru+v6bX8ChYlvDO0g584jwB+/33Lk0Lkb8M5pt6/kV0L6Gsyywtz0f3YnEuumdC+3pe8z/kNSz+jXFN0/Q/zat0bMzd5G0g/+u4PoZsjgxuDIhALh0JuQ/Yx/mPGgo7emnJT6GtsT+ChSO2/w1QeehomwUAAA==&lt;/values&gt;&lt;workflow_reference/&gt;&lt;/sys_hub_flow_logic_instance_v2&gt;&lt;sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;attributes/&gt;&lt;block display_value=""&gt;7e57a778832bd61012d6fe55eeaad3fc&lt;/block&gt;&lt;comment/&gt;&lt;connected_to&gt;5c726662-bcf7-48af-a749-efec3c4e48f4&lt;/connected_to&gt;&lt;decision_table/&gt;&lt;display_text/&gt;&lt;flow display_value="Maintenance Requests Flow"&gt;c2675ffc83a7d61012d6fe55eeaad31f&lt;/flow&gt;&lt;flow_variables_assigned/&gt;&lt;generation_source/&gt;&lt;logic_definition display_value="Else"&gt;1f781bf3c32232002841b63b12d3aee6&lt;/logic_definition&gt;&lt;order&gt;7&lt;/order&gt;&lt;outputs_assigned/&gt;&lt;parent_ui_id&gt;39aa4cf8-45fb-41d9-a65a-d6da642c91cf&lt;/parent_ui_id&gt;&lt;sys_class_name&gt;sys_hub_flow_logic_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-02-04 01:04:51&lt;/sys_created_on&gt;&lt;sys_id&gt;ba57a778832bd61012d6fe55eeaad3fd&lt;/sys_id&gt;&lt;sys_mod_count&gt;4&lt;/sys_mod_count&gt;&lt;sys_scope display_value="RetailNOW Management Application"&gt;3b6dab668317d65012d6fe55eeaad385&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-02-04 02:18:22&lt;/sys_updated_on&gt;&lt;ui_id&gt;e8324273-172a-40ac-b25c-87016c775380&lt;/ui_id&gt;&lt;values&gt;H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=&lt;/values&gt;&lt;workflow_reference/&gt;&lt;/sys_hub_flow_logic_instance_v2&gt;&lt;sys_hub_pill_compound action="delete_multiple" query="attached_to=c2675ffc83a7d61012d6fe55eeaad31f"/&gt;&lt;sys_hub_flow_variable action="delete_multiple" query="model=c2675ffc83a7d61012d6fe55eeaad31f"/&gt;&lt;sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_c2675ffc83a7d61012d6fe55eeaad31f^sys_idNOT IN2dc0ef30832bd61012d6fe55eeaad341,e1c0ef30832bd61012d6fe55eeaad345"/&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;current&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;Record&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;var__m_sys_hub_flow_input_c2675ffc83a7d61012d6fe55eeaad31f&lt;/name&gt;&lt;plural/&gt;&lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-02-04 00:36:05&lt;/sys_created_on&gt;&lt;sys_id&gt;2dc0ef30832bd61012d6fe55eeaad341&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package display_value="RetailNOW Management Application" source="x_1543564_retailno"&gt;3b6dab668317d65012d6fe55eeaad385&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="RetailNOW Management Application"&gt;3b6dab668317d65012d6fe55eeaad385&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-02-04 00:36:05&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;table_name&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;Table Name&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;var__m_sys_hub_flow_input_c2675ffc83a7d61012d6fe55eeaad31f&lt;/name&gt;&lt;plural/&gt;&lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-02-04 00:36:05&lt;/sys_created_on&gt;&lt;sys_id&gt;e1c0ef30832bd61012d6fe55eeaad345&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package display_value="RetailNOW Management Application" source="x_1543564_retailno"&gt;3b6dab668317d65012d6fe55eeaad385&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="RetailNOW Management Application"&gt;3b6dab668317d65012d6fe55eeaad385&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-02-04 00:36:05&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_c2675ffc83a7d61012d6fe55eeaad31f"/&gt;&lt;sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_output_c2675ffc83a7d61012d6fe55eeaad31f"/&gt;&lt;sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_c2675ffc83a7d61012d6fe55eeaad31f"/&gt;&lt;sys_hub_flow_snapshot action="INSERT_OR_UPDATE"&gt;&lt;access&gt;public&lt;/access&gt;&lt;acls/&gt;&lt;active&gt;true&lt;/active&gt;&lt;annotation/&gt;&lt;attributes&gt;browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,viewActivatedIn=naturalLanguage&lt;/attributes&gt;&lt;authored_on_release_version&gt;26000&lt;/authored_on_release_version&gt;&lt;callable_by_client_api&gt;false&lt;/callable_by_client_api&gt;&lt;category/&gt;&lt;copied_from/&gt;&lt;copied_from_name/&gt;&lt;description&gt;To drive the maintenance requests approval process&lt;/description&gt;&lt;flow_priority&gt;MEDIUM&lt;/flow_priority&gt;&lt;internal_name&gt;maintenance_requests_flow&lt;/internal_name&gt;&lt;label_cache&gt;[{"name":"{{static.46d96f57a9fe198101947a9620895886}}","label":"Luke Wilson","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","usedInstances":{"c0988f54-3ee2-489e-b6fc-09271cea7be6":["approval_conditions"]}},{"name":"Created_1.current","label":"Trigger - Record Created➛Maintenance Requets Record","reference":"x_1543564_retailno_maintenance_requets","reference_display":"Maintenance Requets","type":"reference","base_type":"reference","usedInstances":{"ebaa1850-4aac-46a6-9cab-eb0f66c0315f":["record"],"c0988f54-3ee2-489e-b6fc-09271cea7be6":["record"],"7b979f81-01af-443f-97ec-400fea8e534e":["record"],"8336f203-0a15-4066-9a89-8e4f1d52a9c2":["record"],"e950cfd1-db43-4934-a1f3-0df172e48404":["record","enhancement"],"8d153387-fd8a-4637-9faa-50bcd6b9e9ff":["short_description"],"3aa50ed3-c445-462c-a513-145329bc37b8":["record"],"eb70d407-88f2-4114-a3a8-c7c4e5b209e1":["short_description"],"69e5d4d3-f5ec-47b5-ade0-ef6b32accef8":["record"]},"attributes":{}},{"name":"ebaa1850-4aac-46a6-9cab-eb0f66c0315f.state","label":"1 - Wait For Condition➛State","reference_display":"State","type":"choice","base_type":"choice","choices":[{"label":"Complete","value":"0","order":0.0},{"label":"Timeout","value":"1","order":1.0}],"usedInstances":{},"attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"2e334039-7a20-4ead-9148-909988f1a7e4"}},{"name":"Created_1.current.state","label":"Trigger - Record Created➛Maintenance Requets Record➛Status","reference":"","reference_display":"Status","type":"choice","base_type":"choice","parent_table_name":"x_1543564_retailno_maintenance_requets","column_name":"state","choices":[{"label":"Review","used":false,"image":"","reference":false,"selected":false,"missing":false,"rawLabel":"Review","value":"1","parameters":{"name":"x_1543564_retailno_maintenance_requets","dependent_values":[""]}},{"label":"Awaiting Approval","used":false,"image":"","reference":false,"selected":false,"missing":false,"rawLabel":"Awaiting Approval","value":"2","parameters":{"name":"x_1543564_retailno_maintenance_requets","dependent_values":[""]}},{"label":"Accepted","used":false,"image":"","reference":false,"selected":false,"missing":false,"rawLabel":"Accepted","value":"3","parameters":{"name":"x_1543564_retailno_maintenance_requets","dependent_values":[""]}},{"label":"Rejected","used":false,"image":"","reference":false,"selected":false,"missing":false,"rawLabel":"Rejected","value":"4","parameters":{"name":"x_1543564_retailno_maintenance_requets","dependent_values":[""]}}],"usedInstances":{"39aa4cf8-45fb-41d9-a65a-d6da642c91cf":["condition"]}},{"name":"{{static.bef8fe3e83971a5012d6fe55eeaad36b}}","label":"Beryl Tinder","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","usedInstances":{"c0988f54-3ee2-489e-b6fc-09271cea7be6":["approval_conditions"]}},{"name":"c0988f54-3ee2-489e-b6fc-09271cea7be6.approval_state","label":"3 - Ask For Approval➛Approval State","reference_display":"Approval State","type":"choice","base_type":"choice","choices":[{"label":"-- None --","value":"","order":0.0},{"label":"Not Yet Requested","value":"not requested","order":1.0},{"label":"Requested","value":"requested","order":2.0},{"label":"Approved","value":"approved","order":3.0},{"label":"Rejected","value":"rejected","order":4.0},{"label":"Cancelled","value":"cancelled","order":5.0},{"label":"No Longer Required","value":"not_required","order":6.0},{"label":"Skipped","value":"skipped","order":7.0}],"usedInstances":{"5c726662-bcf7-48af-a749-efec3c4e48f4":["condition"],"3ed7ac5f-a8b7-47ba-bc36-004c6434a64c":["condition"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Created_1.current.maintenance_request_summary","label":"Trigger - Record Created➛Maintenance Requets Record➛Maintenance Request Summary","reference":"","reference_display":"Maintenance Request Summary","type":"string","base_type":"string","parent_table_name":"x_1543564_retailno_maintenance_requets","column_name":"maintenance_request_summary","usedInstances":{"0ca6cfcb-df6a-41b6-8eb8-d1255dd58a7d":["short_description"]}},{"name":"0ca6cfcb-df6a-41b6-8eb8-d1255dd58a7d.record","label":"5 - Create Record➛rm_enhancement Record","reference":"rm_enhancement","reference_display":"Enhancement","type":"reference","base_type":"reference","usedInstances":{"7b979f81-01af-443f-97ec-400fea8e534e":["enhancement"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}}]&lt;/label_cache&gt;&lt;master&gt;true&lt;/master&gt;&lt;name&gt;Maintenance Requests Flow&lt;/name&gt;&lt;natlang/&gt;&lt;outputs/&gt;&lt;parent_flow display_value="Maintenance Requests Flow"&gt;c2675ffc83a7d61012d6fe55eeaad31f&lt;/parent_flow&gt;&lt;remote_trigger_id/&gt;&lt;run_as&gt;user&lt;/run_as&gt;&lt;run_with_roles/&gt;&lt;sc_callable&gt;false&lt;/sc_callable&gt;&lt;status&gt;published&lt;/status&gt;&lt;sys_class_name&gt;sys_hub_flow_snapshot&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-02-04 01:04:57&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;2867e778832bd61012d6fe55eeaad3c2&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_overrides/&gt;&lt;sys_package/&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="RetailNOW Management Application"&gt;3b6dab668317d65012d6fe55eeaad385&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-02-04 02:18:24&lt;/sys_updated_on&gt;&lt;type&gt;flow&lt;/type&gt;&lt;version&gt;2&lt;/version&gt;&lt;/sys_hub_flow_snapshot&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=2867e778832bd61012d6fe55eeaad3c2"/&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=2867e778832bd61012d6fe55eeaad3c2"/&gt;&lt;sys_hub_flow_stage action="delete_multiple" query="flow=2867e778832bd61012d6fe55eeaad3c2"/&gt;&lt;sys_flow_cat_variable_model action="delete_multiple" query="id=2867e778832bd61012d6fe55eeaad3c2^sys_idNOT INa067e778832bd61012d6fe55eeaad3c4"/&gt;&lt;sys_flow_cat_variable_model action="INSERT_OR_UPDATE"&gt;&lt;id&gt;2867e778832bd61012d6fe55eeaad3c2&lt;/id&gt;&lt;name&gt;Maintenance Requests Flow&lt;/name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-02-04 01:04:57&lt;/sys_created_on&gt;&lt;sys_id&gt;a067e778832bd61012d6fe55eeaad3c4&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_scope/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-02-04 01:04:57&lt;/sys_updated_on&gt;&lt;/sys_flow_cat_variable_model&gt;&lt;sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=a067e778832bd61012d6fe55eeaad3c4"/&gt;&lt;sys_hub_flow_input action="delete_multiple" query="model=2867e778832bd61012d6fe55eeaad3c2^sys_idNOT IN28672b78832bd61012d6fe55eeaad306,a467e778832bd61012d6fe55eeaad3de"/&gt;&lt;sys_hub_flow_input action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label/&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;table_name&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;formula/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_type display_value=""&gt;table_name&lt;/internal_type&gt;&lt;label&gt;Table Name&lt;/label&gt;&lt;mandatory&gt;false&lt;/mandatory&gt;&lt;max_length&gt;200&lt;/max_length&gt;&lt;model display_value="Maintenance Requests Flow"&gt;2867e778832bd61012d6fe55eeaad3c2&lt;/model&gt;&lt;model_id&gt;2867e778832bd61012d6fe55eeaad3c2&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow_snapshot&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_input_2867e778832bd61012d6fe55eeaad3c2&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;101&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_roles/&gt;&lt;reference/&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_input&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-02-04 01:04:58&lt;/sys_created_on&gt;&lt;sys_id&gt;28672b78832bd61012d6fe55eeaad306&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="RetailNOW Management Application"&gt;3b6dab668317d65012d6fe55eeaad385&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-02-04 02:18:24&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;virtual_type&gt;script&lt;/virtual_type&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_input&gt;&lt;sys_hub_action_input_action_instance action="delete_multiple" query="action_input=28672b78832bd61012d6fe55eeaad306"/&gt;&lt;sys_hub_flow_input action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label/&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent&gt;table_name&lt;/dependent&gt;&lt;dependent_on_field&gt;table_name&lt;/dependent_on_field&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;current&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;formula/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_type display_value=""&gt;document_id&lt;/internal_type&gt;&lt;label&gt;Record&lt;/label&gt;&lt;mandatory&gt;true&lt;/mandatory&gt;&lt;max_length&gt;200&lt;/max_length&gt;&lt;model display_value="Maintenance Requests Flow"&gt;2867e778832bd61012d6fe55eeaad3c2&lt;/model&gt;&lt;model_id&gt;2867e778832bd61012d6fe55eeaad3c2&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow_snapshot&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_input_2867e778832bd61012d6fe55eeaad3c2&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;100&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_roles/&gt;&lt;reference/&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_input&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-02-04 01:04:57&lt;/sys_created_on&gt;&lt;sys_id&gt;a467e778832bd61012d6fe55eeaad3de&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="RetailNOW Management Application"&gt;3b6dab668317d65012d6fe55eeaad385&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-02-04 02:18:24&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;true&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;virtual_type&gt;script&lt;/virtual_type&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_input&gt;&lt;sys_hub_action_input_action_instance action="delete_multiple" query="action_input=a467e778832bd61012d6fe55eeaad3de"/&gt;&lt;sys_hub_flow_output action="delete_multiple" query="model=2867e778832bd61012d6fe55eeaad3c2"/&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=2867e778832bd61012d6fe55eeaad3c2"/&gt;&lt;sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=2867e778832bd61012d6fe55eeaad3c2^sys_idNOT IN28672b78832bd61012d6fe55eeaad323"/&gt;&lt;sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;comment/&gt;&lt;display_text/&gt;&lt;flow display_value="Maintenance Requests Flow"&gt;2867e778832bd61012d6fe55eeaad3c2&lt;/flow&gt;&lt;name&gt;Created&lt;/name&gt;&lt;remote_sys_id/&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-02-04 01:04:58&lt;/sys_created_on&gt;&lt;sys_id&gt;28672b78832bd61012d6fe55eeaad323&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_scope/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-02-04 01:04:58&lt;/sys_updated_on&gt;&lt;trigger_definition display_value="Created"&gt;798916a0c31322002841b63b12d3ae7c&lt;/trigger_definition&gt;&lt;trigger_inputs&gt;H4sIAAAAAAAA/9VY227jNhD9FUFPLeACuvgS522bZNEAuxvUSduHIBUoaWgTpUmvRCnxLvLvHepiy7o4vmWTfQlgkuKcOTxzhsz9d5MTH7h5bt4Rn4PZM5lQEAnC75YLwGGlhz1B5npuTkRIlIyW5rmKEuiZMgohMs/tnpkSnsDtMr4O8SNcmn1RfG4W0/j7ybMHfXcw7HsRKMK4kN6c6JCCiABw8GsCKsYPQhYvOFn+XXz3eb3ImKwWBTPGwwiEeX7/0DMXJMKgSgP6XptiGlVAAzJ2wApc23Ucy3LO+rY/dH3bCV0CloUb1smoZaFaOFlTAE+IMAQMRQmPoYWuCEh4I/hytWKGWeV8zclTzL7h7meWXkcBsQeQzwUzyQK4WSgmRT6SA8onJU/m4ksOVBMHlCRclcThSBKDF8JCY9PRitD0diYfJ2Wgj0xkaRSTXAaEr34RpSLmJwpizSxlHDn2chJimUQZzMnVxc3k0vvnw93FH1cTb3J1eze5vri7ujSfs3y8r4neMUdYYPHydJ5Xp/2RAdcnJZK5j2h6ZhxEbKE+BIqlUMB57q01eyFFyDJWGroNyql4U7dFSuWpWVandIPK5qV8/736s6nNfHA/LQ6HhIRAOrTo04oWq0m2QFMt+Vaz26bKYmQXWfYt67WFmdfIwbqcyxD45Xo7EyenU1QqE4sks4tHIlTsKemRMPQqhOmliOkloea5Pb+oyigR+IG3Ir6pzYy2FX+fWIxw77GySm6yLXGefiq2nCTCkHhC+McIkgipUUZpSvR6TqYFo/QWOASqctr0r7j66zOLYyamFdSroBkHjZircKgao0wpjx0fGfzhwMJs8pvWeKsV6N7VaduU+kAda6Rr07Zcn9rWyBoQGrqWFTiV6myC6USpaqf/KlXaUaNxJjC+g5zqXBYorarCd5JGuqmrMlt97IUVXJwGmn0iaI6GVrM0dy9PW+kvH77clOG21E7co0mY6qtSuKu17ehqlMtHtNMDHM0nwX/TSCYirFuM3tNgwlivMH4p+Pv1hO5GZQTbAWyueCNfWzNcapSI5QkczaW2P4Y+WGhkLnqYPxiP/YA4lI6GI3DsmqOtYbRie19O9oKC0jYJdrlaqxjSNg3t4WdHAGx4294Aj3e1QoGtnpbP/Rzu9TgD4SHUyOPanxomNuUshHLu4ApuREnXNXtsFdOzcTCwR6NghC8GrGLaB5/YfWdAxqOhezaoVXEDyjaYqoWEH/KOiJdxBuTdPXRfU4YxKKVbxv6dVOClMvuG5EEq3Uxzb2QmISPjixS/Xa/XGbeATSp7MZ6qpe6CAjeLjNeF4Us1a/R0DP07jm+E1nfBDlbe8ilT00O6mdbRTxnonw3G1G23DDpus4w1mG6Y7+cKsKPq0876absL7CritLUWOpv3AbKs6aHa1bdcO05Fin1yUpzXI8U9+qpTFl3n++0QsD9RW8ouBMf0Jh0TPEmrhnwpDZwwMIjBqFH8Vw6f4/7SUDNASjneaTGgoaMf68TVztCEslLwjwWS35IbHQqHjeLm86bNp3bqp315Qjgig4HbcWcd11+ebYBewPt+WtHeSk/bCmdrP9pv3/qerR2pIsPNo9+x15w06/aGc1zWrS3npayPbybb3s0tKN5pm3j4H/dGypMkHgAA&lt;/trigger_inputs&gt;&lt;trigger_outputs/&gt;&lt;trigger_type&gt;record_create&lt;/trigger_type&gt;&lt;/sys_hub_trigger_instance_v2&gt;&lt;sys_hub_action_instance_v2 action="delete_multiple" query="flow=2867e778832bd61012d6fe55eeaad3c2^sys_idNOT IN2c672b78832bd61012d6fe55eeaad31f,60672b78832bd61012d6fe55eeaad323,68672b78832bd61012d6fe55eeaad322,6c672b78832bd61012d6fe55eeaad320,a8672b78832bd61012d6fe55eeaad321"/&gt;&lt;sys_hub_action_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;action_type display_value="Wait For Condition"&gt;89ce8a4187120010663ca1bb36cb0be3&lt;/action_type&gt;&lt;action_type_parent display_value="Wait For Condition"&gt;8bb9a8160b10030085c083eb37673aec&lt;/action_type_parent&gt;&lt;attributes/&gt;&lt;comment/&gt;&lt;compiled_snapshot&gt;89ce8a4187120010663ca1bb36cb0be3&lt;/compiled_snapshot&gt;&lt;display_text/&gt;&lt;flow display_value="Maintenance Requests Flow"&gt;2867e778832bd61012d6fe55eeaad3c2&lt;/flow&gt;&lt;generation_source/&gt;&lt;order&gt;1&lt;/order&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_action_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-02-04 01:04:58&lt;/sys_created_on&gt;&lt;sys_id&gt;2c672b78832bd61012d6fe55eeaad31f&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_scope display_value="RetailNOW Management Application"&gt;3b6dab668317d65012d6fe55eeaad385&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-02-04 01:04:58&lt;/sys_updated_on&gt;&lt;ui_id&gt;ebaa1850-4aac-46a6-9cab-eb0f66c0315f&lt;/ui_id&gt;&lt;values&gt;H4sIAAAAAAAA/+2XXW+jOBSG/8qI6ziLwRDo3ShptZW6UyntzF7MziJjHzeWHMiA6TRb9b+vAaeQ0GTanbRSpb308QfveX0eDny9dyR3ThwSM4gowdEEe66L3TD0GcVp6ocsdVMgzsjJ6BLMygJYXnAzvqWqqgP399MCqAae4DGrigIy/fBg5rksV4quv9hlJsIWUnEz75x8/TZyVrQwJ2oonJP7nannSlI0BWWWzjeadjXq9aoe85xVS6MrkZvghd05szMfzmdmxmyq5eCRA3caMg5Gh6CqhJGzpBmnOi/WzokuKhMwOfPLTK0fVyxkpts8l/SulP+YB/tevU6ASYxZDx6H1zRVMGs9aqfEjGp6ZU5nuioeLcslg7K1hYOgldLTfqxdcLnSMs/aLbo+2O7OVbXMPrWmOI8H9K6kKiHhsKpzrdW3qYmrRf5jvhF6JrPGFZumyhlVjyOqdSHTStdy7p1KXj9leBt+2nIhlSmBpBGdlHlVNEbNT6eX81ny58fr6e+n82R+enU9P59en9Y7QEFz9JKuVjK7SVZFfisbhSbf5fhGmcFYqPyHSayUN9mYstqcsbk+Oj4z8VkT/kILWT/0D3OM2Vyr/JzJ7xWcN8UnBPZxGCKMXR8RnIYojiBALgSUBB4Jg9BzHkZOuS6nipZl57G54OR7VVvUOm69TZrradNsqrTezAq50h+NvFuwjj6MNkAGB6ufdsXeO7OD8i7BAfGDkCQFaCpVlhu/TIFCRs2VmqBJVJdDSp+974Us/zybDcsNF3uyszgPYhf9vR8+tRMWZu8wzDbS0dwi8ATMkfvOYLap/TrNW35vw7zluCyTtqSt6ObUtyLWw1EckdRHfkoCRGIhUORGBBGgLgs8PiGY/Qdif8rp4S4lukpmecZlnVfZ47TUpnP+Vbmuz72/L+e9IRnCeXjxUbur6BE57Qt/KhmL5SB28dQBFkv/WD2WuO57A/NYXXbL8G0utyx/E/6AR2EauBECEUWI+JMIxdjzUBhSjjFhXLiv2zFdfqiiRe8TVssl5JVOhKI3PRbdIXGbN9jL2HqGkg1bp1nzArWK9kq0hKV5roBmu13PlNNvZ1apxYu8sOsd4uud0XW0tte5vdPz+n6/CVuM0cg0MYpinwEiYcpQJJhAPqSB8IM0SifuK/Q2driO42G58qqgzS12VB3hT/AZOjY8zToB+6VZmpq72Y1fDA+ySAX/I/XLSA0s3/k17CZei6uF2Tej67KuDMPxkDTAdBKk9d8eRcSLMaIx8VAcwgSIiEKfxq9AWoQPVrgYlnPJFsArBccl7Rk6NqRddQL2S7OkdcW+Ddm8F7eUhUejLBp8GLJl1he3j7leZu+SPXEFtGCLMwmqvlP737aHyP7VbMPYv5y36XKeh30ODGFuPiOJF3oo8skETeIodYkpv9SHI7L37V814knT/BQAAA==&lt;/values&gt;&lt;/sys_hub_action_instance_v2&gt;&lt;sys_hub_action_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;action_type display_value="Update Record"&gt;f9d01dd2c31332002841b63b12d3aea1&lt;/action_type&gt;&lt;action_type_parent display_value="Update Record"&gt;baf174c8c3c232002841b63b12d3aee4&lt;/action_type_parent&gt;&lt;attributes/&gt;&lt;comment/&gt;&lt;compiled_snapshot&gt;f9d01dd2c31332002841b63b12d3aea1&lt;/compiled_snapshot&gt;&lt;display_text/&gt;&lt;flow display_value="Maintenance Requests Flow"&gt;2867e778832bd61012d6fe55eeaad3c2&lt;/flow&gt;&lt;generation_source/&gt;&lt;order&gt;8&lt;/order&gt;&lt;parent_ui_id&gt;e8324273-172a-40ac-b25c-87016c775380&lt;/parent_ui_id&gt;&lt;sys_class_name&gt;sys_hub_action_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-02-04 01:04:58&lt;/sys_created_on&gt;&lt;sys_id&gt;60672b78832bd61012d6fe55eeaad323&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_scope display_value="RetailNOW Management Application"&gt;3b6dab668317d65012d6fe55eeaad385&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-02-04 01:04:58&lt;/sys_updated_on&gt;&lt;ui_id&gt;69e5d4d3-f5ec-47b5-ade0-ef6b32accef8&lt;/ui_id&gt;&lt;values&gt;H4sIAAAAAAAA/+VVXW/aMBT9K8jPUZQQQC1vEwhpUtdK7cRLV0VOfAOWHCe1HQpD/PddJ06IoOuo1Bc03ny/fM7NOfh5TzgjUzICFoS34SSNwigaBsHwZhQmkygJhyyiACHxiKQ5YKWCtFAMzxsqKhvY72cKqAEWh35aKQXSHA6YZ1yXgu6Wrgwj6ZoLhnkyfX7xSEkVTjSgyHR/kroUkqAJCCx9bDGdYjS70p5ZkVY54op5G7xznXOXGXyfYwabLJww8AhsDUgGCCSjQoNHcioZNYXakalRFQaQNHuQYtdVrLk0DdGcbjX/jTePAluXATJL3RK640+aCJg3S2pS2Zwa+oTTU1OpbmcFT0E3e2GQ0UqYWT/WFDyUhheyaTF2sOsuRJXL+2YrpBvQ+yaVhphBabla9A217GldvD22QBdc1mtxNEWRUtGdqDGKJ5WxcPYEBNR7zmlZcrmKS1VseN2MUHJ/JfDgZ6J4wzs1X0mfpha3j5ul/gLj8zq8pIpbEj9wDDYfPKJ3eiao1kcquMf4tbJIGmKOQlxvoV5BXKvBNqeKl+YbXrUBB/zgOeEn449Ult4eRdWbeRT/Ng7Ho2g8GcUKDOVCFsgddQCS4uYw+FqB0eduuLjvc565gE3rmVp+f2HnbHMWu+v3Du6bhDPN+MtMc3NtpnFUrt41//JKMPzwH7mnptoeuucTbfCF+FUFQcRG5244yX5O8xegajW/4CCYfgdmK3jIEZaBuIF9InqXHCxdsnstvkz54SSof1em///m0Xj5AwzPAhIvCQAA&lt;/values&gt;&lt;/sys_hub_action_instance_v2&gt;&lt;sys_hub_action_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;action_type display_value="Update Record"&gt;f9d01dd2c31332002841b63b12d3aea1&lt;/action_type&gt;&lt;action_type_parent display_value="Update Record"&gt;baf174c8c3c232002841b63b12d3aee4&lt;/action_type_parent&gt;&lt;attributes/&gt;&lt;comment/&gt;&lt;compiled_snapshot&gt;f9d01dd2c31332002841b63b12d3aea1&lt;/compiled_snapshot&gt;&lt;display_text/&gt;&lt;flow display_value="Maintenance Requests Flow"&gt;2867e778832bd61012d6fe55eeaad3c2&lt;/flow&gt;&lt;generation_source/&gt;&lt;order&gt;6&lt;/order&gt;&lt;parent_ui_id&gt;5c726662-bcf7-48af-a749-efec3c4e48f4&lt;/parent_ui_id&gt;&lt;sys_class_name&gt;sys_hub_action_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-02-04 01:04:58&lt;/sys_created_on&gt;&lt;sys_id&gt;68672b78832bd61012d6fe55eeaad322&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_scope display_value="RetailNOW Management Application"&gt;3b6dab668317d65012d6fe55eeaad385&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-02-04 01:04:58&lt;/sys_updated_on&gt;&lt;ui_id&gt;7b979f81-01af-443f-97ec-400fea8e534e&lt;/ui_id&gt;&lt;values&gt;H4sIAAAAAAAA/+VVXU/bMBT9K8jPbZQ0bVf6NlEhTWIgwcQLY9GNfUMtOU6wHaCL+t93nbgfAsaKxAta33y/fM7pPfFNy6RgczZGESfHyZSnSZqO4ng0Gyf5NM2TkUgBMWEDpqFEqjTIKyPo/ACq8YG2PTEIDkWWRLwxBrVbrykvpK0VrK5DGUX4UipBeTa/uR2wGgxNdGjYvH2WOhSSghwVlV5uMD3H6Fa1P4uKNyXhyuQmeBY6FyFz9G1BGWrycJJ4wPDJoRZIQApQFgesBC3AVWbF5s40FCDS4kKr1bZiKbXriZbwZOVvunkc+7oCiRkPImyPPyBXuOhF6lPFAhxc0XTuGrPVrJIcba+LwAIa5U72Y33BRe1kpfsW5weH7ko1pT7vVWHbAXv/SWMxE1h7rh59T624WlaPlxugp1J3sgSaquKgtidwzsi8cR5Oy1Bhp3MJdS31XVab6kF2zQSljO4UHaJCVY90p5V3OgLucUekLESnFF904Wsw0pP4TmOoeT1gdmVPFFi7o0I6ZveNR9ITCxSyToVOgqzbBt/MjazdV7rqAQPw9SAsfj55a8v48W6p9mbulv8pSybjdDIdZwYdSKUr4k57gBpIOQreN+jsSzcc3Pc+zxzAZuOZbv3+wi7Y5kXsbL/36LxPBNNMPsw0s89mmkDl07vmX16JR29+kfe2qbOH3fOJdfRC/GziOBXpL9RLv+Wecx9q25jDlBc8H4piCkM/djjDfDYUyWgyEWIygy8i6j/rrz0uHz3+fa47QJeN604lKmFfEWpjOSyJl8OsF+6Z7ULy6Dokt+/Vh3kvmcbd75M58L95tm7/ANZ/S0SxCQAA&lt;/values&gt;&lt;/sys_hub_action_instance_v2&gt;&lt;sys_hub_action_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;action_type display_value="Ask For Approval"&gt;f8f2e9920b10030085c083eb37673abd&lt;/action_type&gt;&lt;action_type_parent display_value="Ask For Approval"&gt;bae0a1120b10030085c083eb37673a92&lt;/action_type_parent&gt;&lt;attributes/&gt;&lt;comment/&gt;&lt;compiled_snapshot&gt;f8f2e9920b10030085c083eb37673abd&lt;/compiled_snapshot&gt;&lt;display_text/&gt;&lt;flow display_value="Maintenance Requests Flow"&gt;2867e778832bd61012d6fe55eeaad3c2&lt;/flow&gt;&lt;generation_source/&gt;&lt;order&gt;3&lt;/order&gt;&lt;parent_ui_id&gt;39aa4cf8-45fb-41d9-a65a-d6da642c91cf&lt;/parent_ui_id&gt;&lt;sys_class_name&gt;sys_hub_action_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-02-04 01:04:58&lt;/sys_created_on&gt;&lt;sys_id&gt;6c672b78832bd61012d6fe55eeaad320&lt;/sys_id&gt;&lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;&lt;sys_scope display_value="RetailNOW Management Application"&gt;3b6dab668317d65012d6fe55eeaad385&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-02-04 02:18:24&lt;/sys_updated_on&gt;&lt;ui_id&gt;c0988f54-3ee2-489e-b6fc-09271cea7be6&lt;/ui_id&gt;&lt;values&gt;H4sIAAAAAAAA/+1YXW/iOBT9K5WfEZsQAoG3qqjSrnZnpGl3XkoVGfumeGWSjO10ykb573sTOyEDUwZGaKWq8+j7YZ97OAdjHkoiOJmTaZSMYDYbeSvf8wLPi0LmRQGsgulkGlDmkQFJ6QawUgHLFMf1M5VFHSjLGwXUAI/9ISuUgtRUFea50Lmk28+uDCNsLSTHPJk/PA5IThXuaECRebmXOhWSpCuQWPqpxbSP0Wzzes0zVmwQVyza4J+uc+EyV78vMINNNRxvQODFQMoBcSRUahiQDU05NZnakrlRBQZwZv4xlduuYi1SY+fc0Bct/sWDg1FdlwAOxhwH3fKeriQsLEc2lSyooXe4OzOF6ijLBANtaeGQ0EKam37MFnzMjchS22LqjV13JotN+sGSQroNeh9JoSHmkNez1ujtaMndOvv6qQV6K9KGFTemzBiV3Yoao8SqMDWckoCEhuYNzXORPsW5yp5F04xQNsMniYthIrOveKYWT+mQshr3EJmlw1uML5rwZ6pEPcRfuA02VwOit/pGUq13oyCP8ZeiRmIHcyPEDQuWgrqPKZGbazzlGRzmauAkv2JH9cV2crLb7RT/EvvhOAgn41iBoUKmGU6Mnz6kFPnC4JcCjD60wMl95xnlhEFao9y7SfYGczZplnGT+9YlTdvVB5twJvGPm8RFdi6x0vqOSSLvjZnEjfbmXfIjg3j+MV3xaKcjRIAzUBknAmT/bmgTh17oZc5T+wmoWrVfuzOubh2s1+A6/TfL7+m/6d/T/+hM/b9+S0Se99Ys8J7uCXZUcBDsdPVPVqj0iAvitdCNOl51Q6/iPFecALJ1xR8W5b4p9sH/jCeCX554H54Yh0fl1vuJ0SmbZSkXNWLdc4b9hgZ9nW7/fihLbagRbLiCJEoggCiYTX0aev6ITxIIQwBKeTBZVYijrR1P+GyShFM6S8CfRb7nz8a4mIy8aBZG0aSqHg/t9n8de56HTyC1e/AUEvSPSHYO7pLKNfVd3F2R7Y7OyeNLPYHeoJHfy+87dlRvyWynL14gQfjE77/6l8TCXpL5kqRZCksyWJK6Kq4F1oSxAsF1iSZWllVlI4WibgO/t9x1c7rVTaVma+Cozyb6TSRuDOHil/jT4QROWg8uCrhaWFIOaXLe63BaXsTBLXrnCpqdfrsX/ds0vNhtOv5lwUtYEGGKuHu44FWJ34IX9OXjf/uCFfyNEwAA&lt;/values&gt;&lt;/sys_hub_action_instance_v2&gt;&lt;sys_hub_action_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;action_type display_value="Create Record"&gt;2de05916c31332002841b63b12d3aee1&lt;/action_type&gt;&lt;action_type_parent display_value="Create Record"&gt;02f0b88cc3c632002841b63b12d3aeff&lt;/action_type_parent&gt;&lt;attributes/&gt;&lt;comment/&gt;&lt;compiled_snapshot&gt;2de05916c31332002841b63b12d3aee1&lt;/compiled_snapshot&gt;&lt;display_text/&gt;&lt;flow display_value="Maintenance Requests Flow"&gt;2867e778832bd61012d6fe55eeaad3c2&lt;/flow&gt;&lt;generation_source/&gt;&lt;order&gt;5&lt;/order&gt;&lt;parent_ui_id&gt;5c726662-bcf7-48af-a749-efec3c4e48f4&lt;/parent_ui_id&gt;&lt;sys_class_name&gt;sys_hub_action_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-02-04 01:04:58&lt;/sys_created_on&gt;&lt;sys_id&gt;a8672b78832bd61012d6fe55eeaad321&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_scope display_value="RetailNOW Management Application"&gt;3b6dab668317d65012d6fe55eeaad385&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-02-04 01:04:58&lt;/sys_updated_on&gt;&lt;ui_id&gt;0ca6cfcb-df6a-41b6-8eb8-d1255dd58a7d&lt;/ui_id&gt;&lt;values&gt;H4sIAAAAAAAA/91VwU7jMBD9FeRzFNkNdKE3VNTTAtKy4kLZaGpPWkuOE2ynkK367ztO0lKxVMtKe2F787yZ8Xsv4+nDhmnFJmwskJ9diLHMRJaNOB+dn4rFOFuIkcoA8ZQlzEKJlBlgYTDvDglbg2li0JU52hVYiSXaQIDSvjbQ3h/D5Uob5dCyycNjwmpw1C+gY5PNG+ij7Aws0FDq90jvCNvQ1u/Gvh7Wntz0QOVU5MMThi8BrUIiUoDxmLASrIJQuZZNgmso4BDUrTXtPmOlSeWEsZj74vVPuvacx7wCSZnEHtsfu4uvest6qLiCAHfUXYbGDelyVWmJvvdFYQGNCdPDWJ9wWwdd2b6kkzpUV6Yp7U1vC9s32H0hijQec4V11BrZD1KKu1X1/G3HdKZtZ8sAmkqC2Z8gBKcXTYh8NgxN97HzEupa22Veu2qtu2LiUqZLQ4e0MNUzXer10qYgI/GUrIV0RvGrLnwPTkcV19SGircJ862fGvD+VQsZmT81kUmvbNCQ9zbEEul0HS7pgjUOdLfJbvQV8oujwyUWr8PUTbs/GHu/qlyI9Lv2RH7ecJ6pzWZKExFQ5SKVjSPjQloCjQTa+ARyh0/UJ+S+KUtw7Xb7g9SQ1M6upauaeugz372jOZvM2RRqkDq0J9fLMsxZMu95dBiAlPLii5AczjkXZ5wXKIriNOMjhYKLLp2My7X6YP7291f8v8v9y6X057nZLaWZRqP8O4O020hYkuyAeT9Yb7bSAJ7cD+CwmcS/2kxizLvfJ9tPvcBPv54O/o2OLKrHX2oXHHqlBwAA&lt;/values&gt;&lt;/sys_hub_action_instance_v2&gt;&lt;sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=2867e778832bd61012d6fe55eeaad3c2"/&gt;&lt;sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=2867e778832bd61012d6fe55eeaad3c2^sys_idNOT IN6c672b78832bd61012d6fe55eeaad31e,a8672b78832bd61012d6fe55eeaad31c,ec672b78832bd61012d6fe55eeaad31d"/&gt;&lt;sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;attributes/&gt;&lt;block display_value=""&gt;7e57a778832bd61012d6fe55eeaad3fc&lt;/block&gt;&lt;comment/&gt;&lt;connected_to&gt;5c726662-bcf7-48af-a749-efec3c4e48f4&lt;/connected_to&gt;&lt;decision_table/&gt;&lt;display_text/&gt;&lt;flow display_value="Maintenance Requests Flow"&gt;2867e778832bd61012d6fe55eeaad3c2&lt;/flow&gt;&lt;flow_variables_assigned/&gt;&lt;generation_source/&gt;&lt;logic_definition display_value="Else"&gt;1f781bf3c32232002841b63b12d3aee6&lt;/logic_definition&gt;&lt;order&gt;7&lt;/order&gt;&lt;outputs_assigned/&gt;&lt;parent_ui_id&gt;39aa4cf8-45fb-41d9-a65a-d6da642c91cf&lt;/parent_ui_id&gt;&lt;sys_class_name&gt;sys_hub_flow_logic_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-02-04 01:04:58&lt;/sys_created_on&gt;&lt;sys_id&gt;6c672b78832bd61012d6fe55eeaad31e&lt;/sys_id&gt;&lt;sys_mod_count&gt;4&lt;/sys_mod_count&gt;&lt;sys_scope display_value="RetailNOW Management Application"&gt;3b6dab668317d65012d6fe55eeaad385&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-02-04 02:18:24&lt;/sys_updated_on&gt;&lt;ui_id&gt;e8324273-172a-40ac-b25c-87016c775380&lt;/ui_id&gt;&lt;values&gt;H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=&lt;/values&gt;&lt;workflow_reference/&gt;&lt;/sys_hub_flow_logic_instance_v2&gt;&lt;sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;attributes/&gt;&lt;block display_value=""&gt;6dc0ef30832bd61012d6fe55eeaad34a&lt;/block&gt;&lt;comment/&gt;&lt;connected_to/&gt;&lt;decision_table/&gt;&lt;display_text/&gt;&lt;flow display_value="Maintenance Requests Flow"&gt;2867e778832bd61012d6fe55eeaad3c2&lt;/flow&gt;&lt;flow_variables_assigned/&gt;&lt;generation_source/&gt;&lt;logic_definition display_value="If"&gt;af4e1945c3e232002841b63b12d3ae3e&lt;/logic_definition&gt;&lt;order&gt;2&lt;/order&gt;&lt;outputs_assigned/&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_flow_logic_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-02-04 01:04:58&lt;/sys_created_on&gt;&lt;sys_id&gt;a8672b78832bd61012d6fe55eeaad31c&lt;/sys_id&gt;&lt;sys_mod_count&gt;4&lt;/sys_mod_count&gt;&lt;sys_scope display_value="RetailNOW Management Application"&gt;3b6dab668317d65012d6fe55eeaad385&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-02-04 02:18:24&lt;/sys_updated_on&gt;&lt;ui_id&gt;39aa4cf8-45fb-41d9-a65a-d6da642c91cf&lt;/ui_id&gt;&lt;values&gt;H4sIAAAAAAAA/+1VXWvbMBT9K0PPxvijCWvfSkJh0K2wlr5sxVxLciImS54+kmYm/31XluOENWMt9HFv1rm6955zdC/uifau884+6GtrxUqRq29PCREqYPjdEwUtJ1eEasWEE1pVA5CQDUgfAvjJhO0k7B6PCF0LyQwfq3VgMMdxQ676P0KCYUKTQZNf0pyWxbwssqz4eJHX87LOC1YChxILSqi5xKuLA40PtwOS/JWf23UBt84ItRrPt2OV+wOoDQus8iwh/NlxxTjyaUBanpAWFAOnzW5CDAd2p+QRWAvlouAWnq34hQ2L2SxcbDhKpKMb0/EBasmX0a0YapbgAOl46ryZzNOCchsNYrwBL93iFIsX7rogN6a4UHjM1tK36kt0hUwFTh7HW14x3gW1gf6opblf6+3XA9MboQZnxqDUFOR0Aof+1d4FPj3hkrdYqGqh69DVqjN6I4Zk5NKmK4mHtJF6i03DhKVAA/EUzYX0BvHlAD+CEUHFZyyDyZFmDVbQaphGLIc2cbJPiN3ZhQRrjyLR4eqnDxSj5FFcFf0JKdSIzl1j5w0fdeyTl8N9Mtd9v8D3dpxVeUq9QVdcah0C+/13n2UlK15O/qty3rYblzBrZnk2O78bF/Nzu3FmK964EMU/FiK8xCv3Icuy/wvxLgshbBXHeNQ2NH/HfXgKwx97Tl5TYZHa8EyfDv+EENjhgAl6Cm21+RFEHbH9b/Rjj1tdBgAA&lt;/values&gt;&lt;workflow_reference/&gt;&lt;/sys_hub_flow_logic_instance_v2&gt;&lt;sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;attributes/&gt;&lt;block display_value=""&gt;65c0ef30832bd61012d6fe55eeaad372&lt;/block&gt;&lt;comment/&gt;&lt;connected_to/&gt;&lt;decision_table/&gt;&lt;display_text/&gt;&lt;flow display_value="Maintenance Requests Flow"&gt;2867e778832bd61012d6fe55eeaad3c2&lt;/flow&gt;&lt;flow_variables_assigned/&gt;&lt;generation_source/&gt;&lt;logic_definition display_value="If"&gt;af4e1945c3e232002841b63b12d3ae3e&lt;/logic_definition&gt;&lt;order&gt;4&lt;/order&gt;&lt;outputs_assigned/&gt;&lt;parent_ui_id&gt;39aa4cf8-45fb-41d9-a65a-d6da642c91cf&lt;/parent_ui_id&gt;&lt;sys_class_name&gt;sys_hub_flow_logic_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-02-04 01:04:58&lt;/sys_created_on&gt;&lt;sys_id&gt;ec672b78832bd61012d6fe55eeaad31d&lt;/sys_id&gt;&lt;sys_mod_count&gt;4&lt;/sys_mod_count&gt;&lt;sys_scope display_value="RetailNOW Management Application"&gt;3b6dab668317d65012d6fe55eeaad385&lt;/sys_scope&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-02-04 02:18:24&lt;/sys_updated_on&gt;&lt;ui_id&gt;5c726662-bcf7-48af-a749-efec3c4e48f4&lt;/ui_id&gt;&lt;values&gt;H4sIAAAAAAAA/+1VXWvbMBT9K0PPjvFHnCZ5KwmFQbfCWvqyFXMtXydisuVZctIs5L/vynKcsGZshTzuzTrSvTrn6B68Z6o1dWv0k7rVWqwqNv/64jFRWYy+96yCEtmccVXlwghVpR3gsQ3I1m7QZy50LWH3fEL4Wsi8wb5bDQ3VGGzYfP/blsipoAigCGc85HE0iaMgiKbjMJvEWRjlMSDE1FBChpKOLo40Ptx3iPdHfmZXW1ybRlSrfn3fd3k8gqrJLasw8Bi+GqxyJD4FSI0eK6HKwahmNyANQv5QyROwFpVxgkt41eInXRgliT1YIEnkvRvD8gkyiUvnltsqlmCA6LTctM1gnhIctTMoxwJaaRbnmDvwUFu5rsTYxn21km1ZfXausKHB2eO0GtMca6vW0u+1FI9rtf1yZHonqs6ZflMqDnJYgSH/stZYPnuGEktqlJZQ1+RqWjdqI7pi4lL6K0kLv5BqS5faCfOBW+I+mQv+HeHLDn6GRlgVn6gNFTuaGWjB024aqR3ZhOzgMb3TCwlan0SSw+mP1lJ0kntxqfPHlvBG1OaWbt5gr+PgvR3us7ne73kwm06LZDyKEaPReDrDUTYp+CiYRTchR7jJcOITW9ILMtUGDB4O39ogiHOH0jC9Cce12r4vYTNIiiQMkssJG08uJexCtt4Zq+gvsbLv+Y+pCoLgf6yuEiuhUxeGXlt3+RVT9WIj5O4cvOZCE7XumT4e/yx2Y0cDJvg5tFXNdyvqhB1+ASqHPjyjBgAA&lt;/values&gt;&lt;workflow_reference/&gt;&lt;/sys_hub_flow_logic_instance_v2&gt;&lt;sys_hub_pill_compound action="delete_multiple" query="attached_to=2867e778832bd61012d6fe55eeaad3c2"/&gt;&lt;sys_hub_flow_variable action="delete_multiple" query="model=2867e778832bd61012d6fe55eeaad3c2"/&gt;&lt;sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_2867e778832bd61012d6fe55eeaad3c2^sys_idNOT IN6c672b78832bd61012d6fe55eeaad30a,ac672b78832bd61012d6fe55eeaad303"/&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;table_name&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;Table Name&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;var__m_sys_hub_flow_input_2867e778832bd61012d6fe55eeaad3c2&lt;/name&gt;&lt;plural/&gt;&lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-02-04 01:04:58&lt;/sys_created_on&gt;&lt;sys_id&gt;6c672b78832bd61012d6fe55eeaad30a&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package display_value="RetailNOW Management Application" source="x_1543564_retailno"&gt;3b6dab668317d65012d6fe55eeaad385&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="RetailNOW Management Application"&gt;3b6dab668317d65012d6fe55eeaad385&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-02-04 01:04:58&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;current&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;Record&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;var__m_sys_hub_flow_input_2867e778832bd61012d6fe55eeaad3c2&lt;/name&gt;&lt;plural/&gt;&lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-02-04 01:04:58&lt;/sys_created_on&gt;&lt;sys_id&gt;ac672b78832bd61012d6fe55eeaad303&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package display_value="RetailNOW Management Application" source="x_1543564_retailno"&gt;3b6dab668317d65012d6fe55eeaad385&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="RetailNOW Management Application"&gt;3b6dab668317d65012d6fe55eeaad385&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-02-04 01:04:58&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_2867e778832bd61012d6fe55eeaad3c2"/&gt;&lt;sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_output_2867e778832bd61012d6fe55eeaad3c2"/&gt;&lt;sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_2867e778832bd61012d6fe55eeaad3c2"/&gt;&lt;sys_hub_flow action="UPDATE"&gt;&lt;sys_id&gt;c2675ffc83a7d61012d6fe55eeaad31f&lt;/sys_id&gt;&lt;latest_snapshot&gt;2867e778832bd61012d6fe55eeaad3c2&lt;/latest_snapshot&gt;&lt;compiler_build&gt;glide-xanadu-07-02-2024__patch1-08-24-2024_09-01-2024_1853.zip&lt;/compiler_build&gt;&lt;/sys_hub_flow&gt;&lt;sys_flow_trigger_plan action="delete_multiple" query="plan_id=c2675ffc83a7d61012d6fe55eeaad31f^sys_idNOT IN78672b78832bd61012d6fe55eeaad33e"/&gt;&lt;sys_flow_trigger_plan action="INSERT_OR_UPDATE"&gt;&lt;binding_strategy&gt;com.snc.process_flow.engine.binding.OncePerRecord&lt;/binding_strategy&gt;&lt;plan&gt;{"type":"PlanProxy","persistor":{"@class":".ChunkingPlanPersistor","table":"sys_flow_trigger_plan","id":"78672b78832bd61012d6fe55eeaad33e","name":"plan","plan_signature":null}}&lt;/plan&gt;&lt;plan_id&gt;c2675ffc83a7d61012d6fe55eeaad31f&lt;/plan_id&gt;&lt;snapshot&gt;2867e778832bd61012d6fe55eeaad3c2&lt;/snapshot&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-02-04 01:04:59&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;78672b78832bd61012d6fe55eeaad33e&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_overrides/&gt;&lt;sys_scope/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-02-04 02:18:25&lt;/sys_updated_on&gt;&lt;trigger display_value=""&gt;38672b78832bd61012d6fe55eeaad33c&lt;/trigger&gt;&lt;/sys_flow_trigger_plan&gt;&lt;sys_flow_subflow_plan action="delete_multiple" query="plan_id=c2675ffc83a7d61012d6fe55eeaad31f"/&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>642877261</payload_hash>
+        <record_name>Maintenance Requests Flow</record_name>
+        <reverted_from/>
+        <source>d8a0c4b683d7d65012d6fe55eeaad3bd</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-04 02:18:25</sys_created_on>
+        <sys_id>a4383b3083abd61012d6fe55eeaad329</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>194cec06f880000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-04 02:18:25</sys_updated_on>
+        <type>Flow</type>
+        <update_guid>2c383b30b7abd610ae48018d5ea68e28</update_guid>
+        <update_guid_history>2c383b30b7abd610ae48018d5ea68e28:642877261,4438f730f9abd6102e1d5b4561cb9b70:-1064986293,2a28b73017abd610e6a0a31a4d481ae3:1481012824,c977f7fccf6bd610b6b6e9544c93d07a:1759422333,81672b78732bd610a9e5b2bf51192258:1630182936,5467e778c52bd610d81dbb000e7d209d:2087762642,4357e7780b2bd610c169eba9f17c401a:1833226286,a5c0ef30882bd610407cee65097c4f82:-398231764,c2671374fbe7d6101fc879cf18243d3a:-1109013718</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-02-04 02:37:19</sys_created_on>
+        <sys_db_object display_value="" name="sys_hub_flow">sys_hub_flow</sys_db_object>
+        <sys_id>43e4266bcbd940afa7d5a66efa652889</sys_id>
+        <sys_metadata>c2675ffc83a7d61012d6fe55eeaad31f</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Maintenance Requests Flow</sys_name>
+        <sys_package display_value="RetailNOW Management Application" source="x_1543564_retailno">3b6dab668317d65012d6fe55eeaad385</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="RetailNOW Management Application">3b6dab668317d65012d6fe55eeaad385</sys_scope>
+        <sys_scope_delete display_value="">111bdc697e1b492e92c4039dac372fe4</sys_scope_delete>
+        <sys_update_name>sys_hub_flow_c2675ffc83a7d61012d6fe55eeaad31f</sys_update_name>
+        <sys_update_version display_value="sys_hub_flow_c2675ffc83a7d61012d6fe55eeaad31f">a4383b3083abd61012d6fe55eeaad329</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-02-04 02:37:19</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
