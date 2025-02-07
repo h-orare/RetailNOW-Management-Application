@@ -1,4 +1,4 @@
-RetailNOW Management Application
+
 RetailNOW Management Application is a ServiceNow-based solution designed to automate the management of fuel stock levels and maintenance requests for gas stations. 
 This application replaces the manual process of SMS reports, Excel-based tracking, and email-driven coordination, ensuring real-time data visibility, automated reporting, and efficient issue resolution.
 
